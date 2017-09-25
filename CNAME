@@ -1,0 +1,3 @@
+familyburger.com.ua.         CNAME   familyburger.github.io.
+familyburger.github.io.      CNAME   github.map.fastly.net.
+github.map.fastly.net.       A       5.39.10.93
