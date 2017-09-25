@@ -1,2 +1,2 @@
 # familyBurger
-Fast food restaurant in Romny
+Fast food restaurant
