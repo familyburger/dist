@@ -1,0 +1,279 @@
+.container p {
+    font-size: 1.5em;
+}
+
+label[for="comment"] {
+    font-size: 1.5em;
+    margin-top: 25px;
+ }
+
+address p span {
+    display: block;
+    margin: 25px 0 25px 0;
+    letter-spacing: 1px;
+}
+
+.container #contactForm .button--split-effect.button--send {
+    margin: 35px 0 45px 0;
+}
+
+.container h1 {
+    position: relative;
+    font-size: 1.8em;
+    margin: 15px 0 0 0;
+}
+
+div[class|="col"] {
+ padding: 0;
+}
+
+.sm-md-line {
+ display: none;
+}
+
+label {
+  font-size: 1.2em;
+  letter-spacing: 1px;
+}
+
+hr {
+    display: flex;
+    border-top: 2px solid rgba(94.1%, 28.4%, 10.2%, 0.7);
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.hrBottom {
+    margin: 0px 0px 59px 0px;
+}
+
+.map-container:before, .map-container:after, #map:before, #map:after {
+    content: '';
+    position: absolute;
+    box-shadow: 0px -1px 5px 1px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.map-container:before { top: -5px; left: 0; right: 0; height: 5px; }
+.map-container:after { right: -5px; top: 0; bottom: 0; width: 5px; }
+#map:before { bottom: -5px; left: 0; right: 0; height: 5px; }
+#map:after { left: -5px; top: 0; bottom: 0; width: 5px; }
+
+
+.map-container {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100vw;
+    max-height: 75vh;
+    position: relative;
+    overflow: hidden;
+    margin-top: 105px;
+}
+
+#map {
+    width: 100vw;
+    height: calc(100vw * 2/5);
+    position: initial!important;
+    overflow: initial!important;
+}
+
+.social > .copyright {
+margin: 10px 0 10px 0;
+font-size: 14px;
+}
+
+#contactForm {
+display: flex;
+flex-direction: column;   
+}
+
+#contactForm input, textarea {
+width: 100%;
+margin: 2px;
+resize:vertical;
+color: rgba(0%,0%,0%, 0.8);
+background-color: rgba(92.2%, 89%, 80.4%, 0.9);
+border: 1px solid rgba(0%,0%,0%, 0.3);
+-moz-box-shadow: 0px 2px 5px rgba(0%, 0%, 0%, 0.3);
+-webkit-box-shadow: 0px 2px 5px rgba(0%, 0%, 0%, 0.3);
+box-shadow: 0px 2px 5px rgba(0%, 0%, 0%, 0.3);
+}
+
+#comment-error {
+font-size: 0.8em;
+margin-top: 0px;
+border-bottom: 2px solid rgba(94.1%, 28.4%, 10.2%, 0.7);
+padding-bottom:2px;
+}
+
+#email-error {
+font-size: 1em;
+border-bottom: 2px solid rgba(94.1%, 28.4%, 10.2%, 0.7);
+padding-bottom:2px;
+margin-top: 10px;
+}
+
+#contactForm input:focus, textarea:focus {
+background-color: white;
+}
+
+.container #contactForm .button {
+font-size: 1.2em;
+background-color:rgba(94.1%, 28.4%, 10.2%, 1);
+color: rgba(92.2%, 89%, 80.4%, 1);
+width: 35%;
+border: 1px solid rgba(0%,0%,0%, 0.3);
+-moz-box-shadow: 0px 2px 5px rgba(0%, 0%, 0%, 0.3);
+-webkit-box-shadow: 0px 2px 5px rgba(0%, 0%, 0%, 0.3);
+box-shadow: 0px 2px 5px rgba(0%, 0%, 0%, 0.3);
+}
+
+.container #contactForm  .button {
+    max-width: 100%;
+    position: relative;
+}
+
+.container #contactForm .button--split-effect.button--send,.container #contactForm .button--split-effect.button--send::before {
+    opacity: 1;
+    transition-property: box-shadow;
+    will-change: box-shadow;
+    transition-timing-function: linear;
+    transition-duration: .2s;
+}
+
+.container #contactForm .button--split-effect.button--send::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    border: 1px solid rgba(94.1%, 28.4%, 10.2%, 1);
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0);
+    opacity: 0;
+    transition-property: transform,opacity;
+    transition-property: transform,opacity,-webkit-transform;
+    will-change: transform,opacity;
+}
+
+.container #contactForm .button--split-effect.button--send:focus,.container #contactForm .button--split-effect.button--send:hover {
+    background-color: rgba(94.1%, 28.4%, 10.2%, 1);
+    border-color: rgba(94.1%, 28.4%, 10.2%, 1);
+    box-shadow: 6px 6px rgba(94.1%, 28.4%, 10.2%, 0.5);
+    color: rgba(255%, 255%, 255%, 1);
+}
+
+.container #contactForm .button--split-effect.button--send:focus::before,.container #contactForm .button--split-effect.button--send:hover::before {
+    -webkit-transform: translate(-6px,-6px);
+    transform: translate(-6px,-6px);
+    opacity: 1;
+}
+
+.container #contactForm .button--split-effect.button--send:active {
+    background-color: rgba(94.1%, 28.4%, 10.2%, 1);
+    border-color: rgba(94.1%, 28.4%, 10.2%, 1);
+}
+
+.container #contactForm .button--split-effect.button--send:active::before {
+    border-color: rgba(94.1%, 28.4%, 10.2%, 1);
+}
+
+.container .social {
+text-align: center;
+}
+
+@media all and (max-width: 576px) { 
+.container p {
+    margin: 0;
+    font-size: 1.3em;
+}
+
+.sm-md-line {
+    display: block;
+   }
+
+.wrapper {
+ display: none;
+}
+
+#map {
+    width: 100vw;
+    height: calc(100vw * 3/4);
+    position: initial!important;
+    overflow: initial!important;
+}
+
+main .container {
+    padding-right: 8.33333333%;
+    padding-left: 8.33333333%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+label[for="comment"] {
+    font-size: 1.3em;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 24px;
+ }
+
+    .hrBottom {
+        margin: 0px 0px 25px 0px;
+    }
+
+  
+  #comment-error {
+    font-size: 0.9em;
+    }
+
+    #email-error {
+        font-size: 1em;
+        }
+
+        @media all and (orientation:landscape) {
+            .navbar {
+               position: absolute;
+               top: 0px;
+            }
+            }
+}
+
+@media all and (max-width: 767px) and (min-width: 577px) { 
+.sm-md-line {
+    display: block;
+   }
+
+main .container {
+    padding-right: 8.33333333%;
+    padding-left: 8.33333333%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container h1 {
+   font-size: 1;
+}
+
+#map {
+    width: 100vw;
+    height: calc(100vw * 9/16);
+    position: initial!important;
+    overflow: initial!important;
+}
+
+.hrBottom {
+    margin: 0px 0px 25px 0px;
+}
+
+  @media all and (orientation:landscape) {
+    .navbar {
+       position: absolute;
+       top: 0px;
+    }
+    }
+}
