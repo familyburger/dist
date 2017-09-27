@@ -185,6 +185,20 @@ box-shadow: 0px 2px 5px rgba(0%, 0%, 0%, 0.3);
 text-align: center;
 }
 
+.messegeSend {
+position: relative;
+}
+
+.textAlert {
+font-family: 'Alegreya', serif;
+width: 55%;
+position: absolute;
+right: 0;
+top: -14px;
+font-size: 1.2em;
+margin: 35px 0 45px 0;
+}
+
 @media all and (max-width: 576px) { 
 .container p {
     margin: 0;
