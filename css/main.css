@@ -90,6 +90,10 @@ top: -12px;
   text-shadow: 1px 1px rgba(0%,0%,0%, 0.3), 1px 1px rgba(0%,0%,0%, 0.3), 1px 1px rgba(0%,0%,0%, 0.3), 1px 1px rgba(0%,0%,0%, 0.3);
 }
 
+.blocks {
+
+}
+
 .blocks .container .row div {
   height: 350px;
   padding-right: 0px; 
@@ -527,12 +531,14 @@ color: rgba(94.1%, 28.4%, 10.2%, 1);
 }
 
 .containerCarousel {
- display: flex;
- order: 1;
+
+}
+
+#contentWrap {
+  margin: 50px 0px;
 }
 
 #myCarousel {
-grid-row: 1;
 -webkit-box-shadow: inset 0px -1px 1px 1px rgba(0, 0, 0, 0.2);
 box-shadow: inset 0px -1px 1px 1px rgba(0, 0, 0, 0.2);
 }
@@ -584,11 +590,6 @@ visibility: hidden;
   background-repeat: no-repeat;
   background-position: center center; 
   background-size: cover; 
-}
-
-#blocksWrap {
-  grid-row: 2;
-  padding: 5% 0px;
 }
 
 footer {
