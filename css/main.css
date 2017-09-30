@@ -34,6 +34,17 @@ background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
 background-size: 75px 75px;
 }
 
+.index-grid-container {
+  display: flex;
+  min-height: 100vh; 
+  flex-direction: column;
+  overflow: hidden;
+  margin-top: 105px;
+  background-image: url("../svg/i-like-food.svg");
+  background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
+  background-size: 75px 75px;
+}
+
 .navbar {
 background-image: url("../svg/i-like-food.svg");
 background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
@@ -86,13 +97,11 @@ top: -12px;
 }
 
 .wrapCarousel {
-  display: block;
-  height: 100%;
-  width: 100%;
+  order: 1;
 }
 
-.blocks {
-  margin: 50px  0px;
+#contentWrap {
+  order: 2;
 }
 
 .blocks .container .row div {
