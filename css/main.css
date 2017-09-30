@@ -532,8 +532,7 @@ color: rgba(94.1%, 28.4%, 10.2%, 1);
 }
 
 #myCarousel {
-display: flex;
-order: 1;
+grid-row: 1;
 -webkit-box-shadow: inset 0px -1px 1px 1px rgba(0, 0, 0, 0.2);
 box-shadow: inset 0px -1px 1px 1px rgba(0, 0, 0, 0.2);
 }
@@ -588,10 +587,8 @@ visibility: hidden;
 }
 
 #blocksWrap {
-  display: flex;
-  margin: 0 auto;
+  grid-row: 2;
   padding: 5% 0px;
-  order: 2;
 }
 
 footer {
