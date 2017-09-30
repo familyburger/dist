@@ -33,8 +33,8 @@ function sendForm(e) {
             },
             dataType: "json",
             beforeSend: function() { textAlert.innerHTML = '<div class="alert alert--loading">Відправлення…</div>';},
-            success: function(data) {textAlert.innerHTML ='<div class="alert alert--success">Надіслано!</div>';},
-            error: function(err) {textAlert.innerHTML = '<div class="alert alert--error">Вибачте,але стався збій.</div>';}
+            success: function(data) {textAlert.innerHTML ='<div class="alert alert--success">Надіслано! &#10003;</div>';},
+            error: function(err) {textAlert.innerHTML = '<div class="alert alert--error">Вибачте,але стався збій. &#10006;</div>';}
         })
     }
 }
