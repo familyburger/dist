@@ -24,6 +24,8 @@ text-shadow: 1px 1px rgba(0%,0%,0%, 0.3), 1px 1px rgba(0%,0%,0%, 0.3), 1px 1px r
 }
 
 .grid-container {
+display: grid;
+-ms-display: grid;
 min-height: 100vh; 
 overflow: hidden;
 margin-top: 105px;
@@ -81,10 +83,6 @@ top: -12px;
   display: flex;
   font-family: 'Alegreya', serif;
   text-shadow: 1px 1px rgba(0%,0%,0%, 0.3), 1px 1px rgba(0%,0%,0%, 0.3), 1px 1px rgba(0%,0%,0%, 0.3), 1px 1px rgba(0%,0%,0%, 0.3);
-}
-
-.blocks {
-  height: 100vh;
 }
 
 .blocks .container .row div {
