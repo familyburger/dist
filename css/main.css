@@ -739,10 +739,6 @@ border-radius: 4px;
 display: none;
 }
 
-.containerCarousel{
-margin-top: 104px;
-}
-
   @media all and (orientation:landscape) {
     .navbar {
        position: absolute;
@@ -830,10 +826,6 @@ margin-top: 104px;
   
   .carousel-inner ~ a[class] {
   display: none;
-  }
-  
-  .containerCarousel{
-  margin-top: 104px;
   }
   
   @media all and (orientation:landscape) {
