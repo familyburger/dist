@@ -36,6 +36,10 @@ background-size: 75px 75px;
 
 .content-grid-container {
   display: block;
+  margin-top: 105px;
+  background-image: url("../svg/i-like-food.svg");
+  background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
+  background-size: 75px 75px;
   overflow: hidden;  
 }
 
@@ -91,7 +95,7 @@ top: -12px;
 }
 
 .blocks {
-
+  height: 100vh;
 }
 
 .blocks .container .row div {
@@ -530,12 +534,8 @@ color: rgba(94.1%, 28.4%, 10.2%, 1);
   }
 }
 
-.containerCarousel {
-
-}
-
-#contentWrap {
-  margin: 50px 0px;
+.carouselContainer {
+margin-bottom: 50px;
 }
 
 #myCarousel {
