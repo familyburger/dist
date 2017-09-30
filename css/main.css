@@ -85,6 +85,16 @@ top: -12px;
   text-shadow: 1px 1px rgba(0%,0%,0%, 0.3), 1px 1px rgba(0%,0%,0%, 0.3), 1px 1px rgba(0%,0%,0%, 0.3), 1px 1px rgba(0%,0%,0%, 0.3);
 }
 
+.wrapCarousel {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.blocks {
+  margin: 50px  0px;
+}
+
 .blocks .container .row div {
   height: 350px;
   padding-right: 0px; 
