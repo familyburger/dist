@@ -24,23 +24,12 @@ text-shadow: 1px 1px rgba(0%,0%,0%, 0.3), 1px 1px rgba(0%,0%,0%, 0.3), 1px 1px r
 }
 
 .grid-container {
-display: grid;
--ms-display: grid;
 min-height: 100vh; 
 overflow: hidden;
 margin-top: 105px;
 background-image: url("../svg/i-like-food.svg");
 background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
 background-size: 75px 75px;
-}
-
-.content-grid-container {
-  display: block;
-  margin-top: 105px;
-  background-image: url("../svg/i-like-food.svg");
-  background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
-  background-size: 75px 75px;
-  overflow: hidden;  
 }
 
 .navbar {
