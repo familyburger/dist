@@ -1,6 +1,6 @@
 $(document).ready(function () {
 let offsetButton = (function () {
-let scrollOffset = document.getElementById('contentWrap').offsetTop;
+let scrollOffset = document.getElementById('blocksWrap').offsetTop;
 return scrollOffset;
 });
 window.onresize = offsetButton;

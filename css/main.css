@@ -40,14 +40,6 @@ background-size: 75px 75px;
   overflow: hidden;  
 }
 
-#contentWrap {
-  grid-row: 2;
-}
-
-.containerCarousel {
-  grid-row: 1;
-}
-
 .navbar {
 background-image: url("../svg/i-like-food.svg");
 background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
@@ -98,7 +90,7 @@ top: -12px;
   font-family: 'Alegreya', serif;
 }
 
-.indexContent .container .row div {
+.blocks .container .row div {
   height: 350px;
   padding-right: 0px; 
   padding-left: 0px; 
@@ -312,30 +304,6 @@ animation-delay:-0.5s;
 .arrow-down path.a3 {	
 animation-delay:0s;
 -webkit-animation-delay:0s; /* Safari 和 Chrome */
-}
-
-.indexContent .container .row:first-of-type {
-  padding-top: 8.33333333%;
-}
-
-.indexContent .container .row:last-of-type {
-  padding-bottom: 8.33333333%;
-}
-
-.indexContent .container .row:first-of-type div[class*="col"]:first-of-type {
- 
-}
-
-.indexContent .container .row:first-of-type div[class*="col"]:last-of-type {
-
-}
-
-.indexContent .container .row:last-of-type div[class*="col"]:first-of-type {
-
-}
-
-.indexContent .container .row:last-of-type div[class*="col"]:last-of-type {
-
 }
 
 .nav-sign {
@@ -558,7 +526,14 @@ color: rgba(94.1%, 28.4%, 10.2%, 1);
   }
 }
 
+.containerCarousel {
+ display: flex;
+ order: 1;
+}
+
 #myCarousel {
+display: flex;
+order: 1;
 -webkit-box-shadow: inset 0px -1px 1px 1px rgba(0, 0, 0, 0.2);
 box-shadow: inset 0px -1px 1px 1px rgba(0, 0, 0, 0.2);
 }
@@ -612,6 +587,13 @@ visibility: hidden;
   background-size: cover; 
 }
 
+#blocksWrap {
+  display: flex;
+  margin: 0 auto;
+  padding: 5% 0px;
+  order: 2;
+}
+
 footer {
 position: relative;
 overflow: hidden;
@@ -634,6 +616,10 @@ align-items: center;
 -webkit-box-pack: end;
 -ms-flex-pack: end;
 justify-content: flex-end;
+}
+
+footer p {
+letter-spacing: 0.6px;
 }
 
 .social {
