@@ -20,7 +20,8 @@ box-sizing: border-box;
 font-family: 'Alegreya Sans';
 font-weight: bold;
 letter-spacing: 1px;
-text-shadow: 1px 1px rgba(0%,0%,0%, 0.3), 1px 1px rgba(0%,0%,0%, 0.3), 1px 1px rgba(0%,0%,0%, 0.3), 1px 1px rgba(0%,0%,0%, 0.3);
+text-shadow: 0px 1px 0px rgba(0%,0%,0%, 0.3), 1px 0px 0px rgba(0%,0%,0%, 0.3), 1px 2px 1px rgba(0%,0%,0%, 0.3),
+2px 1px 1px rgba(0%,0%,0%, 0.3);
 }
 
 .grid-container {
@@ -93,7 +94,8 @@ top: -12px;
   display: -ms-flexbox;
   display: flex;
   font-family: 'Alegreya', serif;
-  text-shadow: 1px 1px rgba(0%,0%,0%, 0.3), 1px 1px rgba(0%,0%,0%, 0.3), 1px 1px rgba(0%,0%,0%, 0.3), 1px 1px rgba(0%,0%,0%, 0.3);
+  text-shadow:0px 1px 0px rgba(0%,0%,0%, 0.3), 1px 0px 0px rgba(0%,0%,0%, 0.3), 1px 2px 1px rgba(0%,0%,0%, 0.3),
+  2px 1px 1px rgba(0%,0%,0%, 0.3);
 }
 
 .wrapCarousel {
