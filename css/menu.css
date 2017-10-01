@@ -55,6 +55,7 @@ background-image: url(../svg/drop-down-arrow.svg);
 background-position: 90% 52%;
 background-repeat: no-repeat;
 background-color:rgba(94.1%, 28.4%, 10.2%, 0.9);
+-webkit-box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
 box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
 -moz-box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
 border: 1px solid rgba(96.4%, 82.5%, 47.7%, 0.9);
@@ -72,6 +73,7 @@ background: rgba(94.1%, 28.4%, 10.2%, 0.9);
 }
 
 .row  img:hover {
+-webkit-transform: scale(1.04);
 transform: scale(1.04);
 }
 
@@ -218,6 +220,7 @@ margin: 0;
 }
 
 .row  img:hover {
+-webkit-transform: scale(1.06);
 transform: scale(1.06);
 }
 
