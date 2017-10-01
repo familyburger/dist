@@ -104,6 +104,10 @@ top: -12px;
   order: 2;
 }
 
+.blocks {
+  margin: 50px 0px;
+}
+
 .blocks .container .row div {
   height: 350px;
   padding-right: 0px; 
