@@ -145,9 +145,19 @@ text-align: center;
 margin-left: 50px;
 margin-top: 5px;
 padding: 0px 10px;
+padding-right: 20px;
 font-size: 1.6em;
 line-height: 1.6em;
 text-shadow: 1px 1px rgba(0%,0%,0%, 0.5), 2px 1px rgba(0%,0%,0%, 0.4), 3px 1px rgba(0%,0%,0%, 0.3), 0px -1px 5px rgba(255, 255, 255, 0.25), 0px 1px 5px rgba(255, 255, 255, 0.25);
+}
+
+.modal-body > .container > .row > div > h2 > b::after {
+  content: "";
+  display: block;
+  padding: 2px 0;
+  line-height: 1px;
+  margin-bottom: -25px;
+  border-top: 2px dashed #000; 
 }
 
 .modal-header {
