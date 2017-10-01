@@ -54,6 +54,12 @@ hr {
     margin: 0px 0px 59px 0px;
 }
 
+.info-window h3,.info-window h4  {
+    font-family: 'Alegreya Sans';
+    font-weight: 900;
+    text-align: center;
+}
+
 .map-container:before, .map-container:after, #map:before, #map:after {
     content: '';
     position: absolute;
