@@ -333,6 +333,10 @@ label[for="comment"] {
         width: 100%;
       }
 
+      .container #contactForm .button--split-effect.button--send {
+        margin: 42px 0 25px 0;
+    }
+
         @media all and (orientation:landscape) {
             .navbar {
                position: absolute;
@@ -376,6 +380,14 @@ main address .btn-block {
     display: inline-block;
     width: 100%;
   }
+
+  .container #contactForm .button--split-effect.button--send {
+    margin: 42px 0 25px 0;
+}
+
+address .btn-vk {
+    margin-bottom: 20px;
+}
 
   @media all and (orientation:landscape) {
     .navbar {
