@@ -385,12 +385,8 @@ main address .btn-block {
     }
 }
 
-@media all and (max-width: 335px) {
+@media all and (max-width: 350px) {
     address .btn-facebook p, address .btn-vk p  {
-        font-size: 5vmin;
-        }
-        address p  {
-            font-size: 5vmin;
-        }   
-        
+        font-size: 4.8vmin;
+        }      
 }
