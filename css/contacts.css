@@ -334,7 +334,7 @@ label[for="comment"] {
       }
 
       .container #contactForm .button--split-effect.button--send {
-        margin: 42px 0 25px 0;
+        margin: 24px 0 25px 0;
     }
 
         @media all and (orientation:landscape) {
@@ -386,7 +386,7 @@ main address .btn-block {
 }
 
 address .btn-vk {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
   @media all and (orientation:landscape) {
