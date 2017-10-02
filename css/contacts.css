@@ -15,10 +15,6 @@ label[for="comment"] {
     margin-top: 25px;
  }
 
-input[name="name"],input[name="email"] {
-
-}
-
  address .btn-facebook p, address .btn-vk p {
      display: inline;
      margin: 0;
@@ -183,7 +179,6 @@ background-color: white;
 }
 
 .container #contactForm .button {
-
 background-color:rgba(94.1%, 28.4%, 10.2%, 1);
 color: rgba(92.2%, 89%, 80.4%, 1);
 width: 35%;
@@ -388,4 +383,14 @@ main address .btn-block {
        top: 0px;
     }
     }
+}
+
+@media all and (max-width: 335px) {
+    address .btn-facebook p, address .btn-vk p  {
+        font-size: 5vmin;
+        }
+        address p  {
+            font-size: 5vmin;
+        }   
+        
 }
