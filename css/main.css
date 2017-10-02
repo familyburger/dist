@@ -296,6 +296,14 @@ svg {
   display: inline-block;
 }
 
+.btn-vk, .btn-facebook {
+  color: rgba(92.2%, 89%, 80.4%, 1)
+}
+
+.btn-vk:hover, address .btn-facebook:hover {
+  color: white;
+}
+
 .arrow-down path {
 stroke: rgba(255%, 255%, 255%, 1);
 fill: transparent;

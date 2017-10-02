@@ -2,6 +2,10 @@
 height: 100%;
 }
 
+.grid-container {
+  display: block;
+}
+
 .container p {
     font-size: 1.5em;
 }
@@ -11,14 +15,61 @@ label[for="comment"] {
     margin-top: 25px;
  }
 
+input[name="name"],input[name="email"] {
+
+}
+
+ address .btn-facebook p, address .btn-vk p {
+     display: inline;
+     margin: 0;
+     padding: 0;
+     padding: 0px 12px 0px 0px;
+}
+
+address .btn-vk p{ 
+    padding: 0px 70px 0px 0px;
+}
+
 address p span {
     display: block;
     margin: 25px 0 25px 0;
     letter-spacing: 1px;
 }
 
+address .btn-social>:first-child {
+    top: -3px;
+}
+
+address .btn {
+    padding: 2px 0px 0px 44px;
+}
+
+address .btn-block + .btn-block {
+    margin-top: 15px;
+}
+
+address .btn-facebook {
+    -webkit-box-shadow: 0px 2px 5px rgba(0%, 0%, 0%, 0.3);
+    box-shadow: 0px 2px 5px rgba(0%, 0%, 0%, 0.3);
+}
+
+address .btn-block {
+    display: inline-block;
+    width: auto;
+}
+
+address .btn-vk{
+    margin-bottom: 46px;
+    -webkit-box-shadow: 0px 2px 5px rgba(0%, 0%, 0%, 0.3);
+    box-shadow: 0px 2px 5px rgba(0%, 0%, 0%, 0.3);
+}
+
+address {
+margin-bottom: 0px;
+}
+
 .container #contactForm .button--split-effect.button--send {
-    margin: 35px 0 45px 0;
+    margin: 42px 0 45px 0;
 }
 
 .container h1 {
@@ -132,13 +183,18 @@ background-color: white;
 }
 
 .container #contactForm .button {
-font-size: 1.2em;
+
 background-color:rgba(94.1%, 28.4%, 10.2%, 1);
 color: rgba(92.2%, 89%, 80.4%, 1);
 width: 35%;
 border: 1px solid rgba(0%,0%,0%, 0.3);
 -webkit-box-shadow: 0px 2px 5px rgba(0%, 0%, 0%, 0.3);
 box-shadow: 0px 2px 5px rgba(0%, 0%, 0%, 0.3);
+border-radius: 5px;
+}
+
+.button p {
+    margin: 0px;
 }
 
 .container #contactForm  .button {
@@ -167,6 +223,7 @@ box-shadow: 0px 2px 5px rgba(0%, 0%, 0%, 0.3);
     width: calc(100% + 6px);
     height: calc(100% + 6px);
     border: 1px solid rgba(94.1%, 28.4%, 10.2%, 1);
+    border-radius: 5px;
     -webkit-transform: translate(0,0);
     transform: translate(0,0);
     opacity: 0;
@@ -224,6 +281,10 @@ margin: 35px 0 45px 0;
     font-size: 1.3em;
 }
 
+address .btn-vk p{ 
+    padding: 0px 64px 0px 0px;
+}
+
 .sm-md-line {
     display: block;
    }
@@ -266,7 +327,16 @@ label[for="comment"] {
 
     #email-error {
         font-size: 1em;
-        }
+    }
+
+    address .btn-vk {
+        margin-bottom: 10px;
+    }
+
+    main address .btn-block {
+        display: inline-block;
+        width: 100%;
+      }
 
         @media all and (orientation:landscape) {
             .navbar {
@@ -280,6 +350,10 @@ label[for="comment"] {
 .sm-md-line {
     display: block;
    }
+
+   address {
+    margin-bottom: -10px;
+}
 
 main .container {
     padding-right: 8.33333333%;
@@ -302,6 +376,11 @@ main .container {
 .hrBottom {
     margin: 0px 0px 25px 0px;
 }
+
+main address .btn-block {
+    display: inline-block;
+    width: 100%;
+  }
 
   @media all and (orientation:landscape) {
     .navbar {
