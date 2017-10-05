@@ -3,7 +3,7 @@ let offsetButton = (function () {
 let scrollOffset = document.getElementById('contentWrap').offsetTop;
 return scrollOffset;
 });
-var scrollElm = document.scrollingElement;
+let scrollElm = document.scrollingElement;
 window.onresize = offsetButton;
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
@@ -26,7 +26,7 @@ $('#scrollTop').on('click', function(event){
     return false;
 });
 document.getElementsByClassName('navbar-toggle')[0].onclick = function () {
-    var scrolledNav = document.getElementsByClassName('navbar')[0];
+    let scrolledNav = document.getElementsByClassName('navbar')[0];
     if (this.getAttribute("aria-expanded") === 'false' || this.getAttribute("aria-expanded") === null && !scrolledNav.classList.contains("activeBar")) {
         scrolledNav.classList.add("activeBar");
         scrolledNav.style.height = 'auto';
