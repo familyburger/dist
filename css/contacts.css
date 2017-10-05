@@ -1,4 +1,4 @@
-.push {
+    .push {
     height: 100%;
     }
     
@@ -10,20 +10,12 @@
         font-size: 1.5em;
     }
     
-    #scrollTop {
-        bottom: 125px;
-        right: -5px;
-        z-index: 999;
-        padding: 30px;
-        margin: 25px 25px 25px 25px;
-    }
-
     label[for="comment"] {
         font-size: 1.5em;
         margin-top: 25px;
      }
     
-     address .btn-facebook p, address .btn-vk p {
+    address .btn-facebook p, address .btn-vk p {
          display: inline;
          margin: 0;
          padding: 0;
