@@ -10,6 +10,14 @@
         font-size: 1.5em;
     }
     
+    #scrollTop {
+        bottom: 125px;
+        right: -5px;
+        z-index: 999;
+        padding: 30px;
+        margin: 25px 25px 25px 25px;
+    }
+    
     label[for="comment"] {
         font-size: 1.5em;
         margin-top: 25px;
@@ -307,13 +315,6 @@
             margin: 24px 0 25px 0;
         }
         
-        #scrollTop {
-            bottom: 125px;
-            right: -5px;
-            z-index: 999;
-            padding: 30px;
-            margin: 25px 25px 25px 25px;
-        }
     }
     
     @media all and (max-width: 767px) and (min-width: 577px) { 
@@ -325,14 +326,6 @@
         margin-bottom: -10px;
     }
     
-    #scrollTop {
-        bottom: 125px;
-        right: -5px;
-        z-index: 999;
-        padding: 30px;
-        margin: 25px 25px 25px 25px;
-    }
-
     main .container {
         padding-right: 8.33333333%;
         padding-left: 8.33333333%;
