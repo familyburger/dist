@@ -276,6 +276,10 @@ margin: 35px 0 45px 0;
         margin: 42px 0 27px 0;
 }
 
+#scrollTop {
+    bottom: 140px;
+}
+
 .container p {
     margin: 0;
     font-size: 1.3em;
@@ -346,6 +350,10 @@ label[for="comment"] {
 .container #contactForm .button--split-effect.button--send {
         margin: 42px 0 30px 0;
     }
+
+#scrollTop {
+    bottom: 140px;
+}
 
 main > .container {
         border-bottom:  none;
