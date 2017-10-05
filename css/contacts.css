@@ -281,6 +281,11 @@
         font-size: 24px;
      }
     
+        .hrBottom {
+            margin: 0px 0px 25px 0px;
+        }
+    
+      
       #comment-error {
         font-size: 0.9em;
         }
@@ -328,6 +333,10 @@
         height: calc(100vw * 9/16);
         position: initial!important;
         overflow: initial!important;
+    }
+    
+    .hrBottom {
+        margin: 0px 0px 25px 0px;
     }
     
     main address .btn-block {
