@@ -197,7 +197,60 @@ border-radius: 5px;
     position: relative;
 }
 
+.container #contactForm .button--split-effect.button--send,.container #contactForm .button--split-effect.button--send::before {
+    opacity: 1;
+    -webkit-transition-property: -webkit-box-shadow;
+    transition-property: -webkit-box-shadow;
+    transition-property: box-shadow;
+    transition-property: box-shadow, -webkit-box-shadow;
+    will-change: box-shadow;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s;
+}
 
+.container #contactForm .button--split-effect.button--send::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    border: 1px solid rgba(94.1%, 28.4%, 10.2%, 1);
+    border-radius: 5px;
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0);
+    opacity: 0;
+    -webkit-transition-property: opacity,-webkit-transform;
+    transition-property: opacity,-webkit-transform;
+    transition-property: transform,opacity;
+    transition-property: transform,opacity,-webkit-transform;
+    will-change: transform,opacity;
+}
+
+.container #contactForm .button--split-effect.button--send:focus,.container #contactForm .button--split-effect.button--send:hover {
+    background-color: rgba(94.1%, 28.4%, 10.2%, 1);
+    border-color: rgba(94.1%, 28.4%, 10.2%, 1);
+    -webkit-box-shadow: 6px 6px rgba(94.1%, 28.4%, 10.2%, 0.5);
+    box-shadow: 6px 6px rgba(94.1%, 28.4%, 10.2%, 0.5);
+    color: rgba(255%, 255%, 255%, 1);
+}
+
+.container #contactForm .button--split-effect.button--send:focus::before,.container #contactForm .button--split-effect.button--send:hover::before {
+    -webkit-transform: translate(-6px,-6px);
+    transform: translate(-6px,-6px);
+    opacity: 1;
+}
+
+.container #contactForm .button--split-effect.button--send:active {
+    background-color: rgba(94.1%, 28.4%, 10.2%, 1);
+    border-color: rgba(94.1%, 28.4%, 10.2%, 1);
+}
+
+.container #contactForm .button--split-effect.button--send:active::before {
+    border-color: rgba(94.1%, 28.4%, 10.2%, 1);
+}
 
 .container .social {
 text-align: center;
