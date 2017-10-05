@@ -273,11 +273,7 @@ margin: 35px 0 45px 0;
 
 @media all and (max-width: 576px) { 
 .container #contactForm .button--split-effect.button--send {
-        margin: 42px 0 27px 0;
-}
-
-#scrollTop {
-    bottom: 140px;
+        margin: 42px 0 28px 0;
 }
 
 .container p {
@@ -286,6 +282,7 @@ margin: 35px 0 45px 0;
 }
 
 main > .container {
+    margin-bottom: 0px;
     border-bottom:  none;
  }
  
@@ -351,11 +348,8 @@ label[for="comment"] {
         margin: 42px 0 30px 0;
     }
 
-#scrollTop {
-    bottom: 140px;
-}
-
 main > .container {
+        margin-bottom: 0px;
         border-bottom:  none;
     }
 
