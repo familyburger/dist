@@ -76,13 +76,11 @@ float: right;
 
 .flex-container .scrolled-nav {
   height: 65px;
-  line-height: 65px;
   min-height: 0px;
 }
 
 .grid-container .scrolled-nav {
   height: 65px;
-  line-height: 65px;
   min-height: 0px;
 }
 
@@ -713,6 +711,10 @@ margin-right: 15px;
 
 /* media queries*/
 @media all and (max-width: 767px) and (min-width: 577px) { 
+  .scrolled-nav .container .navbar-nav>li>a {
+    padding-top: 1.7em;
+  }
+  
 .navbar {
 background-image: url("../svg/i-like-food.svg");
 background-color: rgba(96.4%, 82.5%, 47.7%, 0.9);
@@ -799,6 +801,10 @@ display: none;
 }
 
 @media all and (max-width: 576px) { 
+  .scrolled-nav .container .navbar-nav>li>a {
+    padding-top: 1.7em;
+  }
+
   .navbar {
   background-image: url("../svg/i-like-food.svg");
   background-color: rgba(96.4%, 82.5%, 47.7%, 0.9);
