@@ -100,8 +100,7 @@
     .hrBottom {
        border-top:  2px solid rgba(94.1%, 28.4%, 10.2%, 0.7);
        height: 59px;
-  
-       margin: 0;
+       margin: 0px;
     }
     
     .info-window h3,.info-window h4  {
