@@ -98,7 +98,9 @@
     }
     
     .hrBottom {
-        margin: 0px 0px 59px 0px;
+       border-top: none;
+       height: 59px;
+       border-top: 2px solid rgba(94.1%, 28.4%, 10.2%, 0.7);
     }
     
     .info-window h3,.info-window h4  {
@@ -312,7 +314,9 @@
      }
     
         .hrBottom {
-            margin: 0px 0px 25px 0px;
+            border-top: none;
+            height: 25px;
+            border-bottom: 2px solid rgba(94.1%, 28.4%, 10.2%, 0.7);
         }
     
       
@@ -367,7 +371,9 @@
     }
     
     .hrBottom {
-        margin: 0px 0px 25px 0px;
+        border-top: none;
+        height: 25px;
+        border-bottom: 2px solid rgba(94.1%, 28.4%, 10.2%, 0.7);
     }
     
     main address .btn-block {
