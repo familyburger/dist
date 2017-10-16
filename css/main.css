@@ -85,7 +85,7 @@ float: right;
 }
 
 .scrolled-nav .navbar-toggle {
-top: 13px;
+  top: 13px;
 }
 
 .scrolled-nav .navbar-header .navbar-brand {
@@ -797,7 +797,11 @@ border-radius: 4px;
 .carousel-inner ~ a[class] {
 display: none;
 }
-
+@media all and (orientation: landscape) {
+  .navbar {
+    position: absolute;
+  }
+  }
 }
 
 @media all and (max-width: 576px) { 
@@ -884,10 +888,14 @@ display: none;
   .carousel-inner ~ a[class] {
   display: none;
   }
-
+@media all and (orientation:landscape) {
+.navbar {
+  position: absolute;
+}
+}
 }
 
-@media (max-width: 991px) { 
+@media all and (max-width: 991px) { 
   .arrow_box_right {
     display: none;
   }
@@ -1045,5 +1053,5 @@ display: none;
   }
 }
 
-@media (min-width: 1200px) { }
+@media all and (min-width: 1200px) { }
 
