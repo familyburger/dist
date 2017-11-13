@@ -47,7 +47,7 @@ background-size: 75px 75px;
   overflow: hidden;
   margin-top: 105px;
   background-image: url("../svg/i-like-food.svg");
-  background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
+  background-color: hsla(43, 86%, 72%, 0.851);
   background-size: 75px 75px;
 }
 
@@ -238,7 +238,7 @@ color: rgba(94.1%, 28.4%, 10.2%, 1);
   height: 2px;
   bottom: 7px;
   left: 0;
-  background-color: rgba(94.1%, 28.4%, 10.2%, 1);
+  background-color: #ef481a;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -265,9 +265,10 @@ color: rgba(94.1%, 28.4%, 10.2%, 1);
   
   .sign {
   background-image: url(../images/sign.png);
-  background-size: contain;
-  width: 1.55em;
-  height: 1.55em;
+  filter: drop-shadow(0px 0px 1px rgba(0%,0%,0%, 0.8));
+  background-size: cover;
+  width: 7.5em;
+  height: 44px;
   position: relative;
   top: -12px;
   }
@@ -305,7 +306,7 @@ color: rgba(94.1%, 28.4%, 10.2%, 1);
   
   .arrow_box_right {
     position: relative;
-    background-color:rgba(94.1%, 28.4%, 10.2%, 0.9);
+    background-color:hsla(13, 87%, 52%, 0.902);
     -webkit-box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
@@ -776,6 +777,7 @@ background-color: transparent;
 background-image: none;
 border: 1px solid transparent;
 border-radius: 4px;
+filter: drop-shadow(0px 0px 1px rgba(0%,0%,0%, 0.8));
 }
 
 .navbar-inverse .navbar-nav>li>a:after {
@@ -863,6 +865,7 @@ display: none;
       background-image: none;
       border: 1px solid transparent;
       border-radius: 4px;
+      filter: drop-shadow(0px 0px 1px rgba(0%,0%,0%, 0.8));
   }
   
   .navbar-inverse .navbar-nav>li>a:after {
