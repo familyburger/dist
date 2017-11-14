@@ -25,10 +25,9 @@ $(document).ready(function () {
         event.stopPropagation();
         event.preventDefault();
         $('html,body').stop().animate({
-            scrollTop: '0px'
+            scrollTop: 0
         }, 'slow');
     });
-
     document.getElementsByClassName('navbar-toggle')[0].onclick = function () {
         let scrolledNav = document.getElementsByClassName('navbar')[0];
         if (this.getAttribute("aria-expanded") === 'false' || this.getAttribute("aria-expanded") === null && !scrolledNav.classList.contains("activeBar")) {
