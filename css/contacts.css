@@ -50,6 +50,8 @@
     }
 
     address .btn {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;  
         width: 323px;
     }
@@ -68,6 +70,7 @@
     address .btn-instagram,
     address .btn-yt {
       color: #ebe2cd;
+      -webkit-filter: drop-shadow(0px 0px 1px rgba(0%, 0%, 0%, 0.8));
       filter: drop-shadow(0px 0px 1px rgba(0%, 0%, 0%, 0.8));
       border: 1px solid rgba(0, 0, 0, 0.2);
       margin-left: 0px;
@@ -220,6 +223,7 @@
         color: rgba(92.2%, 89%, 80.4%, 1);
         width: 35%;
         border: 1px solid rgba(0%, 0%, 0%, 0.3);
+        -webkit-filter: drop-shadow(0px 0px 1px rgba(0%, 0%, 0%, 0.8));
         filter: drop-shadow(0px 0px 1px rgba(0%, 0%, 0%, 0.8));
         border-radius: 5px; 
         font-size: 1.5em;

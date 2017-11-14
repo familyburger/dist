@@ -272,6 +272,7 @@ a:focus {
 
 .sign {
   background-image: url(../images/sign.png);
+  -webkit-filter: drop-shadow(0px 0px 1px rgba(0%, 0%, 0%, 0.8));
   filter: drop-shadow(0px 0px 1px rgba(0%, 0%, 0%, 0.8));
   background-size: cover;
   width: 7.5em;
@@ -490,6 +491,7 @@ svg {
 .btn-instagram,
 .btn-yt {
   color: #ebe2cd;
+  -webkit-filter: drop-shadow(0px 0px 1px rgba(0%, 0%, 0%, 0.8));
   filter: drop-shadow(0px 0px 1px rgba(0%, 0%, 0%, 0.8));
   border: 1px solid rgba(0, 0, 0, 0.2);
   margin-left: 10px;
@@ -507,7 +509,7 @@ address .btn-facebook:hover {
 
 .btn-vk:hover {
   color: white;
-  background-color:#2672ec'
+  background-color:#2672ec;
 }
 
 .btn-instagram:hover {
@@ -579,6 +581,12 @@ address .btn-facebook:hover {
   display: inline-block;
   -webkit-box-shadow: -5px 2px 0 0 rgba(255%, 255%, 255%, 0.8) inset;
   box-shadow: -5px 2px 0 0 rgba(255%, 255%, 255%, 0.8) inset;
+}
+
+.offsetScroll {
+  position: relative;
+  right: -45px;
+  top: 0;
 }
 
 #scrollTop {
@@ -824,6 +832,7 @@ footer p {
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
+    -webkit-filter: drop-shadow(0px 0px 1px rgba(0%, 0%, 0%, 0.8));
     filter: drop-shadow(0px 0px 1px rgba(0%, 0%, 0%, 0.8));
   }
   .navbar-inverse .navbar-nav>li>a:after {
@@ -898,6 +907,7 @@ footer p {
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
+    -webkit-filter: drop-shadow(0px 0px 1px rgba(0%, 0%, 0%, 0.8));
     filter: drop-shadow(0px 0px 1px rgba(0%, 0%, 0%, 0.8));
   }
   .navbar-inverse .navbar-nav>li>a:after {
