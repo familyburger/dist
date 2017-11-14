@@ -7,7 +7,7 @@ let scrollElm = document.scrollingElement;
 window.onresize = offsetButton;
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
-    console.log(offsetButton())
+    console.log(offsetButton() + ' ' + scrollElm.scrollTop)
     if (scrollElm.scrollTop > offsetButton()) {
         document.getElementById('scrollTop').style.display = "block";
     }
@@ -23,7 +23,7 @@ function scrollFunction() {
 }
 $('#scrollTop').on('click', function(event){
     event.stopPropagation();
-    $('html,body').stop().animate({ scrollTop: 0 }, 'slow');
+    $('body').stop().animate({ scrollTop: 0 }, 'slow');
     return false;
 });
 document.getElementsByClassName('navbar-toggle')[0].onclick = function () {
