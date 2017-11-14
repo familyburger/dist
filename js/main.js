@@ -24,7 +24,7 @@ $(document).ready(function () {
     $('#scrollTop').on('click', function (event) {
         event.stopPropagation();
         event.preventDefault();
-        $('html,body').stop().animate({
+        $('html,body').animate({
             scrollTop: 0
         }, 'slow');
     });
