@@ -28,7 +28,7 @@ body {
 
 .grid-container {
   display: grid;
-  min-height: 100vh;
+  min-height: 100%;
   overflow: hidden;
   margin-top: 105px;
   background-image: url("../svg/i-like-food.svg");
@@ -40,7 +40,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 100vh;
+  min-height: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -596,11 +596,6 @@ address .btn-facebook:hover {
   border-radius: 50%;
   -webkit-box-shadow: 0px 1px 5px 1px rgba(0%, 0%, 0%, 0.3);
   box-shadow: 0px 1px 5px 1px rgba(0%, 0%, 0%, 0.3);
-}
-
-.offsetScroll {
-  position: relative;
-  right: -45px;
 }
 
 #scrollTop:hover {
