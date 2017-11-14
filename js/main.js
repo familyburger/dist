@@ -21,10 +21,13 @@ function scrollFunction() {
         $('.navbar').removeClass('scrolled-nav');
     } 
 }
+jQuery.easing.quart = function (x, t, b, c, d) {
+    return -c * ((t=t/d-1)*t*t*t - 1) + b;
+};
 $('#scrollTop').on('click', function(event){
     event.stopPropagation();
-    $('body').stop().animate({ scrollTop: 0 }, 'slow');
-    return false;
+                    jQuery('html,body').animate({ scrollTop: 0 }, 1200, 'quart');
+                    return false;
 });
 document.getElementsByClassName('navbar-toggle')[0].onclick = function () {
     let scrolledNav = document.getElementsByClassName('navbar')[0];
