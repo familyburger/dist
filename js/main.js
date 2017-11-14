@@ -7,6 +7,7 @@ let scrollElm = document.scrollingElement;
 window.onresize = offsetButton;
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
+    console.log(offsetButton())
     if (scrollElm.scrollTop > offsetButton()) {
         document.getElementById('scrollTop').style.display = "block";
     }
