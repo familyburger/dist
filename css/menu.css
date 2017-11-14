@@ -102,10 +102,6 @@ width: 90%;
 filter: drop-shadow(1px 3px 1px rgba(255%, 255%, 255%, 0.3));
 }
 
-.modal{
-  overflow: visible !important;
-}
-
 .modal-fullscreen {
 background: rgba(0%,0%,0%, 0.5);
 }
