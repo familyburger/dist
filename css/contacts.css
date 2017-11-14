@@ -5,7 +5,10 @@
     .grid-container {
         display: block;
     }
-
+    .container h1 {
+        position: relative;
+        font-size: 1.8em;
+    }
     .container p {
         font-size: 1.5em;
     }
