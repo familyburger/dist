@@ -6,6 +6,7 @@ $(function () {
             center: location,
             zoom: 16,
             panControl: false,
+            gestureHandling: 'greedy',
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             styles: [{
                 "elementType": "geometry",
