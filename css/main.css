@@ -65,11 +65,6 @@ a:focus {
   outline-offset: none;
 }
 
-header {
-  overflow: hidden;
-  margin: 0;
-}
-
 .container-fluid>.navbar-collapse,
 .container-fluid>.navbar-header,
 .container>.navbar-collapse,

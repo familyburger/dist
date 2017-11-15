@@ -229,20 +229,7 @@ $(function () {
             map: map,
             icon: markerImage
         });
-        var contentString = '<div class="info-window">' +
-            '<h3>FamilyBurger</h3>' +
-            '<div class="info-content">' +
-            '<h4>Ласкаво просимо!</h4>' +
-            '</div>' +
-            '</div>';
-        var infowindow = new google.maps.InfoWindow({
-            content: contentString,
-            maxWidth: 400
-        });
-
-        marker.addListener('click', function () {
-            infowindow.open(map, marker);
-        });
+       
     }
 
     google.maps.event.addDomListener(window, 'load', initMap);
