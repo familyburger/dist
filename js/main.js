@@ -1,4 +1,4 @@
-window.onload = function () {
+$(document).ready(function () {
     let offsetButton = (function () {
         let scrollOffset = document.getElementById('contentWrap').offsetTop;
         return scrollOffset;
@@ -23,11 +23,11 @@ window.onload = function () {
     }
 
     $('#scrollTop').on('click', function (event) {
-        event.stopPropagation();
-        event.preventDefault();
         $('html,body').stop().animate({
             scrollTop: 0
         }, 'slow');
+        event.stopPropagation();
+        event.preventDefault();
     });
 
     document.getElementsByClassName('navbar-toggle')[0].onclick = function () {
@@ -39,4 +39,4 @@ window.onload = function () {
             scrolledNav.classList.remove("activeBar");
         }
     }
-};
+});
