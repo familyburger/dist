@@ -115,7 +115,6 @@ function addImage() {
             description.innerHTML = 'Вибачте,товар відсутній';
     }
 }
-
 $('#selectMenu').change(function(event) {
     let $option = $('#selectMenu option:selected').text();
     let str = '';
@@ -135,6 +134,7 @@ $('#selectMenu').change(function(event) {
         str = '#elseDiv';
         scrollToDiv (100,str,'slow');
     }
+    $(this).val( 'burger' );
 });
 
 function scrollToDiv (targetOffset,targetId,speed) {
@@ -142,6 +142,5 @@ function scrollToDiv (targetOffset,targetId,speed) {
     $('html, body').stop().animate({
         scrollTop: target.offset().top
        -targetOffset}, speed);
-       $('#selectMenu').val( 'burger' );
 }
 });
