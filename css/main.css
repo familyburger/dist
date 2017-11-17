@@ -681,11 +681,11 @@ address .btn-facebook:hover {
 }
 
 .high-quality {
-  height: 100%;
-  width: 100%;
+  display: none;
   object-fit: cover;
   object-position: center center;
-  visibility: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 .carousel-inner> :nth-child(1)>.fill {
