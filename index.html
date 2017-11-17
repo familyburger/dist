@@ -35,18 +35,6 @@
     <link rel="stylesheet" href="css/bootstrap-social.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/picturefill.min.js" async></script>
-    <script>
-    //img preloader
-    function preload(object) {
-        object.style.display = 'block';
-        let id = object.id; 
-     //   let highres = object.src;
-     //   console.log(highres)
-        let target = parseInt(id.substring(13));
-        document.getElementsByClassName('fill')[target - 1].style.backgroundImage = 'none';
- };
-     </script>
 </head>
 
 <body>
@@ -193,6 +181,7 @@
     <script src="js/jquery-2.2.4.min.js"></script>
     <script src="js/jquery.mobile.custom.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/picturefill.min.js" async></script>
     <script src="js/carousel.js"></script>
     <script src="js/main.js"></script>
 </body>
