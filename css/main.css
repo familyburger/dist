@@ -681,7 +681,6 @@ address .btn-facebook:hover {
 }
 
 .high-quality {
-  display: none;
   object-fit: cover;
   object-position: center center;
   height: 100%;
