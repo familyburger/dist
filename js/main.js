@@ -121,7 +121,7 @@ $(document).ready(function () {
         }
         
         // Scroll to section 
-        document.getElementById('scrollTop').addEventListener('click', function () {
+        document.getElementById('scrollTop').addEventListener('click', function (event) {
           event.stopPropagation();
           event.preventDefault();
           scrollIt(document.getElementsByClassName('navbar-brand')[0], 500, 'easeOutQuad', function () {
