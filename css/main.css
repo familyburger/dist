@@ -75,13 +75,11 @@ a:focus {
 }
 
 .flex-container .scrolled-nav {
-  height: 65px;
-  min-height: 0px;
+  min-height: 70px;
 }
 
 .grid-container .scrolled-nav {
-  height: 65px;
-  min-height: 0px;
+  min-height: 70px;
 }
 
 .scrolled-nav .navbar-toggle {

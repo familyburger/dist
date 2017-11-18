@@ -15,7 +15,7 @@ window.addEventListener('load', function() {
       } else {
           document.getElementById('scrollTop').style.display = "none";
       }
-      if (scrollElm.scrollTop >= 105) {
+      if (scrollElm.scrollTop >= 175) {
           $('.navbar').addClass('scrolled-nav');
       } else {
           $('.navbar').removeClass('scrolled-nav');
@@ -138,3 +138,5 @@ window.addEventListener('load', function() {
       }
   }
 },true);
+
+
