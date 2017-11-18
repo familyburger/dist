@@ -17,12 +17,12 @@
 html,
 body {
   margin: 0;
+  height: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: 'Alegreya Sans';
   font-weight: bold;
   letter-spacing: 1px;
-  background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
   text-shadow: 0px 1px 0px rgba(0%, 0%, 0%, 0.3), 1px 0px 0px rgba(0%, 0%, 0%, 0.3), 1px 2px 1px rgba(0%, 0%, 0%, 0.3), 2px 1px 1px rgba(0%, 0%, 0%, 0.3);
 }
 
@@ -31,6 +31,7 @@ body {
   min-height: 100%;
   overflow: hidden;
   margin-top: 105px;
+  background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
   background-image: url("../svg/i-like-food.svg");
   background-size: 75px 75px;
 }
@@ -40,6 +41,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   min-height: 100%;
+  background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -303,10 +305,65 @@ a:focus {
   margin: 57px 0px;
 }
 
-.blocks .container .row div {
+.blocks .container .row div[class*="arrow"] {
   height: 350px;
   padding-right: 0px;
   padding-left: 0px;
+}
+
+.blocks .container .row div[class*="col"] {
+ padding: 0;
+}
+
+.notes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.note {
+  box-shadow: 0 3px 6px rgba(0,0,0,.25);
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+  -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+  float: left;
+  border: 1px solid rgba(0,0,0,.25);
+}
+
+.sticky1 {
+
+  transform: rotate(-4.5deg);
+  -webkit-transform: rotate(-4.5deg);
+  -moz-transform: rotate(-4.5deg);
+  background-color: #CBFAFA;
+}
+
+.sticky2 {
+ 
+  transform: rotate(3.5deg);
+  -webkit-transform: rotate(3.5deg);
+  -moz-transform: rotate(3.5deg);
+  background-color: blueviolet;
+}
+
+.sticky3 {
+
+  background-color: wheat;
+}
+
+.blocks .container .row .note .pin {
+  width: 15px;
+  height: 15px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 50%, black 100%);
+  background-image: -webkit-radial-gradient(45px 45px, circle cover, yellow, black);
+  background-image: radial-gradient(yellow 50%, black 100%);
+}
+
+.blocks .container .row .note .text {
+height: 100%;
+padding: 15px;
 }
 
 .arrow_box_right {
@@ -454,20 +511,20 @@ a:focus {
   margin-top: -36px;
 }
 
-.arrow_box_down {
+.arrow_box_bottom {
   display: none;
 }
 
-.arrow_box_down {
-  display: none
-}
-
-.arrow_box_inner_down {
+.arrow_box_inner_bottom {
   display: none;
 }
 
-.arrow_box_inner_down {
-  display: none
+.arrow_box_inner_top {
+  display: none;
+}
+
+.arrow_box_top {
+  display: none;
 }
 
 .wrapper {
@@ -678,7 +735,20 @@ address .btn-facebook:hover {
   right: 0;
 }
 
+#high-quality-1 {
+  visibility: hidden;
+}
+
+#high-quality-2 {
+  visibility: hidden;
+}
+
+#high-quality-3 {
+  visibility: hidden;
+}
+
 .high-quality {
+  visibility: hidden;
   object-fit: cover;
   object-position: center center;
   height: 100%;
@@ -921,6 +991,9 @@ footer p {
   .carousel-inner~a[class] {
     display: none;
   }
+  .notes {
+   flex-direction: column;
+  }
   @media all and (orientation:landscape) {
     .navbar {
       position: absolute;
@@ -941,7 +1014,9 @@ footer p {
   .arrow_box_inner_left {
     display: none;
   }
+
   .arrow_box_inner_bottom {
+    display: block;
     position: relative;
     background-color: rgba(94.1%, 28.4%, 10.2%, 0.9);
     -webkit-box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
@@ -974,6 +1049,7 @@ footer p {
     margin-left: -36px;
   }
   .arrow_box_bottom {
+    display: block;
     position: relative;
     background-color: rgba(94.1%, 28.4%, 10.2%, 0.9);
     -webkit-box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
@@ -1006,6 +1082,7 @@ footer p {
     margin-left: -36px;
   }
   .arrow_box_top {
+    display: block;
     position: relative;
     background-color: rgba(94.1%, 28.4%, 10.2%, 0.9);
     -webkit-box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
@@ -1038,6 +1115,7 @@ footer p {
     margin-left: -36px;
   }
   .arrow_box_inner_top {
+    display: block;
     position: relative;
     background-color: rgba(94.1%, 28.4%, 10.2%, 0.9);
     -webkit-box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
