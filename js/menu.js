@@ -1,4 +1,4 @@
-window.onload = function () {
+window.addEventListener('load', function() {
 let $images = $('.product-img');
 let itemImg = Array.prototype.slice.call(document.querySelectorAll('.container .item-img'));
 for (let i = 0; i < itemImg.length; i++) {
@@ -143,4 +143,4 @@ function scrollToDiv (targetOffset,targetId,speed) {
         scrollTop: target.offset().top
        -targetOffset}, speed);
 }
-};
+},true);

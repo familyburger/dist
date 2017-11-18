@@ -1,4 +1,4 @@
-window.onload = function () {
+window.addEventListener('load', function() {
   let offsetButton = (function () {
       let scrollOffset = document.getElementById('contentWrap').offsetTop;
       return scrollOffset;
@@ -137,4 +137,4 @@ window.onload = function () {
           scrolledNav.classList.remove("activeBar");
       }
   }
-};
+},true);
