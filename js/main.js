@@ -6,7 +6,7 @@ window.addEventListener('load', function() {
   let scrollElm = document.scrollingElement;
   window.onresize = offsetButton;
   window.onscroll = function () {
-      scrollFunction()
+      scrollFunction();
   };
 
   function scrollFunction() {

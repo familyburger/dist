@@ -1,5 +1,3 @@
-/* alegreya-sans-900italic - latin_cyrillic-ext_cyrillic */
-
 @font-face {
   font-family: 'Alegreya Sans';
   font-style: italic;
@@ -17,19 +15,18 @@
 html,
 body {
   margin: 0;
+  padding: 0;
   height: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: 'Alegreya Sans';
   font-weight: bold;
-  letter-spacing: 1px;
   text-shadow: 0px 1px 0px rgba(0%, 0%, 0%, 0.3), 1px 0px 0px rgba(0%, 0%, 0%, 0.3), 1px 2px 1px rgba(0%, 0%, 0%, 0.3), 2px 1px 1px rgba(0%, 0%, 0%, 0.3);
 }
 
 .grid-container {
   display: grid;
   min-height: 100%;
-  overflow: hidden;
   margin-top: 105px;
   background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
   background-image: url("../svg/i-like-food.svg");
@@ -41,13 +38,12 @@ body {
   display: -ms-flexbox;
   display: flex;
   min-height: 100%;
+  margin-top: 105px;
   background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  overflow: hidden;
-  margin-top: 105px;
   background-image: url("../svg/i-like-food.svg");
   background-size: 75px 75px;
 }
@@ -312,7 +308,7 @@ a:focus {
 }
 
 .blocks .container .row div[class*="col"] {
- padding: 0;
+  padding: 0;
 }
 
 .notes {
@@ -323,15 +319,14 @@ a:focus {
 }
 
 .note {
-  box-shadow: 0 3px 6px rgba(0,0,0,.25);
-  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
-  -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .25);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .25);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, .25);
   float: left;
-  border: 1px solid rgba(0,0,0,.25);
+  border: 1px solid rgba(0, 0, 0, .25);
 }
 
 .sticky1 {
-
   transform: rotate(-4.5deg);
   -webkit-transform: rotate(-4.5deg);
   -moz-transform: rotate(-4.5deg);
@@ -339,7 +334,6 @@ a:focus {
 }
 
 .sticky2 {
- 
   transform: rotate(3.5deg);
   -webkit-transform: rotate(3.5deg);
   -moz-transform: rotate(3.5deg);
@@ -347,7 +341,6 @@ a:focus {
 }
 
 .sticky3 {
-
   background-color: wheat;
 }
 
@@ -362,8 +355,8 @@ a:focus {
 }
 
 .blocks .container .row .note .text {
-height: 100%;
-padding: 15px;
+  height: 100%;
+  padding: 15px;
 }
 
 .arrow_box_right {
@@ -559,12 +552,12 @@ address .btn-facebook:hover {
 
 .btn-yt:hover {
   color: white;
-  background-color:#cb2027;
+  background-color: #cb2027;
 }
 
 .btn-vk:hover {
   color: white;
-  background-color:#2672ec;
+  background-color: #2672ec;
 }
 
 .btn-instagram:hover {
@@ -992,7 +985,7 @@ footer p {
     display: none;
   }
   .notes {
-   flex-direction: column;
+    flex-direction: column;
   }
   @media all and (orientation:landscape) {
     .navbar {
@@ -1014,7 +1007,6 @@ footer p {
   .arrow_box_inner_left {
     display: none;
   }
-
   .arrow_box_inner_bottom {
     display: block;
     position: relative;
