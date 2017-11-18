@@ -15,8 +15,9 @@ window.addEventListener('load', function() {
       } else {
           document.getElementById('scrollTop').style.display = "none";
       }
-      if (scrollElm.scrollTop >= 175) {
+      if (scrollElm.scrollTop >= 105) {
           $('.navbar').addClass('scrolled-nav');
+        
       } else {
           $('.navbar').removeClass('scrolled-nav');
       }
