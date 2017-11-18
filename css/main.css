@@ -28,6 +28,7 @@ body {
 .grid-container {
   display: grid;
   margin-top: 105px;
+  min-height: 100vh;
   background-image: url("../svg/i-like-food.svg");
   background-size: 75px 75px;
 }
@@ -44,6 +45,11 @@ body {
   flex-direction: column;
   background-image: url("../svg/i-like-food.svg");
   background-size: 75px 75px;
+}
+
+header {
+  position: absolute;
+  top: 0;
 }
 
 .navbar {
@@ -902,11 +908,6 @@ footer p {
   .carousel-inner~a[class] {
     display: none;
   }
-  @media all and (orientation: landscape) {
-    .navbar {
-      position: absolute;
-    }
-  }
 }
 
 @media all and (max-width: 576px) {
@@ -982,11 +983,6 @@ footer p {
   }
   .notes {
     flex-direction: column;
-  }
-  @media all and (orientation:landscape) {
-    .navbar {
-      position: absolute;
-    }
   }
 }
 
