@@ -40,34 +40,34 @@
 <body>
     <div class="grid-container">
         <header>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html">
-                        <span class="sign"></span>
-                    </a>
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">
+                            <span class="sign"></span>
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="menu.html">Меню</a>
+                            </li>
+                            <li>
+                                <a href="#">Вакансії</a>
+                            </li>
+                            <li>
+                                <a href="contacts.html">Контакти</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a href="menu.html">Меню</a>
-                        </li>
-                        <li>
-                            <a href="#">Вакансії</a>
-                        </li>
-                        <li>
-                            <a href="contacts.html">Контакти</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+            </nav>
         </header>
         <main id="contentWrap">
             <div class="indexContent">
@@ -96,27 +96,24 @@
                     </div>
                 </section>
                 <div class="container jobs">
-                    <h1>
-                        <b>Гарячі вакансії</b>
-                        <div class="wrapper">
-                            <svg class="arrow-down arrow-down--scaled">
-                                <path class="a1" d="M10 10 L15 16 L20 10"></path>
-                                <path class="a2" d="M5 15 L15 26 L25 15"></path>
-                                <path class="a3" d="M0 20 L15 36 L30 20"></path>
-                            </svg>
-                        </div>
-                    </h1>
-                    <hr>
-                    <div class="row">
-                        <section class="polaroids">
-                            <div class=" col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                            </div>
-                            <div class=" col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                <img src="images/vacancies/employee.jpg" alt="employee photo">
-                            </div>
-                        </section>
+                    <div class="wrapper">
+                        <svg class="arrow-down arrow-down--scaled">
+                            <path class="a1" d="M10 10 L15 16 L20 10"></path>
+                            <path class="a2" d="M5 15 L15 26 L25 15"></path>
+                            <path class="a3" d="M0 20 L15 36 L30 20"></path>
+                        </svg>
                     </div>
                     <hr>
+                    <div class="row">
+
+                        <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
+                            <section class="polaroids">
+                                <img src="images/vacancies/employee.jpg" alt="employee photo">
+                            </section>
+                        </div>
+
+                    </div>
+                    <hr class="imgHr">
                     <div class="row">
                         <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <p class="infoText">
@@ -133,6 +130,7 @@
                             </p>
                         </div>
                     </div>
+                    <hr class="bottomHr">
                 </div>
             </div>
         </main>

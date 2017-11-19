@@ -16,16 +16,8 @@ hr {
     margin-left: -15px;
 }
 
-.indexContent .container .row:last-of-type {
-    padding-bottom: 0px;
-}
-
 .indexContent .container .row:first-of-type {
-    padding-top: 25px;
-}
-
-.indexContent {
-    height: 100vh;
+    padding: 25px;
 }
 
 .indexContent .svgImg .container .row div[class*="col"] {
@@ -35,7 +27,6 @@ hr {
 
 .indexContent .svgImg .container .row div[class*="col"] img {
     max-width: 8em;
-    margin: 0px 15px;
     border: 4px solid rgba(94.1%, 28.4%, 10.2%, 0.8);
     border-radius: 50%;
     background-color: rgba(96.4%, 82.5%, 47.7%, 0.8);
@@ -57,22 +48,57 @@ hr {
     margin-top: 0;
 }
 
-.polaroids div:last-child {
+.imgHr {
+    margin-top: 30px;
+}
+
+.bottomHr {
+    margin-bottom: 30px;
+}
+
+.polaroids {
+    height: 100%;
+    z-index: 1;
+    box-shadow:
+    0 1px 1px rgba(0,0,0,0.15), /* The top layer shadow */
+    0 10px 0 -5px #eee, /* The second layer */
+    0 10px 1px -4px rgba(0,0,0,0.15), /* The second layer shadow */
+    0 20px 0 -10px #eee, /* The third layer */
+    0 20px 1px -9px rgba(0,0,0,0.15); /* The third layer shadow */
+}
+
+.polaroids {
     background-color: white;
-    padding: 1% 1% 4% 1%;
-    -webkit-transition: -webkit-transform .15s linear;
-    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .25);
-    -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, .25);
-    margin-bottom: 25px;
+    padding: 2% 2% 2% 2%;
+}
+
+.polaroids div:last-child .effect
+{
+  position:relative;
+
+}
+.polaroids div:last-child:before, .polaroids div:last-child:after
+{
+    content:"";
+    position:absolute; 
+    z-index:-1;
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    border-radius:100px / 10px;
+}
+.polaroids div:last-child:after
+{
+    right:10px; 
+    left:auto; 
+    transform:skew(8deg) rotate(3deg);
 }
 
 .polaroids img {
     width: 100%;
-}
-
-.polaroids div:last-child:hover {
-    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .5);
-    -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, .5);
+    padding: 5px;
 }
 
 .infoText {

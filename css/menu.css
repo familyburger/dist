@@ -2,7 +2,6 @@
 width: 100%;
 padding: 15px 0 15px 0;
 overflow: hidden;
-
 }
 
 .menu > .row {
@@ -104,6 +103,7 @@ filter: drop-shadow(1px 3px 1px rgba(255%, 255%, 255%, 0.3));
 
 .modal-fullscreen {
 background: rgba(0%,0%,0%, 0.5);
+padding: 0!important;
 }
 
 .modal-fullscreen .modal-content {
