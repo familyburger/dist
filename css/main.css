@@ -667,8 +667,7 @@ address .btn-facebook:hover {
   margin-left: -12px;
   -webkit-transform: rotateZ(-45deg);
   transform: rotateZ(-45deg);
-  -webkit-animation: sdb 1.5s infinite;
-  animation: sdb 1.5s infinite;
+ 
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
