@@ -70,11 +70,6 @@ body {
   background-size: 75px 75px;
 }
 
-header {
-  position: absolute;
-  top: 0;
-}
-
 .navbar {
   background-image: url("../svg/i-like-food.svg");
   background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
@@ -162,43 +157,33 @@ a:focus {
 .navbar-inverse .navbar-brand::after {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 0%;
   height: 2px;
-  top: 20px;
-  left: 0;
+  top: 18px;
+  right: 0;
   background-color: rgba(94.1%, 28.4%, 10.2%, 1);
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
 
 .navbar-inverse .navbar-brand:hover:after {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+  width: 100%;
 }
 
 .navbar-inverse .navbar-brand::before {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 0%;
   height: 2px;
-  bottom: -17px;
+  bottom: -20px;
   left: 0;
   background-color: rgba(94.1%, 28.4%, 10.2%, 1);
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
 
 .navbar-inverse .navbar-brand:hover:before {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+  width: 100%;
 }
 
 .navbar-inverse .navbar-toggle {
@@ -241,43 +226,33 @@ a:focus {
 .navbar-inverse .navbar-nav>li>a::after {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 0%;
   height: 2px;
   top: 27px;
-  left: 0;
+  right: 0;
   background-color: rgba(94.1%, 28.4%, 10.2%, 1);
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
 
 .navbar-inverse .navbar-nav>li>a:hover:after {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+  width: 100%;
 }
 
 .navbar-inverse .navbar-nav>li>a::before {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 0%;
   height: 2px;
-  bottom: 7px;
+  bottom: 6px;
   left: 0;
   background-color: #ef481a;
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
 
 .navbar-inverse .navbar-nav>li>a:hover:before {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+  width: 100%;
 }
 
 .carousel-indicators li {

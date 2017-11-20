@@ -28,9 +28,6 @@ display: none;
  border-color: rgba(0%, 0%, 0%, 0.15);
  border-style: groove;
  border-radius: 25px;
- -moz-box-transition:  0.2s ease-in-out;
- -webkit-transition:  0.2s ease-in-out;
- transition: 0.2s ease-in-out;
  -webkit-filter: drop-shadow(2px 5px 5px rgba(0%, 0%, 0%, 0.60));
   filter: drop-shadow(2px 5px 5px rgba(0%, 0%, 0%, 0.60));
 }
@@ -64,7 +61,7 @@ appearance: none;
 }
 
 #selectMenu:hover {
-  color:rgba(255%, 255%, 255%, 1);
+color:rgba(255%, 255%, 255%, 1);
 }
 
 option {
@@ -72,8 +69,8 @@ background: rgba(94.1%, 28.4%, 10.2%, 0.9);
 }
 
 .row  img:hover {
--webkit-transform: scale(1.04);
-transform: scale(1.04);
+-webkit-transform: scale(1.06);
+transform: scale(1.06);
 }
 
 .item-img {
