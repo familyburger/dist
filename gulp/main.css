@@ -346,7 +346,7 @@ a:focus {
 .note::after {
   content: "";
   display: block;
-  padding-bottom: 80%;
+  padding-bottom: 70%;
 }
 
 .sticky1 {
@@ -389,7 +389,6 @@ a:focus {
 }
 
 .blocks .container .row .note .text {
-  position: absolute;
   height: 100%;
   padding: 15px;
 }
