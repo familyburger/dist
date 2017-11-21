@@ -35,13 +35,13 @@
     <link rel="stylesheet" href="css/bootstrap-social.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <script>
+        //carousel images preload
+        function preload(object) {
+            object.style.visibility = 'visible';
+        }
+    </script>
 </head>
-<script>
-    //carousel images preload
-    function preload(object) {
-        object.style.visibility = 'visible';
-    }
-</script>
 
 <body>
     <div class="flex-container">
@@ -81,7 +81,6 @@
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                     <li data-target="#myCarousel" data-slide-to="1"></li>
                     <li data-target="#myCarousel" data-slide-to="2"></li>
-
                 </ol>
                 <div class="carousel-inner">
                     <div class="item active">

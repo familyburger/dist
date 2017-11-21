@@ -1,4 +1,4 @@
-.indexContent .container {
+.indexContent:first-child {
     margin-top: 25px;
 }
 
@@ -145,7 +145,7 @@ article {
 .container h1 {
     margin: 0;
     padding: 0;
-    font-size: 1.8;
+    font-size: 1.8em;
 }
 
 @media all and (max-width: 767px) and (min-width: 577px) {
@@ -153,7 +153,7 @@ article {
         display: initial;
     }
     .container h1 {
-        font-size: 1;
+        font-size: 1em;
     }
     article {
         font-size: 1.3em;

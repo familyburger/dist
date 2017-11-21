@@ -278,10 +278,9 @@
     .container #contactForm .button--split-effect.button--send:focus,
     .container #contactForm .button--split-effect.button--send:hover {
         background-color: rgba(94.1%, 28.4%, 10.2%, 1);
-        border-color: rgba(94.1%, 28.4%, 10.2%, 1);
         -webkit-box-shadow: 6px 6px rgba(94.1%, 28.4%, 10.2%, 0.5);
         box-shadow: 6px 6px rgba(94.1%, 28.4%, 10.2%, 0.5);
-        color: rgba(255%, 255%, 255%, 1);
+        color: rgba(255, 255, 255, 1);
     }
 
     .container #contactForm .button--split-effect.button--send:focus::before,
@@ -293,7 +292,6 @@
 
     .container #contactForm .button--split-effect.button--send:active {
         background-color: rgba(94.1%, 28.4%, 10.2%, 1);
-        border-color: rgba(94.1%, 28.4%, 10.2%, 1);
     }
 
     .container #contactForm .button--split-effect.button--send:active::before {
@@ -393,7 +391,7 @@
             margin-left: auto;
         }
         .container h1 {
-            font-size: 1;
+            font-size: 1em;
         }
         #map {
             width: 100vw;

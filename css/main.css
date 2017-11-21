@@ -21,18 +21,6 @@
   height: 0;
 }
 
-* html .clearfix {
-  zoom: 1;
-}
-
-
-/* IE6 */
-
-*:first-child+html .clearfix {
-  zoom: 1;
-}
-
-
 /* IE7 */
 
 html {
@@ -101,7 +89,6 @@ body {
 
 a:focus {
   outline: none;
-  outline-offset: none;
 }
 
 .container-fluid>.navbar-collapse,
@@ -425,7 +412,6 @@ a:focus {
   height: 0;
   width: 0;
   position: absolute;
-  pointer-events: none;
 }
 
 .arrow_box_right::after {
@@ -460,7 +446,6 @@ a:focus {
   height: 0;
   width: 0;
   position: absolute;
-  pointer-events: none;
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
@@ -497,7 +482,6 @@ a:focus {
   height: 0;
   width: 0;
   position: absolute;
-  pointer-events: none;
 }
 
 .arrow_box_left::after {
@@ -532,7 +516,6 @@ a:focus {
   height: 0;
   width: 0;
   position: absolute;
-  pointer-events: none;
   -webkit-transform: rotateY(360deg);
   transform: rotateY(360deg);
 }
@@ -613,9 +596,6 @@ address .btn-facebook:hover {
 }
 
 .arrow-down path {
-  stroke: rgba(255%, 255%, 255%, 1);
-  fill: transparent;
-  stroke-width: 1px;
   animation: arrow 2s infinite;
   -webkit-animation: arrow 2s infinite;
 }
@@ -635,47 +615,23 @@ address .btn-facebook:hover {
   }
 }
 
-@-webkit-keyframes arrow
-/*Safari and Chrome*/
-
-{
-  0% {
-    opacity: 0
-  }
-  40% {
-    opacity: .8
-  }
-  80% {
-    opacity: 0
-  }
-  100% {
-    opacity: 0
-  }
-}
-
 .arrow-down path.a1 {
   animation-delay: -1s;
-  -webkit-animation-delay: -1s;
-  /* Safari 和 Chrome */
 }
 
 .arrow-down path.a2 {
   animation-delay: -0.5s;
-  -webkit-animation-delay: -0.5s;
-  /* Safari 和 Chrome */
 }
 
 .arrow-down path.a3 {
   animation-delay: 0s;
-  -webkit-animation-delay: 0s;
-  /* Safari 和 Chrome */
 }
 
 .arrow {
   position: relative;
   display: inline-block;
-  -webkit-box-shadow: -5px 2px 0 0 rgba(255%, 255%, 255%, 0.8) inset;
-  box-shadow: -5px 2px 0 0 rgba(255%, 255%, 255%, 0.8) inset;
+  -webkit-box-shadow: -5px 2px 0 0 rgba(255, 255, 255, 0.8) inset;
+  box-shadow: -5px 2px 0 0 rgba(255, 255, 255, 0.8) inset;
 }
 
 .offsetScroll {
@@ -718,20 +674,6 @@ address .btn-facebook:hover {
   animation: sdb 1.5s infinite;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-@-webkit-keyframes sdb {
-  0% {
-    -webkit-transform: rotateY(0) rotateZ(-45deg);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: rotateY(720deg) rotateZ(-45deg);
-    opacity: 0;
-  }
 }
 
 @keyframes sdb {
@@ -831,7 +773,6 @@ footer {
   flex: 0 0 auto;
   position: relative;
   overflow: hidden;
-  border-top: 1px solid rgba(96.4%, 82.5%, 47.7%, 0.85);
   background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
   -webkit-box-shadow: 0px -1px 5px 1px rgba(0, 0, 0, 0.3);
   box-shadow: 0px -1px 5px 1px rgba(0, 0, 0, 0.3);
@@ -958,11 +899,6 @@ footer p {
   .carousel-inner~a[class] {
     display: none;
   }
-  @media all and (orientation: landscape) {
-    .navbar {
-      position: absolute;
-    }
-  }
 }
 
 @media all and (max-width: 576px) {
@@ -1036,10 +972,11 @@ footer p {
   .carousel-inner~a[class] {
     display: none;
   }
-  @media all and (orientation: landscape) {
-    .navbar {
-      position: absolute;
-    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 767px) {
+  .navbar {
+    position: absolute;
   }
 }
 
@@ -1074,7 +1011,6 @@ footer p {
     height: 0;
     width: 0;
     position: absolute;
-    pointer-events: none;
     z-index: 1;
   }
   .arrow_box_inner_bottom::after {
@@ -1107,7 +1043,6 @@ footer p {
     height: 0;
     width: 0;
     position: absolute;
-    pointer-events: none;
     z-index: 2;
   }
   .arrow_box_bottom::after {
@@ -1140,7 +1075,6 @@ footer p {
     height: 0;
     width: 0;
     position: absolute;
-    pointer-events: none;
     z-index: 2;
   }
   .arrow_box_top:after {
@@ -1173,7 +1107,6 @@ footer p {
     height: 0;
     width: 0;
     position: absolute;
-    pointer-events: none;
     z-index: 2;
   }
   .arrow_box_inner_top:after {
