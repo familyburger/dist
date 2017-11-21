@@ -20,8 +20,20 @@
   clear: both;
   height: 0;
 }
-* html .clearfix             { zoom: 1; } /* IE6 */
-*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+* html .clearfix {
+  zoom: 1;
+}
+
+
+/* IE6 */
+
+*:first-child+html .clearfix {
+  zoom: 1;
+}
+
+
+/* IE7 */
 
 html {
   height: 100%;
@@ -946,6 +958,11 @@ footer p {
   .carousel-inner~a[class] {
     display: none;
   }
+  @media all and (orientation: landscape) {
+    .navbar {
+      position: absolute;
+    }
+  }
 }
 
 @media all and (max-width: 576px) {
@@ -1018,6 +1035,11 @@ footer p {
   }
   .carousel-inner~a[class] {
     display: none;
+  }
+  @media all and (orientation: landscape) {
+    .navbar {
+      position: absolute;
+    }
   }
 }
 
