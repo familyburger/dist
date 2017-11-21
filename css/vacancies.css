@@ -17,7 +17,8 @@ hr {
 }
 
 .indexContent .container .row:first-of-type {
-    padding: 25px;
+    padding: 25px 25px 35px 25px;
+    margin-top: -25px;
 }
 
 .indexContent .svgImg .container .row div[class*="col"] {
@@ -59,47 +60,83 @@ hr {
 .polaroids {
     height: 100%;
     z-index: 1;
-    -webkit-box-shadow:
-    0 1px 1px rgba(0,0,0,0.15), /* The top layer shadow */
-    0 10px 0 -5px #ebe2cd, /* The second layer */
-    0 10px 1px -4px rgba(0,0,0,0.15), /* The second layer shadow */
-    0 20px 0 -10px #ebe2cd, /* The third layer */
-    0 20px 1px -9px rgba(0,0,0,0.15);
-    box-shadow:
-    0 1px 1px rgba(0,0,0,0.15), /* The top layer shadow */
-    0 10px 0 -5px #ebe2cd, /* The second layer */
-    0 10px 1px -4px rgba(0,0,0,0.15), /* The second layer shadow */
-    0 20px 0 -10px #ebe2cd, /* The third layer */
-    0 20px 1px -9px rgba(0,0,0,0.15); /* The third layer shadow */
 }
 
-.polaroids {
-    background-color: #ebe2cd;
-    padding: 2%;
+.pictureFrame {
+    position: relative;
+}
+
+.hook {
+    width: 5px;
+    height: 5px;
+    background-color: #5c5c5d;
+    margin: 0 auto 100px auto;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 1px 0 1px black;
+    box-shadow: 0 1px 0 1px black;
+}
+
+.hook:before {
+    content: '';
+    width: 100px;
+    height: 100px;
+    border: 2px solid #a49c7c;
+    position: absolute;
+    left: calc(50% - 50px);
+    top: 25px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.polaroids::after {
+    background-color: #fff5e5;
+    bottom: -1.5em;
+    -webkit-box-shadow: 0 2px 1px hsla(0, 0%, 100%, .2), 0 -1px 1px 1px hsla(0, 0%, 0%, .4), inset 0 2px 3px 1px hsla(0, 0%, 0%, .2), inset 0 4px 3px 1px hsla(0, 0%, 0%, .2), inset 0 6px 3px 1px hsla(0, 0%, 0%, .1);
+    box-shadow: 0 2px 1px hsla(0, 0%, 100%, .2), 0 -1px 1px 1px hsla(0, 0%, 0%, .4), inset 0 2px 3px 1px hsla(0, 0%, 0%, .2), inset 0 4px 3px 1px hsla(0, 0%, 0%, .2), inset 0 6px 3px 1px hsla(0, 0%, 0%, .1);
+    content: '';
+    left: -1.5em;
+    position: absolute;
+    right: -1.5em;
+    top: -1.5em;
+    z-index: -1;
+}
+
+.polaroids::before {
+    background-color: #22130c;
+    bottom: -2.5em;
+    -webkit-box-shadow: inset 0 1px 1px 1px hsla(0, 0%, 100%, .2), inset 0 -2px 1px hsla(0, 0%, 0%, .4), 0 5px 50px hsla(0, 0%, 0%, .25), 0 20px 20px -15px hsla(0, 0%, 0%, .2), 0 30px 20px -15px hsla(0, 0%, 0%, .15), 0 40px 20px -15px hsla(0, 0%, 0%, .1);
+    box-shadow: inset 0 1px 1px 1px hsla(0, 0%, 100%, .2), inset 0 -2px 1px hsla(0, 0%, 0%, .4), 0 5px 50px hsla(0, 0%, 0%, .25), 0 20px 20px -15px hsla(0, 0%, 0%, .2), 0 30px 20px -15px hsla(0, 0%, 0%, .15), 0 40px 20px -15px hsla(0, 0%, 0%, .1);
+    content: '';
+    left: -2.5em;
+    position: absolute;
+    right: -2.5em;
+    top: -2.5em;
+    z-index: -1;
 }
 
 .img-shadow {
-	position: relative;
-	max-width: 100%;
-	float: left;
-	}
-    
-    .img-shadow::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		box-shadow: inset 0 0 8px rgba(0,0,0,.6);
-		-moz-box-shadow: inset 0 0 8px rgba(0,0,0,.6);
-		-webkit-box-shadow: inset 0 0 8px rgba(0,0,0,.6);
-	   } 
-	   
+    position: relative;
+    max-width: 100%;
+    float: left;
+}
+
+.img-shadow::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, .6);
+    -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, .6);
+    -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, .6);
+}
+
 .img-shadow img {
     width: 100%;
-	float: left;
-	} 
+    float: left;
+}
 
 article {
     font-size: 1.5em;
