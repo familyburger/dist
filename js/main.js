@@ -1,4 +1,4 @@
-window.addEventListener('load', function() {
+$( document ).ready(function() {
   let offsetButton = (function () {
       let scrollOffset = document.getElementById('contentWrap').offsetTop;
       return scrollOffset;

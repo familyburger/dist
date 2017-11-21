@@ -1,4 +1,4 @@
-window.addEventListener('load', function() {
+$( document ).ready(function() {
 let $images = $('.product-img');
 let itemImg = Array.prototype.slice.call(document.querySelectorAll('.container .item-img'));
 for (let i = 0; i < itemImg.length; i++) {
