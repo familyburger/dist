@@ -184,6 +184,9 @@ article {
     article {
         font-size: 1.3em;
     }
+    .pictureFrame div[class*="col"] {
+        padding: 0;
+    }
 }
 
 @media all and (max-width: 335px) {
