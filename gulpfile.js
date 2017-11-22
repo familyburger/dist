@@ -1,11 +1,10 @@
 const gulp = require('gulp');
-const autoprefixer = require('gulp-autoprefixer');
+const babel = require('gulp-babel');
  
 gulp.task('default', () =>
-    gulp.src('./css/contacts.css')
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
+    gulp.src('./js/menu.js')
+        .pipe(babel({
+            presets: ['env']
         }))
-        .pipe(gulp.dest('gulp'))
+        .pipe(gulp.dest('dist'))
 );
