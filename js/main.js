@@ -1,7 +1,6 @@
 $(document).ready(function () {
-  var offsetButton = function offsetButton() {
-    var scrollOffset = document.getElementById('contentWrap').offsetTop;
-    return scrollOffset;
+  function offsetButton() {
+    return document.getElementById('contentWrap').offsetTop;
   };
   var scrollElm = document.scrollingElement;
   window.onresize = offsetButton;
@@ -10,7 +9,8 @@ $(document).ready(function () {
   };
 
   function scrollFunction() {
-    if (scrollElm.scrollTop > offsetButton()) {
+    var scrollOffset = offsetButton();
+    if (scrollElm.scrollTop > scrollOffset) {
       document.getElementById('scrollTop').style.display = "block";
     } else {
       document.getElementById('scrollTop').style.display = "none";
@@ -120,11 +120,34 @@ $(document).ready(function () {
     scroll();
   }
 
+  $('#selectMenu').change(function (event) {
+    var $option = $('#selectMenu option:selected').text();
+    if ($option === 'Піца') {
+       var pizza = document.getElementById('pizzaDiv');
+        scrollIt(pizza, pizza.offsetTop, 'easeInOutCubic', function () {
+        });
+    } else if ($option === 'Роли') {
+      var roll = document.getElementById('rollDiv');
+        scrollIt(roll, roll.offsetTop, 'easeInOutCubic', function () {
+        });
+    } else if ($option === 'Салати') {
+      var salat = document.getElementById('salatDiv');
+        scrollIt(salat, salat.offsetTop, 'easeInOutCubic', function () {
+        });
+    } else if ($option === 'Різне') {
+      var food = document.getElementById('elseDiv');
+        scrollIt(food, food.offsetTop, 'easeInOutCubic', function () {
+        });
+    }
+    $(this).val('burger');
+});
+
   // Scroll to section 
   document.getElementById('scrollTop').addEventListener('click', function (event) {
     event.stopPropagation();
     event.preventDefault();
-    scrollIt(document.getElementsByClassName('navbar-brand')[0], 1000, 'easeInOutCubic', function () {});
+    var time = this.offsetTop * 2;
+    scrollIt(document.getElementsByClassName('navbar-brand')[0], time, 'easeInOutCubic', function () {});
   });
 
   document.getElementsByClassName('navbar-toggle')[0].onclick = function () {

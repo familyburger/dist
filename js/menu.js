@@ -116,28 +116,4 @@ $(document).ready(function () {
                 description.innerHTML = 'Вибачте,товар відсутній';
         }
     }
-    $('#selectMenu').change(function (event) {
-        var $option = $('#selectMenu option:selected').text();
-        var str = '';
-        if ($option === 'Піца') {
-            str = '#pizzaDiv';
-            scrollToDiv(100, str, 'slow');
-        } else if ($option === 'Роли') {
-            str = '#rollDiv';
-            scrollToDiv(100, str, 'slow');
-        } else if ($option === 'Салати') {
-            str = '#salatDiv';
-            scrollToDiv(100, str, 'slow');
-        } else if ($option === 'Різне') {
-            str = '#elseDiv';
-            scrollToDiv(100, str, 'slow');
-        }
-        $(this).val('burger');
-    });
-
-    function scrollToDiv(targetOffset, targetId, speed) {
-        var target = $(targetId);
-        $('html, body').stop().animate({
-            scrollTop: target.offset().top - targetOffset }, speed);
-    }
 }, true);
