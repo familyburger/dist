@@ -120,6 +120,7 @@ $(document).ready(function () {
     scroll();
   }
 
+    //measure scroll speed
   function scrollSpeed (elem) {
     var pixels = document.body.clientHeight + elem.offsetTop;
     var pixelsPerMs = 2; 
@@ -157,9 +158,8 @@ $(document).ready(function () {
   document.getElementById('scrollTop').addEventListener('click', function (event) {
     event.stopPropagation();
     event.preventDefault();
-
-    var time = scrollSpeed(this);
-    scrollIt(document.getElementsByClassName('navbar-brand')[0], time, 'easeInOutCubic', function () {});
+    var scrollTime = scrollSpeed(this);
+    scrollIt(document.getElementsByClassName('navbar-brand')[0], scrollTime, 'easeInOutCubic', function () {});
   });
 
   document.getElementsByClassName('navbar-toggle')[0].onclick = function () {
