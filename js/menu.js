@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    $('.notify-badge').arctext({
+        radius: 300
+    });
     var $images = $('.product-img');
     var itemImg = Array.prototype.slice.call(document.querySelectorAll('.container .item-img'));
     for (var i = 0; i < itemImg.length; i++) {
