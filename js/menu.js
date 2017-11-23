@@ -1,12 +1,13 @@
 $(document).ready(function () {
     var $images = $('.product-img');
     var itemImg = Array.prototype.slice.call(document.querySelectorAll('.container .item-img'));
+    var num = 0;
     for (var i = 0; i < itemImg.length; i++) {
         itemImg[i].onclick = addImage;
     }
     function addImage() {
-        var num = itemImg.indexOf(this) + 1;
         var price = document.getElementsByClassName('ribbon')[0];
+        num = itemImg.indexOf(this) + 1;
         (function slideDown() {
             var hgt = 25;
             interval = setInterval(function () {

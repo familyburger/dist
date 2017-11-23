@@ -127,6 +127,7 @@ $(document).ready(function () {
     return pixels / pixelsPerMs;
   }
 
+    // Scroll to section 
   $('#selectMenu').change(function (event) {
     var scrollTime = 0;
     var $option = $('#selectMenu option:selected').text();
