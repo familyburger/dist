@@ -1,4 +1,27 @@
+.menu {
+width: 100%;
+padding: 15px 0 15px 0;
+overflow: hidden;
+}
 
+.row {
+text-align: center;
+}
+
+option:disabled {
+display: none;
+}
+
+.row  img {
+ max-width: 85%;
+ border-right: 10px ;
+ border-left: 10px;
+ border-color: rgba(0%, 0%, 0%, 0.15);
+ border-style: groove;
+ border-radius: 25px;
+ -webkit-filter: drop-shadow(2px 5px 5px rgba(0%, 0%, 0%, 0.60));
+  filter: drop-shadow(2px 5px 5px rgba(0%, 0%, 0%, 0.60));
+}
 
 .sort {
 width: 100%;
