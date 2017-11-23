@@ -31,7 +31,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background-color: rgba(96.4%, 82.5%, 47.7%, 0.85);
@@ -817,7 +817,7 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 105px;
+  min-height: 105px;
   position: relative;
   -webkit-box-align: center;
   -ms-flex-align: center;

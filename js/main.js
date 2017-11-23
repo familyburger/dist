@@ -120,23 +120,34 @@ $(document).ready(function () {
     scroll();
   }
 
+  function scrollSpeed (elem) {
+    var pixels = document.body.clientHeight + elem.offsetTop;
+    var pixelsPerMs = 2; 
+    return pixels / pixelsPerMs;
+  }
+
   $('#selectMenu').change(function (event) {
+    var scrollTime = 0;
     var $option = $('#selectMenu option:selected').text();
     if ($option === 'Піца') {
        var pizza = document.getElementById('pizzaDiv');
-        scrollIt(pizza, pizza.offsetTop, 'easeInOutCubic', function () {
+        scrollTime = scrollSpeed(pizza);
+        scrollIt(pizza, scrollTime, 'easeInOutCubic', function () {
         });
     } else if ($option === 'Роли') {
       var roll = document.getElementById('rollDiv');
-        scrollIt(roll, roll.offsetTop, 'easeInOutCubic', function () {
+        scrollTime = scrollSpeed(roll);
+        scrollIt(roll, scrollTime, 'easeInOutCubic', function () {
         });
     } else if ($option === 'Салати') {
       var salat = document.getElementById('salatDiv');
-        scrollIt(salat, salat.offsetTop, 'easeInOutCubic', function () {
+        scrollTime = scrollSpeed(salat); 
+        scrollIt(salat, scrollTime, 'easeInOutCubic', function () {
         });
     } else if ($option === 'Різне') {
       var food = document.getElementById('elseDiv');
-        scrollIt(food, food.offsetTop, 'easeInOutCubic', function () {
+        scrollTime = scrollSpeed(food);
+        scrollIt(food, scrollTime, 'easeInOutCubic', function () {
         });
     }
     $(this).val('burger');
@@ -146,7 +157,8 @@ $(document).ready(function () {
   document.getElementById('scrollTop').addEventListener('click', function (event) {
     event.stopPropagation();
     event.preventDefault();
-    var time = this.offsetTop * 2;
+
+    var time = scrollSpeed(this);
     scrollIt(document.getElementsByClassName('navbar-brand')[0], time, 'easeInOutCubic', function () {});
   });
 
