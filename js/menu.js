@@ -1,26 +1,12 @@
 $(document).ready(function () {
     var $images = $('.product-img');
     var itemImg = Array.prototype.slice.call(document.querySelectorAll('.container .item-img'));
-    var num = 0;
     for (var i = 0; i < itemImg.length; i++) {
         itemImg[i].onclick = addImage;
     }
     function addImage() {
+        var num = itemImg.indexOf(this) + 1;
         var price = document.getElementsByClassName('ribbon')[0];
-        num = itemImg.indexOf(this) + 1;
-        (function slideDown() {
-            var hgt = 25;
-            interval = setInterval(function () {
-                if (50 > hgt) {
-                    hgt += 0.5;
-                    price.style.height = hgt + "%";
-                } else {
-                    price.style.height = hgt + "%";
-                    clearInterval(interval);
-                }
-            }, 25);
-        })();
-
         var description = document.getElementsByClassName('description')[0];
         $images.css('background-image', 'url(images/product/img-' + num + '.png)');
         switch (num) {
@@ -116,5 +102,17 @@ $(document).ready(function () {
                 price.innerHTML = '00 грн.';
                 description.innerHTML = 'Вибачте,товар відсутній';
         }
+        (function slideDown() {
+            var hgt = 25;
+            interval = setInterval(function () {
+                if (50 > hgt) {
+                    hgt += 0.5;
+                    price.style.height = hgt + "%";
+                } else {
+                    price.style.height = hgt + "%";
+                    clearInterval(interval);
+                }
+            }, 25);
+        })();
     }
 }, true);
