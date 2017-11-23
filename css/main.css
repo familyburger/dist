@@ -79,6 +79,7 @@ body {
 }
 
 .navbar {
+  margin: 0;
   background-image: url("../svg/i-like-food.svg");
   background-color: rgba(96.4%, 82.5%, 47.7%, 1);
   min-height: 105px;
