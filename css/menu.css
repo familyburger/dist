@@ -38,45 +38,32 @@ z-index: 99;
 margin: 20px 0 55px 0;
 }
 
-#selectMenu {
-position: absolute;
-right: 0px;
-font-size: 1.2em;
-padding: 10px 30px 10px 10px;
-color: #ebe2cd;
-cursor: pointer;
-text-align: left;
-background-image: url(../svg/drop-down-arrow.svg);
-background-position: 90% 52%;
-background-repeat: no-repeat;
-background-color:rgba(94.1%, 28.4%, 10.2%, 0.9);
--webkit-box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
-box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
--moz-box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
-border: 1px solid rgba(96.4%, 82.5%, 47.7%, 0.9);
-appearance: none;
--moz-appearance: none; 
--webkit-appearance: none;
-}
 
-#selectMenu:hover {
-color:rgba(255, 255, 255, 1);
-}
-
-option {
-background: rgba(94.1%, 28.4%, 10.2%, 0.9);
-}
-
-.row  img:hover {
--webkit-transform: scale(1.06);
-transform: scale(1.06);
-}
 
 .item-img {
 position:relative;
 }
 
+.notify-badge{
+position:relative;
+font-size: 1.7em;
+ margin: 0;
+}
 
+.notify-badge span {
+height: 40px;
+color:rgba(94.1%, 28.4%, 10.2%, 1);
+line-height: 40px;
+}
+
+.product-img {
+background-size: contain;
+background-repeat: no-repeat;
+height: 18em;
+width: 90%;
+-webkit-filter: drop-shadow(1px 3px 1px rgba(255, 255, 255, 0.3));
+filter: drop-shadow(1px 3px 1px rgba(255, 255, 255, 0.3));
+}
 
 .modal-fullscreen {
 background: rgba(0%,0%,0%, 0.5);
@@ -195,10 +182,7 @@ font-size: 1.20em;
 margin: 0;
 }
 
-.row  img:hover {
--webkit-transform: scale(1.06);
-transform: scale(1.06);
-}
+
 
 .modal-body > .container > .row > div > h2 {
   font-size: 1.4em;
