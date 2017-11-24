@@ -53,6 +53,10 @@ hr {
     margin-top: 30px;
 }
 
+h1,article {
+    text-align: center;
+}
+
 .bottomHr {
     margin-bottom: 30px;
 }
