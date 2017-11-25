@@ -13,8 +13,7 @@ display: none;
 }
 
 .row  img {
- max-width: 95%;
- margin: 10%;
+ max-width: 85%;
  border-right: 10px ;
  border-left: 10px;
  border-color: rgba(0%, 0%, 0%, 0.15);
@@ -27,8 +26,8 @@ display: none;
 .sort {
 width: 100%;
 position: relative;
-margin: 25px;
 z-index: 99;
+margin: 25px;
 }
 
 #selectMenu {
