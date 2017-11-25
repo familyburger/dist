@@ -3,7 +3,7 @@ $(document).ready(function () {
         radius: 300
     });
     var $images = $('.product-img');
-    var itemImg = Array.prototype.slice.call(document.querySelectorAll('.container .item-img'));
+    var itemImg = Array.prototype.slice.call(document.querySelectorAll('.container-box .item-img'));
     for (var i = 0; i < itemImg.length; i++) {
         itemImg[i].onclick = addImage;
     }
