@@ -8,6 +8,10 @@ overflow: hidden;
 text-align: center;
 }
 
+.row div[class^=col] {
+padding-bottom: 15px;
+}
+
 option:disabled {
 display: none;
 }
@@ -27,7 +31,9 @@ display: none;
 width: 100%;
 position: relative;
 z-index: 99;
-margin: 25px;
+padding: 25px;
+display: flex;
+justify-content: flex-end;
 }
 
 #selectMenu {
@@ -190,7 +196,7 @@ text-shadow: 1px 1px rgba(0%,0%,0%, 0.5), 2px 1px rgba(0%,0%,0%, 0.4), 3px 1px r
 
 @media all and (max-width: 576px) { 
 .row  img {
- max-width: 80%;
+ max-width: 95%;
 }
 
 .modal-body > .container > .row > div > h2 {
