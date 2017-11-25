@@ -132,22 +132,22 @@ $(document).ready(function () {
     var scrollTime = 0;
     var $option = $('#selectMenu option:selected').text();
     if ($option === 'Піца') {
-       var pizza = document.getElementById('pizzaDiv');
+       var pizza = document.getElementById('pizza');
         scrollTime = scrollSpeed(pizza);
         scrollIt(pizza, scrollTime, 'easeInOutCubic', function () {
         });
     } else if ($option === 'Роли') {
-      var roll = document.getElementById('rollDiv');
+      var roll = document.getElementById('roll');
         scrollTime = scrollSpeed(roll);
         scrollIt(roll, scrollTime, 'easeInOutCubic', function () {
         });
     } else if ($option === 'Салати') {
-      var salat = document.getElementById('salatDiv');
+      var salat = document.getElementById('salat');
         scrollTime = scrollSpeed(salat); 
         scrollIt(salat, scrollTime, 'easeInOutCubic', function () {
         });
     } else if ($option === 'Різне') {
-      var food = document.getElementById('elseDiv');
+      var food = document.getElementById('chicken');
         scrollTime = scrollSpeed(food);
         scrollIt(food, scrollTime, 'easeInOutCubic', function () {
         });

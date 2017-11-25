@@ -1,8 +1,12 @@
-.flex-col {
+.flex-row {
 display: flex;
 flex-wrap: wrap;
 margin: 15px 0px;
 justify-content: center;
+}
+
+#contentWrap {
+  padding: 25px 0px;
 }
 
 .menu {
@@ -11,7 +15,6 @@ justify-content: center;
   overflow: hidden;
 }
 
- 
 .item-img {
   position:relative;
   flex-basis: 25%;
@@ -22,7 +25,7 @@ justify-content: center;
   display: none;
 }
   
-  .flex-col img {
+  .flex-row img {
    max-width: 85%;
    border-right: 10px ;
    border-left: 10px;
@@ -37,7 +40,7 @@ justify-content: center;
   width: 100%;
   position: relative;
   z-index: 99;
-  margin: 20px 0 75px 0;
+  margin: 0px 0px 75px 0px;
   }
   
   #selectMenu {
@@ -69,7 +72,7 @@ justify-content: center;
   background: rgba(94.1%, 28.4%, 10.2%, 0.9);
   }
   
-  .flex-col img:hover {
+  .flex-row img:hover {
   -webkit-transform: scale(1.06);
   transform: scale(1.06);
   }
