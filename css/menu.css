@@ -1,6 +1,8 @@
 .flex-col {
 display: flex;
 flex-wrap: wrap;
+margin: 15px 0px;
+justify-content: center;
 }
 
 .menu {
@@ -165,6 +167,7 @@ flex-wrap: wrap;
       line-height: 25px;
       font-size: 1.6em;
       font-family: 'Alegreya', serif;
+      text-align: center;
       font-weight: bold;
       text-shadow: 1px 1px rgba(0%,0%,0%, 0.3), 2px 1px rgba(0%,0%,0%, 0.4), 1px 2px 6px rgba(0%,0%,0%, 0.5);
       top: 0;
@@ -219,11 +222,6 @@ flex-wrap: wrap;
   #selectMenu {
     font-size: 1.35em;
     }
-    .item-img {
-      position:relative;
-      flex-basis: 50%;
-      text-align: center;
-    }
   }
   
   @media all and (max-width: 767px) and (min-width: 577px) { 
@@ -236,11 +234,12 @@ flex-wrap: wrap;
   #selectMenu {
     font-size: 1.35em;
     }
-    .item-img {
-      position:relative;
-      flex-basis: 50%;
-      text-align: center;
-    }
   }
   
+
+@media all and (max-width: 991px) {
+  .item-img {
+    flex-basis: 50%;
+  }
+}
   
