@@ -140,18 +140,18 @@ justify-content: center;
     text-shadow: -1px 0 rgba(0%,0%,0%, 0.4), 0 1px rgba(0%,0%,0%, 0.4), 1px 0 rgba(0%,0%,0%, 0.4), 0 -1px rgba(0%,0%,0%, 0.4);
   }
   
-  .modal-body > .container > .row > div > h2 {
+  .modal-body > .container > .row > div > p {
   text-align: center;
   margin-left: 50px;
   margin-top: 5px;
   padding: 0px 10px;
   padding-right: 20px;
-  font-size: 1.6em;
-  line-height: 1.6em;
+  font-size: 1.5em;
+  line-height: 1.5em;
   text-shadow: 1px 1px rgba(0%,0%,0%, 0.5), 2px 1px rgba(0%,0%,0%, 0.4), 3px 1px rgba(0%,0%,0%, 0.3), 0px -1px 5px rgba(255, 255, 255, 0.25), 0px 1px 5px rgba(255, 255, 255, 0.25);
   }
   
-  .modal-body > .container > .row > div > h2 > b::after {
+  .modal-body > .container > .row > div > p > b::after {
     content: "";
     display: block;
     padding: 2px 0;
@@ -203,11 +203,6 @@ justify-content: center;
   }
   
   @media all and (max-width: 576px) { 
-  .modal-body > .container > .row > div > h2 {
-  text-align: center;
-  margin: 5px;
-  }
-  
   .notify-badge{
   position:relative;
   font-size: 1.30em;
@@ -219,31 +214,31 @@ justify-content: center;
   transform: scale(1.06);
   }
   
-  .modal-body > .container > .row > div > h2 {
-    font-size: 1.4em;
-    line-height: 1.4em;
+  .modal-body > .container > .row > div > p {
+    font-size: 1.3em;
+    text-align: center;
+    margin: 5px;
   }
   
   #selectMenu {
-    font-size: 1.35em;
+    font-size: 1.3em;
     }
   }
   
   @media all and (max-width: 767px) and (min-width: 577px) { 
-  .modal-body > .container > .row > div > h2 {
-    font-size: 1.45em;
-    line-height: 1.45em;
+  .modal-body > .container > .row > div > p {
+    font-size: 1.4em;
     margin: 5px;
     }
   
     .notify-badge{
       position:relative;
-      font-size: 1.40em;
+      font-size: 1.4em;
       margin: 0;
     }
 
   #selectMenu {
-    font-size: 1.35em;
+    font-size: 1.4em;
     }
   }
   
