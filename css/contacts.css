@@ -326,9 +326,6 @@
             font-size: 1.3em;
             line-height: 1.7em;
         }
-        .container #contactForm .button--split-effect.button--send {
-            font-size: 1.3em;
-        }
         .container p {
             margin: 0;
             font-size: 1.3em;
@@ -336,7 +333,7 @@
         address .btn-vk p {
             padding: 0px 64px 0px 0px;
         }
-        label[for="comment"] {
+        .container #contactForm .button--split-effect.button--send, label, label[for="comment"] {
             font-size: 1.3em;
         }
         .sm-md-line {
@@ -356,9 +353,6 @@
             padding-left: 8.33333333%;
             margin-right: auto;
             margin-left: auto;
-        }
-        label {
-            font-size: 1.3em;
         }
         .container h1 {
             text-align: center;
@@ -387,6 +381,20 @@
     }
 
     @media all and (max-width: 767px) and (min-width: 577px) {
+        address .btn.btn-block p {
+            font-size: 1.4em;
+            line-height: 1.7em;
+        }
+        .container p {
+            margin: 0;
+            font-size: 1.4em;
+        }
+        address .btn-vk p {
+            padding: 0px 64px 0px 0px;
+        }
+        .container #contactForm .button--split-effect.button--send, label, label[for="comment"] {
+            font-size: 1.4em;
+        }
         .sm-md-line {
             display: block;
         }

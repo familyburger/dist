@@ -156,21 +156,22 @@ article {
     .br {
         display: initial;
     }
-    .container h1 {
-        font-size: 1em;
-    }
-    article {
-        font-size: 1.3em;
+    article, .indexContent .svgImg .container .row div[class*="col"] p {
+        font-size: 1.4em;
     }
 }
 
 @media all and (max-width: 576px) {
     .indexContent .svgImg .container .row div[class*="col"] p {
-        font-size: 1.2em;
-        margin: 3px 3px;
+        font-size: 1.3em;
+        margin: 0px -10px 0px -10px;
+        padding: 0px 5px;
         position: absolute;
         left: 0;
         right: 0;
+    }
+    article, .indexContent .svgImg .container .row div[class*="col"] p {
+        font-size: 1.3em;
     }
     .br {
         display: initial;
@@ -194,7 +195,7 @@ article {
 }
 
 @media all and (max-width: 335px) {
-    .indexContent .svgImg .container .row div[class*="col"] p {
+       .grid-container .indexContent .svgImg .container .row div[class*="col"] p {
         font-size: 5vmin;
     }
     .br {
