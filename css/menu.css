@@ -46,9 +46,9 @@ justify-content: center;
   #selectMenu {
   position: absolute;
   right: 0px;
-  font-size: 1.2em;
+  font-size: 1.5em;
   padding: 10px 30px 10px 10px;
-  color: #ebe2cd;
+  color: white;
   cursor: pointer;
   text-align: left;
   background-image: url(../svg/drop-down-arrow.svg);
@@ -62,10 +62,6 @@ justify-content: center;
   appearance: none;
   -moz-appearance: none; 
   -webkit-appearance: none;
-  }
-  
-  #selectMenu:hover {
-  color:rgba(255, 255, 255, 1);
   }
   
   option {
