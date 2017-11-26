@@ -79,6 +79,11 @@ justify-content: center;
   transform: scale(1.06);
   }
  
+  #pizza,#roll,#chicken,#burger,#salat {
+    position: relative;
+    top: -75px;
+  }
+
   .notify-badge{
   position:relative;
   font-size: 1.7em;
