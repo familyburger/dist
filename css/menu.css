@@ -100,7 +100,7 @@ justify-content: center;
   filter: drop-shadow(1px 3px 1px rgba(255, 255, 255, 0.3));
   }
   
-  #roll,#salat,#burger,#chicken {
+  #roll,#salat,#burger,#chicken,#pizza {
     position: relative;
     top: -75px;
   }
