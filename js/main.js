@@ -124,7 +124,7 @@ $(document).ready(function () {
     //measure scroll speed
   function scrollSpeed (elem) {
     var pixels = document.body.clientHeight + elem.offsetTop;
-    var pixelsPerMs = 2; 
+    var pixelsPerMs = 1; 
     return pixels / pixelsPerMs;
   }
 
