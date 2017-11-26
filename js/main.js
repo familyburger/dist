@@ -26,7 +26,7 @@ $(document).ready(function () {
     var duration = arguments.length <= 1 || arguments[1] === undefined ? 200 : arguments[1];
     var easing = arguments.length <= 2 || arguments[2] === undefined ? 'linear' : arguments[2];
     var callback = arguments[3];
-    var targetOffset = arguments.length <= 3 || arguments[4] === undefined ? 0 : arguments[4];
+   
     // Predefine list of available timing functions
     var easings = {
       linear: function linear(t) {
@@ -135,7 +135,7 @@ $(document).ready(function () {
     if ($option === 'Піца') {
        var pizza = document.getElementById('pizza');
         scrollTime = scrollSpeed(pizza);
-        scrollIt(pizza, scrollTime, 'easeInOutCubic', function () {}, 75);
+        scrollIt(pizza, scrollTime, 'easeInOutCubic', function () {});
     } else if ($option === 'Роли') {
       var roll = document.getElementById('roll');
         scrollTime = scrollSpeed(roll);
@@ -147,7 +147,7 @@ $(document).ready(function () {
     } else if ($option === 'Різне') {
       var food = document.getElementById('chicken');
         scrollTime = scrollSpeed(food);
-        scrollIt(food, scrollTime, 'easeInOutCubic', function () {}, 75);
+        scrollIt(food, scrollTime, 'easeInOutCubic', function () {});
     }
     $(this).val('burger');
 });
