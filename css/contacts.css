@@ -371,6 +371,12 @@
         .wrapper {
             display: none;
         }
+        .container h1 {
+            text-align: center;
+         }
+         address {
+             text-align: center;
+         }
         #map {
             width: 100vw;
             height: calc(100vw * 3/4);

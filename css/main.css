@@ -79,8 +79,14 @@ body {
 
 .navbar {
   margin: 0;
-  background-image: url("../svg/i-like-food.svg");
-  background-color: hsla(43, 80%, 70%, 1);
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.05) 10px,
+    rgba(0, 0, 0, 0.2) 10px,
+    rgba(0, 0, 0, 0.2) 20px
+  ), url("../svg/i-like-food.svg");
+  background-color: hsla(43, 80%, 80%, 1);
   min-height: 105px;
   -webkit-box-shadow: 0px 1px 5px 1px rgba(0%, 0%, 0%, 0.25);
   box-shadow: 0px 1px 5px 1px rgba(0%, 0%, 0%, 0.25);
@@ -813,10 +819,16 @@ footer {
   flex: 0 0 auto;
   position: relative;
   overflow: hidden;
-  background-color: hsla(43, 80%, 70%, 1);
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.05) 10px,
+    rgba(0, 0, 0, 0.2) 10px,
+    rgba(0, 0, 0, 0.2) 20px
+  ), url("../svg/i-like-food.svg");
+  background-color: hsla(43, 80%, 80%, 1);
   -webkit-box-shadow: 0px -1px 5px 1px rgba(0, 0, 0, 0.3);
   box-shadow: 0px -1px 5px 1px rgba(0, 0, 0, 0.3);
-  background-image: url("../svg/i-like-food.svg");
 }
 
 .footer {
