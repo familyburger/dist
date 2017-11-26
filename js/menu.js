@@ -1,7 +1,4 @@
 $(document).ready(function () {
-    $(function() {  
-            $('img').loadScroll();
-        });
     $('.notify-badge').arctext({
         radius: 300
     });
