@@ -1,10 +1,11 @@
 const gulp = require('gulp');
-const babel = require('gulp-babel');
+const autoprefixer = require('gulp-autoprefixer');
  
 gulp.task('default', () =>
-    gulp.src('./js/menu.js')
-        .pipe(babel({
-            presets: ['env']
+    gulp.src('./css/vacancies.css')
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
         }))
         .pipe(gulp.dest('dist'))
 );
