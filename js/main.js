@@ -6,8 +6,6 @@ $(document).ready(function () {
   window.onresize = offsetButton;
   window.onscroll = scrollFunction;
 
-
-
   function scrollFunction() {
     var scrollOffset = offsetButton();
     if (scrollElm.scrollTop > scrollOffset) {
