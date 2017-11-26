@@ -4,9 +4,9 @@ $(document).ready(function () {
   };
   var scrollElm = document.scrollingElement;
   window.onresize = offsetButton;
-  window.onscroll = function () {
-    scrollFunction();
-  };
+  window.onscroll = scrollFunction;
+
+
 
   function scrollFunction() {
     var scrollOffset = offsetButton();
