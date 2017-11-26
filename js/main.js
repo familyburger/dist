@@ -26,6 +26,7 @@ $(document).ready(function () {
     var duration = arguments.length <= 1 || arguments[1] === undefined ? 200 : arguments[1];
     var easing = arguments.length <= 2 || arguments[2] === undefined ? 'linear' : arguments[2];
     var callback = arguments[3];
+    var targetOffset = arguments.length <= 3 || arguments[4] === undefined ? 0 : arguments[4];
     // Predefine list of available timing functions
     var easings = {
       linear: function linear(t) {
@@ -82,7 +83,7 @@ $(document).ready(function () {
     var documentHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
     var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
     var destinationOffset = typeof destination === 'number' ? destination : destination.offsetTop;
-    var destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset);
+    var destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset - targetOffset);
 
     // If requestAnimationFrame is not supported
     // Move window to destination position and trigger callback function
@@ -134,23 +135,19 @@ $(document).ready(function () {
     if ($option === 'Піца') {
        var pizza = document.getElementById('pizza');
         scrollTime = scrollSpeed(pizza);
-        scrollIt(pizza, scrollTime, 'easeInOutCubic', function () {
-        });
+        scrollIt(pizza, scrollTime, 'easeInOutCubic', function () {}, 75);
     } else if ($option === 'Роли') {
       var roll = document.getElementById('roll');
         scrollTime = scrollSpeed(roll);
-        scrollIt(roll, scrollTime, 'easeInOutCubic', function () {
-        });
+        scrollIt(roll, scrollTime, 'easeInOutCubic', function () {});
     } else if ($option === 'Салати') {
       var salat = document.getElementById('salat');
         scrollTime = scrollSpeed(salat); 
-        scrollIt(salat, scrollTime, 'easeInOutCubic', function () {
-        });
+        scrollIt(salat, scrollTime, 'easeInOutCubic', function () {});
     } else if ($option === 'Різне') {
       var food = document.getElementById('chicken');
         scrollTime = scrollSpeed(food);
-        scrollIt(food, scrollTime, 'easeInOutCubic', function () {
-        });
+        scrollIt(food, scrollTime, 'easeInOutCubic', function () {}, 75);
     }
     $(this).val('burger');
 });
