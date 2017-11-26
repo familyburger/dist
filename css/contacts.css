@@ -87,6 +87,11 @@
     address .btn-yt:hover, footer .btn-yt:hover {
         color: white;
     }
+    .alert {
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
 
     address .btn.btn-block p {
         margin: 0;
@@ -210,7 +215,7 @@
     }
 
     #comment-error {
-        font-size: 0.8em;
+        font-size: 1em;
         margin-top: 0px;
         border-bottom: 2px solid rgba(94.1%, 28.4%, 10.2%, 0.7);
         padding-bottom: 2px;
@@ -309,16 +314,20 @@
 
     .messegeSend {
         position: relative;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
     }
 
     .textAlert {
+        flex: 1 0 auto;
+        margin-top: 30px;
+    }
+
+    .textAlert .alert {
         font-family: 'Alegreya', serif;
-        width: 55%;
-        position: absolute;
-        right: 0;
-        top: -14px;
-        font-size: 1.2em;
-        margin: 35px 0 45px 0;
+        font-size: 1.5em;
+        text-align: center;
     }
 
     @media all and (max-width: 576px) {
@@ -328,6 +337,9 @@
         }
         .container p {
             margin: 0;
+            font-size: 1.3em;
+        }
+        .textAlert .alert {
             font-size: 1.3em;
         }
         address .btn-vk p {
@@ -363,10 +375,7 @@
             height: 25px;
             border-top: 2px solid rgba(94.1%, 28.4%, 10.2%, 0.7);
         }
-        #comment-error {
-            font-size: 0.9em;
-        }
-        #email-error {
+        #comment-error ,#email-error {
             font-size: 1em;
         }
         address .btn-vk {
@@ -374,6 +383,9 @@
         }
         main address .btn-block {
             width: 100%;
+        }
+        .textAlert {
+            margin-top: 0;
         }
         .container #contactForm .button--split-effect.button--send {
             margin: 24px 0 25px 0;
@@ -384,6 +396,9 @@
         address .btn.btn-block p {
             font-size: 1.4em;
             line-height: 1.7em;
+        }
+        .textAlert .alert {
+            font-size: 1.4em;
         }
         .container p {
             margin: 0;
