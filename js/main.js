@@ -156,7 +156,7 @@ $(document).ready(function () {
     event.stopPropagation();
     event.preventDefault();
     var scrollTime = scrollSpeed(this);
-    scrollIt(document.getElementsByClassName('header')[0], scrollTime, 'easeInOutCubic', function () {});
+    scrollIt(document.getElementsByClassName('targetTop')[0], scrollTime, 'easeInOutCubic', function () {});
   });
 
   document.getElementsByClassName('navbar-toggle')[0].onclick = function () {
