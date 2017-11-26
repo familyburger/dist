@@ -1,4 +1,11 @@
+.indexContent {
+    width: 100%;
+    overflow: hidden;
+}
 
+.indexContent:first-child {
+    margin-top: 25px;
+}
 
 .container h1 {
     position: relative;
@@ -14,12 +21,13 @@ hr {
     margin-left: -15px;
 }
 
-.grid-container .indexContent .container .row:nth-child(1) {
-   padding-top: 25px;
+.grid-container .indexContent .svgImg .container .row {
+    padding: 25px 0px;
 }
 
-.jobs .row:nth-child(2) {
-    padding: 15px 25px 35px 25px;
+.indexContent .container .row:first-of-type {
+    padding: 25px 25px 35px 25px;
+    margin-top: -25px;
 }
 
 .indexContent .svgImg .container .row div[class*="col"] {
