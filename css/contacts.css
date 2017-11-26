@@ -30,7 +30,7 @@
     address p span {
         display: block;
         margin: 25px 0 25px 0;
-        letter-spacing: 1px;
+       
     }
 
     address .btn-social>:first-child {
@@ -61,7 +61,7 @@
     }
 
     .container #contactForm .button--split-effect.button--send {
-        margin-top: 54px;
+        margin-top: 65px;
     }
 
     label[for='email'] {
@@ -86,7 +86,7 @@
     }
 
     address .btn.btn-block p {
-        margin: 1px 0px;
+        margin: 0;
         padding: 0px 12px 0px 0px;
         font-size: 1.5em;
     }
@@ -100,8 +100,7 @@
     }
 
     label {
-        font-size: 1.2em;
-        letter-spacing: 1px;
+        font-size: 1.5em;
     }
 
     hr {
@@ -180,7 +179,7 @@
 
     .social>.copyright {
         margin: 10px 0 10px 0;
-        font-size: 14px;
+        font-size: 1.2em;
     }
 
     #contactForm {
@@ -322,6 +321,7 @@
     @media all and (max-width: 576px) {
         address .btn.btn-block p {
             font-size: 1.3em;
+            line-height: 1.7em;
         }
         .container #contactForm .button--split-effect.button--send {
             font-size: 1.3em;
@@ -351,7 +351,7 @@
             margin-right: auto;
             margin-left: auto;
         }
-        label[for="comment"] {
+        label {
             font-size: 1.3em;
         }
         .container h1 {
@@ -392,9 +392,6 @@
             padding-left: 8.33333333%;
             margin-right: auto;
             margin-left: auto;
-        }
-        .container h1 {
-            font-size: 1em;
         }
         #map {
             width: 100vw;

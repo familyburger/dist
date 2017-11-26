@@ -23,7 +23,6 @@
 
 html {
   height: 100%;
-  letter-spacing: 1.2px;
 }
 
 body {
@@ -44,6 +43,9 @@ body {
   -ms-flex-direction: column;
   flex-direction: column;
   font-weight: bold;
+  font-size: 140%;
+  letter-spacing: 1.2px;
+  line-height: 200%;
   text-shadow: 0px 1px 0px rgba(0%, 0%, 0%, 0.3), 1px 0px 0px rgba(0%, 0%, 0%, 0.3), 1px 1px 1px rgba(0%, 0%, 0%, 0.3), 2px 1px 1px rgba(0%, 0%, 0%, 0.3);
 }
 
@@ -841,12 +843,12 @@ footer p {
 }
 
 .container .design {
-  position: absolute;
-  left: 0;
-  -ms-flex-item-align: center;
-  align-self: center;
+  flex: 1 0 auto;
   font-size: 1.2em;
-  margin-top: 17px;
+  color: white;
+  align-self: flex-end;
+  position: relative;
+  bottom: 11px;
 }
 
 .copyright {
