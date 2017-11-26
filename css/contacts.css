@@ -431,14 +431,15 @@
         .sm-md-line {
             display: block;
         }
+        .container h1 {
+           text-align: center;
+        }
         address {
             margin-bottom: -10px;
+            text-align: center;
         }
-        main .container {
-            padding-right: 8.33333333%;
-            padding-left: 8.33333333%;
-            margin-right: auto;
-            margin-left: auto;
+        .wrapper {
+            display: none;
         }
         #map {
             width: 100vw;
