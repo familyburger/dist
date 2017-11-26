@@ -1,6 +1,4 @@
-.indexContent:first-child {
-    margin-top: 25px;
-}
+
 
 .container h1 {
     position: relative;
@@ -17,12 +15,11 @@ hr {
 }
 
 .grid-container .indexContent .container .row:nth-child(1) {
-    padding-bottom: 0px;
+   padding-top: 25px;
 }
 
-.indexContent .container .row:first-of-type {
-    padding: 25px 25px 35px 25px;
-    margin-top: -25px;
+.jobs .row:nth-child(2) {
+    padding: 15px 25px 35px 25px;
 }
 
 .indexContent .svgImg .container .row div[class*="col"] {
@@ -98,7 +95,7 @@ h1,article {
 }
 
 .polaroids::after {
-    background-color: #fff5e5;
+    background-color: white;
     bottom: -1.5em;
     -webkit-box-shadow: 0 2px 1px hsla(0, 0%, 100%, .2), 0 -1px 1px 1px hsla(0, 0%, 0%, .4), inset 0 2px 3px 1px hsla(0, 0%, 0%, .2), inset 0 4px 3px 1px hsla(0, 0%, 0%, .2), inset 0 6px 3px 1px hsla(0, 0%, 0%, .1);
     box-shadow: 0 2px 1px hsla(0, 0%, 100%, .2), 0 -1px 1px 1px hsla(0, 0%, 0%, .4), inset 0 2px 3px 1px hsla(0, 0%, 0%, .2), inset 0 4px 3px 1px hsla(0, 0%, 0%, .2), inset 0 6px 3px 1px hsla(0, 0%, 0%, .1);
