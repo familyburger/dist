@@ -22,6 +22,10 @@
         margin-top: 25px;
     }
 
+    address p:first-of-type {
+        margin: 0 0 20px;
+    }
+
     address .btn-facebook p,
     address .btn-vk p {
         display: inline;
@@ -29,8 +33,7 @@
 
     address p span {
         display: block;
-        margin: 25px 0 25px 0;
-       
+        margin: 25px 0 20px 0;
     }
 
     address .btn-social>:first-child {
@@ -50,7 +53,7 @@
     }
 
     .socialBlock {
-        padding-top: 36.5px;
+        padding-top: 30px;
     }
 
     address .btn {
@@ -61,7 +64,7 @@
     }
 
     .container #contactForm .button--split-effect.button--send {
-        margin-top: 65px;
+        margin-top: 30px;
     }
 
     label[for='email'] {
@@ -332,6 +335,9 @@
         }
         address .btn-vk p {
             padding: 0px 64px 0px 0px;
+        }
+        label[for="comment"] {
+            font-size: 1.3em;
         }
         .sm-md-line {
             display: block;
