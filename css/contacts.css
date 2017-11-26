@@ -234,9 +234,11 @@
     }
 
     .container #contactForm .button {
+        flex: 1 0 auto;
         background-color: rgba(94.1%, 28.4%, 10.2%, 1);
         color: white;
-        width: 35%;
+        max-width: 35%;
+        text-shadow: 0px 1px 0px rgba(0%, 0%, 0%, 0.3), 1px 0px 0px rgba(0%, 0%, 0%, 0.3), 1px 1px 1px rgba(0%, 0%, 0%, 0.3), 2px 1px 1px rgba(0%, 0%, 0%, 0.3);
         border: 1px solid rgba(0%, 0%, 0%, 0.3);
         -webkit-filter: drop-shadow(0px 0px 1px rgba(0%, 0%, 0%, 0.8));
         filter: drop-shadow(0px 0px 1px rgba(0%, 0%, 0%, 0.8));
@@ -244,12 +246,19 @@
         font-size: 1.5em;
     }
 
+    @-moz-document url-prefix() { 
+        .container #contactForm .button {
+            top: -7px;
+            padding: 1px;
+        }
+      }
+    
     .button p {
         margin: 0px;
     }
 
     .container #contactForm .button {
-        max-width: 100%;
+        max-width: 323px;
         position: relative;
     }
 
@@ -325,6 +334,7 @@
     }
 
     .textAlert {
+        display: none;
         -webkit-box-flex: 1;
         -ms-flex: 1 0 auto;
         flex: 1 0 auto;
@@ -397,6 +407,12 @@
         .container #contactForm .button--split-effect.button--send {
             margin: 24px 0 25px 0;
         }
+        @-moz-document url-prefix() { 
+            .container #contactForm .button {
+                top: -7px;
+                padding: 2.5px;
+            }
+          }
     }
 
     @media all and (max-width: 767px) and (min-width: 577px) {
@@ -449,6 +465,13 @@
         address .btn-vk {
             margin-bottom: 24px;
         }
+        @-moz-document url-prefix() { 
+            .container #contactForm .button {
+                top: -7px;
+                padding: 2.5px;
+            }
+          }
+        
     }
 
     @media all and (max-width: 350px) {
@@ -459,3 +482,8 @@
             font-size: 4.8vmin;
         }
     }
+    @media all and (max-width: 991px) {
+    .container #contactForm .button {
+        max-width: 50%;
+    }
+}
