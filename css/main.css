@@ -77,6 +77,11 @@ body {
   flex-direction: column;
 }
 
+header {
+position: absolute;
+top: 0;
+}
+
 .navbar {
   margin: 0;
   background: repeating-linear-gradient(

@@ -136,6 +136,7 @@ $(document).ready(function () {
         scrollIt(pizza, scrollTime, 'easeInOutCubic', function () {});
     } else if ($option === 'Роли') {
       var roll = document.getElementById('roll');
+      console.log(roll)
         scrollTime = scrollSpeed(roll);
         scrollIt(roll, scrollTime, 'easeInOutCubic', function () {});
     } else if ($option === 'Салати') {
@@ -155,7 +156,7 @@ $(document).ready(function () {
     event.stopPropagation();
     event.preventDefault();
     var scrollTime = scrollSpeed(this);
-    scrollIt(document.getElementsByClassName('navbar-brand')[0], scrollTime, 'easeInOutCubic', function () {});
+    scrollIt(document.getElementsByClassName('header')[0], scrollTime, 'easeInOutCubic', function () {});
   });
 
   document.getElementsByClassName('navbar-toggle')[0].onclick = function () {
