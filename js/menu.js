@@ -7,6 +7,20 @@ $(document).ready(function () {
     for (var i = 0; i < itemImg.length; i++) {
         itemImg[i].onclick = addImage;
     }
+    window.onload = function() {
+        setTimeout(function() {
+            var img = [];
+            var imgNum = 1;
+            if (document.images) {
+                for (var y = 0; y < itemImg.length; y++) {
+                img[y] = new Image();
+                img[y].src = './images/product/img-' + imgNum + '.png';
+                imgNum++;
+             }
+             console.log(img)
+            }
+        }, 1000);
+    };
     function addImage() {
         var num = itemImg.indexOf(this) + 1;
         var price = document.getElementsByClassName('ribbon')[0];
