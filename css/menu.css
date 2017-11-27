@@ -1,12 +1,8 @@
 body.modal-open {
-  overflow-y: auto !important;
+  overflow-y: auto;
   padding-right: 0 !important;
-  }
-  
-.modal-scrollbar-measure {
-  overflow: hidden;
 }
-
+  
 .flex-row {
 display: -webkit-box;
 display: -ms-flexbox;
@@ -221,6 +217,9 @@ justify-content: center;
   }
   
   @media all and (max-width: 576px) { 
+  body.modal-open {
+    overflow-y: hidden;
+  }   
   .notify-badge{
   position:relative;
   font-size: 1.30em;
@@ -244,6 +243,9 @@ justify-content: center;
   }
   
   @media all and (max-width: 767px) and (min-width: 577px) { 
+  body.modal-open {
+      overflow-y: hidden;
+  }   
   .modal-body > .container > .row > div > p {
     font-size: 1.4em;
     margin: 5px;
@@ -262,6 +264,9 @@ justify-content: center;
   
 
 @media all and (max-width: 991px) {
+  body.modal-open {
+    overflow-y: hidden;
+  }   
   .item-img {
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
