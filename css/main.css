@@ -845,20 +845,19 @@ footer {
 }
 
 footer p {
-  font-size: 1.2em;
+  font-size: 1.3em;
   color: white;
 }
 
 .social {
-  text-align: center;
+  flex: 1 0 auto;
+  text-align: end;
   margin: 0;
 }
 
 .container .design {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  font-size: 1.2em;
+  flex: 0 1 auto;
+  font-size: 1.3em;
   color: white;
   -ms-flex-item-align: end;
   align-self: flex-end;
@@ -881,6 +880,12 @@ footer p {
 /* media queries*/
 
 @media all and (max-width: 767px) and (min-width: 577px) {
+  footer p {
+    font-size: 1.2em;
+  }
+  .container .design {
+    font-size: 1.2em;
+  }
   .blocks .container .row div[class*="col"] {
     padding: 0 15px;
   }
@@ -954,6 +959,12 @@ footer p {
 }
 
 @media all and (max-width: 576px) {
+  footer p {
+    font-size: 1.1em;
+  }
+  .container .design {
+    font-size: 1.1em;
+  }
   .blocks .container .row div[class*="col"] {
     padding: 0 15px;
   }
