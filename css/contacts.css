@@ -13,7 +13,7 @@
         position: relative;
         font-size: 1.8em;
     }
-    .container p {
+    .grid-container .container p {
         font-size: 1.5em;
     }
 
@@ -185,11 +185,6 @@
         overflow: initial!important;
     }
 
-    .social>.copyright {
-        margin: 10px 0 10px 0;
-        font-size: 1.2em;
-    }
-
     #contactForm {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -317,10 +312,6 @@
         border-color: rgba(94.1%, 28.4%, 10.2%, 1);
     }
 
-    .container .social {
-        text-align: center;
-    }
-
     .messegeSend {
         position: relative;
         display: -webkit-box;
@@ -352,7 +343,8 @@
             font-size: 1.3em;
             line-height: 1.7em;
         }
-        .container p {
+
+      .grid-container .container p {
             margin: 0;
             font-size: 1.3em;
         }
