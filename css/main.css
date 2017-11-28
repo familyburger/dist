@@ -12,6 +12,20 @@
   /* Legacy iOS */
 }
 
+@font-face {
+  font-family: 'sticky notes';
+  font-weight:normal;
+  src: url('../fonts/Dear-Joe.eot');
+  /* IE9 Compat Modes */
+  src: local('sticky notes'), url('../fonts/notes.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/notes.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/notes.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/notes.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/notes.svg#stickyNotes') format('svg');
+  /* Legacy iOS */
+}
+
+
 .clearfix:after {
   visibility: hidden;
   display: block;
@@ -34,7 +48,7 @@ body {
   background-color: hsla(43, 86%, 72%, 0.75);
   background-image: url("../svg/i-like-food.svg");
   background-size: 75px 75px;
-  font-family: 'Alegreya Sans';
+  font-family: 'Alegreya Sans',Verdana, sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -398,9 +412,35 @@ a:focus {
 }
 
 .blocks .container .row .note .text {
+  display: flex;
+  flex-direction: column;
   position: absolute;
+  width: 100%;
   height: 100%;
-  padding: 15px;
+  text-align: center;
+  font-family:  'sticky notes';
+  text-shadow: none;
+  justify-content: center;
+  letter-spacing: 0.3em;
+  padding-bottom: 15px;
+}
+
+.text h3{
+  margin: 0;
+  padding: 0;
+}
+
+.sticky1 > .text {
+  color: rgba(78, 18, 243, 0.959);
+}
+
+.sticky2 > .text {
+  color: rgba(239, 243, 18, 0.959);
+  line-height: 0.5;
+}
+
+.sticky3 > .text {
+  color: rgba(243, 18, 112, 0.959);
 }
 
 .arrow_box_right {
@@ -956,6 +996,9 @@ footer p {
   .carousel-inner~a[class] {
     display: none;
   }
+  .flex-container .blocks .container .row .note .text {
+    font-size: 0.8em;
+    }
 }
 
 @media all and (max-width: 576px) {
@@ -1033,6 +1076,16 @@ footer p {
   .carousel-inner~a[class] {
     display: none;
   }
+  .flex-container .blocks .container .row .note .text {
+    font-size: 0em;
+  }
+ .text h3, .h3 {
+  font-size: 5vmin;
+}
+.text h1, .h1 {
+  font-size: 8vmin;
+  margin: 0;
+}
 }
 
 @media screen and (orientation: landscape) and (max-width: 767px) {
@@ -1182,7 +1235,14 @@ footer p {
     border-width: 36px;
     margin-left: -36px;
   }
+  .blocks .container .row .note .text {
+    font-size: 1.5em;
+    }
 }
 
-@media all and (min-width: 1200px) {}
+@media all and (max-width: 1199px) and (min-width: 992px) {
+  .blocks .container .row .note .text {
+  font-size: 0.5em;
+  }
+}
 
