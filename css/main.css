@@ -1080,9 +1080,11 @@ footer p {
     font-size: 0em;
   }
  .text h3, .h3 {
+  font-size: 16px;
   font-size: 5vmin;
 }
 .text h1, .h1 {
+  font-size: 22px;
   font-size: 8vmin;
   margin: 0;
 }
