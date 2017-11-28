@@ -1081,11 +1081,11 @@ footer p {
   }
  .text h3, .h3 {
   font-size: 16px;
-  font-size: 5vmin;
+  font-size: 5vw;
 }
 .text h1, .h1 {
   font-size: 22px;
-  font-size: 7.5vmin;
+  font-size: 7.5vw;
   margin: 0;
 }
 }
