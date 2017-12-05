@@ -3,10 +3,11 @@
   src: url("../fonts/alegreya-sans-v5-latin_cyrillic-ext_cyrillic-900italic.eot"); /* IE9 */
   src: url("../fonts/alegreya-sans-v5-latin_cyrillic-ext_cyrillic-900italic.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
   url("../fonts/alegreya-sans-v5-latin_cyrillic-ext_cyrillic-900italic.woff") format("woff"), /* chrome, firefox */
+  url("../fonts/alegreya-sans-v5-latin_cyrillic-ext_cyrillic-900italic.woff2") format("woff2"), /* chrome, firefox */
   url("../fonts/alegreya-sans-v5-latin_cyrillic-ext_cyrillic-900italic.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
   url("../fonts/alegreya-sans-v5-latin_cyrillic-ext_cyrillic-900italic.svg#Alegreya Sans Black") format("svg"); /* iOS 4.1- */
-  font-style: normal;
-  font-weight: normal;
+  font-style: initial;
+  font-weight: 900;
 }
 
   @font-face {
@@ -14,12 +15,12 @@
     src: url("../fonts/notes.eot"); /* IE9 */
     src: url("../fonts/notes.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
     url("../fonts/notes.woff") format("woff"), /* chrome, firefox */
+    url("../fonts/notes.woff2") format("woff2"), /* chrome, firefox */
     url("../fonts/notes.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
     url("../fonts/notes.svg#HeinrichScript") format("svg"); /* iOS 4.1- */
     font-style: normal;
     font-weight: normal;
 }
-
 
 .clearfix:after {
   visibility: hidden;
