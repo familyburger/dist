@@ -1,11 +1,10 @@
 const gulp = require('gulp');
-const autoprefixer = require('gulp-autoprefixer');
- 
-gulp.task('default', () =>
-    gulp.src('./css/vacancies.css')
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
+const fontmin = require('gulp-fontmin');
+let text = 'АаБбВвГгҐґДдЕеЄєЖжЗзИиІіЇїЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЬьЮюЯя';
+gulp.task('default', function () {
+    return gulp.src('./fonts/alegreya-sans-v5-latin_cyrillic-ext_cyrillic-900italic.ttf')
+        .pipe(fontmin({
+            text: text,
         }))
-        .pipe(gulp.dest('dist'))
-);
+        .pipe(gulp.dest('dist/fonts'));
+});
