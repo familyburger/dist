@@ -1,11 +1,10 @@
-const gulp = require('gulp');
-const autoprefixer = require('gulp-autoprefixer');
- 
-gulp.task('default', () =>
-    gulp.src('./css/vacancies.css')
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
+var gulp = require('gulp');
+var fontmin = require('gulp-fontmin');
+var text = 'АаБбВвГгДдЕеЄєЖжЗзИиIіЇїЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЬьЮюЯя1234567890';
+gulp.task('default', function () {
+    return gulp.src('./oldFonts/notes.ttf')
+        .pipe(fontmin({
+            text: text,
         }))
-        .pipe(gulp.dest('dist'))
-);
+        .pipe(gulp.dest('dist/fonts'));
+});
