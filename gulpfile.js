@@ -1,10 +1,14 @@
 var gulp = require('gulp');
 var fontmin = require('gulp-fontmin');
-var text = 'АаБбВвГгДдЕеЄєЖжЗзИиIіЇїЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЬьЮюЯя1234567890';
+
+function cyrillic(start, end) {
+    let result = '';
+    for (let i = start; i < end; i++) {
+        result += String.fromCodePoint(i);
+    }
+    return result;
+}
+let text = cyrillic('1028', '1112');
 gulp.task('default', function () {
-    return gulp.src('./oldFonts/notes.ttf')
-        .pipe(fontmin({
-            text: text,
-        }))
-        .pipe(gulp.dest('dist/fonts'));
+    console.log(text);
 });

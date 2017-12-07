@@ -168,4 +168,7 @@ $(document).ready(function () {
       scrolledNav.classList.remove("activeBar");
     }
   };
+
+
 }, true);
+
