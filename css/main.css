@@ -353,6 +353,7 @@ a:focus {
 .note {
   position: relative;
   width: 31%;
+  max-height: 80%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, .25);
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .25);
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, .25);
@@ -420,7 +421,7 @@ a:focus {
   text-shadow: none;
   justify-content: center;
   letter-spacing: 0.3em;
-  padding-bottom: 15px;
+  padding-bottom: 25px;
 }
 
 .text h3 {
@@ -1093,6 +1094,9 @@ footer p {
 }
 
 @media all and (max-width: 991px) {
+  .blocks .container .row div[class*="arrow"] {
+    height: 250px;
+}
   .arrow_box_right {
     display: none;
   }
