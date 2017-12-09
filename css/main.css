@@ -118,14 +118,14 @@ a:focus {
 
 .flex-container .scrolled-nav {
   min-height: 70px;
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
 }
 
 .grid-container .scrolled-nav {
   min-height: 70px;
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
 }
 
 .scrolled-nav .navbar-toggle {
@@ -134,10 +134,14 @@ a:focus {
 
 .scrolled-nav .navbar-header .navbar-brand {
   padding-top: 0.75em;
+  -webkit-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
 }
 
 .scrolled-nav .container .navbar-nav>li>a {
   padding-top: 1.15em;
+  -webkit-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
 }
 
 .scrolled-nav .navbar-header .navbar-brand::after {
@@ -160,8 +164,8 @@ a:focus {
 
 .navbar-inverse {
   border: none;
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
 }
 
 .navbar-inverse .navbar-collapse,
@@ -174,6 +178,8 @@ a:focus {
   font-size: 2em;
   padding-top: 1.2em;
   position: relative;
+  -webkit-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
 }
 
 .navbar-inverse .navbar-brand:hover {
@@ -188,8 +194,8 @@ a:focus {
   top: 18px;
   right: 0;
   background-color: rgba(94.1%, 28.4%, 10.2%, 1);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
 }
 
 .navbar-inverse .navbar-brand:hover:after {
@@ -204,8 +210,8 @@ a:focus {
   bottom: -20px;
   left: 0;
   background-color: rgba(94.1%, 28.4%, 10.2%, 1);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
 }
 
 .navbar-inverse .navbar-brand:hover:before {
@@ -243,6 +249,8 @@ a:focus {
   position: relative;
   padding-top: 1.7em;
   cursor: pointer;
+  -webkit-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
 }
 
 .navbar-inverse .navbar-nav>li>a:hover {
@@ -257,8 +265,8 @@ a:focus {
   top: 27px;
   right: 0;
   background-color: rgba(94.1%, 28.4%, 10.2%, 1);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
 }
 
 .navbar-inverse .navbar-nav>li>a:hover:after {
@@ -273,8 +281,8 @@ a:focus {
   bottom: 6px;
   left: 0;
   background-color: #ef481a;
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
 }
 
 .navbar-inverse .navbar-nav>li>a:hover:before {
