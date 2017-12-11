@@ -118,14 +118,10 @@ a:focus {
 
 .flex-container .scrolled-nav {
   min-height: 70px;
-  -webkit-transition: all 0.3s linear 0s;
-  transition: all 0.3s linear 0s;
 }
 
 .grid-container .scrolled-nav {
   min-height: 70px;
-  -webkit-transition: all 0.3s linear 0s;
-  transition: all 0.3s linear 0s;
 }
 
 .scrolled-nav .navbar-toggle {
@@ -134,14 +130,10 @@ a:focus {
 
 .scrolled-nav .navbar-header .navbar-brand {
   padding-top: 0.75em;
-  -webkit-transition: all 0.3s linear 0s;
-  transition: all 0.3s linear 0s;
 }
 
 .scrolled-nav .container .navbar-nav>li>a {
   padding-top: 1.15em;
-  -webkit-transition: all 0.3s linear 0s;
-  transition: all 0.3s linear 0s;
 }
 
 .scrolled-nav .navbar-header .navbar-brand::after {
