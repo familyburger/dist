@@ -2,6 +2,22 @@ $(document).ready(function () {
     $('.notify-badge').arctext({
         radius: 300
     });
+    var MenuModel = function MenuModel(XMLHttpRequest) {
+        this.XMLHttpRequest = XMLHttpRequest;
+      };
+    
+      MenuModel.prototype.getProducts = function getProducts(index, fn) {
+        var oReq = new this.XMLHttpRequest();
+        oReq.onload = function onLoad(e) {
+          var ajaxResponse = JSON.parse(e.currentTarget.responseText)
+          console.log(ajaxResponse)
+        };
+      
+        oReq.open('GET', 'https://familyburger.com.ua/products.json', true);
+        oReq.send();
+      };
+    var menuModel = new MenuModel(XMLHttpRequest);
+    menuModel.getProducts();
     var $images = $('.product-img');
     var itemImg = Array.prototype.slice.call(document.querySelectorAll('.container .item-img'));
     for (var i = 0; i < itemImg.length; i++) {
