@@ -50,6 +50,10 @@ justify-content: center;
   margin: 0px 0px 75px 0px;
   }
   
+  select::-ms-expand {
+    display: none;
+  }
+
   #selectMenu {
   position: absolute;
   right: 0px;
