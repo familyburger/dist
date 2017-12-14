@@ -3,13 +3,13 @@ $(document).ready(function () {
     return document.getElementById('contentWrap').offsetTop;
   };
 
-  function browserVersion() {
+  function checkBrowserVersion() {
      var ua = window.navigator.userAgent
      var msie = ua.indexOf ( "MSIE " )
      if ( msie > 0 )      
         return document.body.scrollTop;
      else                 
-        return document.scrollingElement;
+        return document.scrollingElement.scrollTop;
   }
 
   window.onresize = offsetButton;
@@ -17,13 +17,13 @@ $(document).ready(function () {
 
   function scrollFunction() {
     var scrollOffset = offsetButton();
-    var scrollElm = browserVersion();
-    if (scrollElm.scrollTop > scrollOffset) {
+    var scrollElm = checkBrowserVersion();
+    if (scrollElm > scrollOffset) {
       document.getElementById('scrollTop').style.display = "block";
     } else {
       document.getElementById('scrollTop').style.display = "none";
     }
-    if (scrollElm.scrollTop >= 105) {
+    if (scrollElm >= 105) {
       $('.navbar').addClass('scrolled-nav');
     } else {
       $('.navbar').removeClass('scrolled-nav');
