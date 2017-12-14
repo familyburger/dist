@@ -28,6 +28,7 @@ hr {
 
 .indexContent .svgImg .container .row div[class*="col"] img {
     max-width: 8em;
+    max-height: 8em;
     border: 5px solid rgba(94.1%, 28.4%, 10.2%, 0.8);
     border-style: groove;
     margin: 5px;
