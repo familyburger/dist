@@ -886,7 +886,7 @@ footer p {
 
 .social {
   flex: 1 0 auto;
-  text-align: end;
+  text-align: right;
   margin: 0;
 }
 
