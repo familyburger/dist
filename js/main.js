@@ -5,9 +5,8 @@ $(document).ready(function () {
 
   function checkBrowserVersion() {
      var ua = window.navigator.userAgent;
-     var msie = ua.indexOf ( "MSIE " );
-     var edge = ua.indexOf('Edge/');
-     if ( msie > 0 || edge > 0 )      
+     var msie = ua.indexOf ( 'MSIE ' );
+     if ( msie > 0 )      
         return document.body.scrollTop;
      else                 
         return document.scrollingElement.scrollTop;
