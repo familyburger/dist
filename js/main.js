@@ -2,12 +2,22 @@ $(document).ready(function () {
   function offsetButton() {
     return document.getElementById('contentWrap').offsetTop;
   };
-  var scrollElm = document.scrollingElement;
+
+  function browserVersion() {
+     var ua = window.navigator.userAgent
+     var msie = ua.indexOf ( "MSIE " )
+     if ( msie > 0 )      
+        return document.body.scrollTop;
+     else                 
+        return document.scrollingElement;
+  }
+
   window.onresize = offsetButton;
   window.onscroll = scrollFunction;
 
   function scrollFunction() {
     var scrollOffset = offsetButton();
+    var scrollElm = browserVersion();
     if (scrollElm.scrollTop > scrollOffset) {
       document.getElementById('scrollTop').style.display = "block";
     } else {
