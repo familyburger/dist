@@ -1,15 +1,15 @@
 $(document).ready(function () {
-    var price = document.getElementsByClassName('ribbon')[0];
-    var description = document.getElementsByClassName('description')[0];
-    var image = document.getElementsByClassName('product-img')[0];
-    var ProductsModel = function ProductsModel(XMLHttpRequest) {
+    var price = document.getElementsByClassName('ribbon')[0],
+    description = document.getElementsByClassName('description')[0],
+    image = document.getElementsByClassName('product-img')[0],
+    ProductsModel = function ProductsModel(XMLHttpRequest) {
         this.XMLHttpRequest = XMLHttpRequest;
       };
       ProductsModel.prototype.getProducts = function getProducts(index,fn) {
         var oReq = new this.XMLHttpRequest();
         oReq.onload = function onLoad(e) {
-          var ajaxResponse = JSON.parse(e.currentTarget.responseText)
-          var product = ajaxResponse[index];
+          var ajaxResponse = JSON.parse(e.currentTarget.responseText),
+          product = ajaxResponse[index];
           fn(product);
         };
       
@@ -27,7 +27,7 @@ $(document).ready(function () {
         image.style.backgroundImage = 'url("images/product/img-' + imageIndex + '.png")';
       };
       ProductsView.prototype.slideDown = function slideDown() {
-            var hgt = 25;
+            var hgt = 25,
             interval = setInterval(function () {
                 if (50 > hgt) {
                     hgt += 0.5;
@@ -35,6 +35,7 @@ $(document).ready(function () {
                 } else {
                     price.style.height = hgt + "%";
                     clearInterval(interval);
+                    interval = null;
                 }
             }, 25);
       } 
@@ -48,9 +49,11 @@ $(document).ready(function () {
       this.productsView.render(productModelData);
       };
       (function initialize() {
-        var itemImg = Array.prototype.slice.call(document.querySelectorAll('.container .item-img'));
-        var productsModel = new ProductsModel(XMLHttpRequest);
-        for (var i = 0; i < itemImg.length; i++) {
+        var i,
+        itemImg = Array.prototype.slice.call(document.querySelectorAll('.container .item-img')),
+        productsModel = new ProductsModel(XMLHttpRequest),
+        len = itemImg.length;
+        for (i = 0; i < len; i++) {
             itemImg[i].onclick = function () {
                var productsView = new ProductsView(this,itemImg); 
                var controller = new ProductsController(productsView, productsModel);
