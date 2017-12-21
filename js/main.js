@@ -131,8 +131,8 @@ $(document).ready(function () {
 
     //measure scroll speed
   function scrollSpeed (elem) {
-    var pixels = document.body.clientHeight + elem.offsetTop;
-    var pixelsPerMs = 1; 
+    var pixels = document.body.clientHeight + elem.offsetTop,
+    pixelsPerMs = 4; 
     return pixels / pixelsPerMs;
   }
 
@@ -143,20 +143,19 @@ $(document).ready(function () {
     if ($option === 'Піца') {
        var pizza = document.getElementById('pizza');
         scrollTime = scrollSpeed(pizza);
-        scrollIt(pizza, scrollTime, 'easeInOutCubic', function () {});
+        scrollIt(pizza, scrollTime, 'linear', function () {});
     } else if ($option === 'Роли') {
       var roll = document.getElementById('roll');
-      console.log(roll)
         scrollTime = scrollSpeed(roll);
-        scrollIt(roll, scrollTime, 'easeInOutCubic', function () {});
+        scrollIt(roll, scrollTime, 'linear', function () {});
     } else if ($option === 'Салати') {
       var salat = document.getElementById('salat');
         scrollTime = scrollSpeed(salat); 
-        scrollIt(salat, scrollTime, 'easeInOutCubic', function () {});
+        scrollIt(salat, scrollTime, 'linear', function () {});
     } else if ($option === 'Різне') {
       var food = document.getElementById('chicken');
         scrollTime = scrollSpeed(food);
-        scrollIt(food, scrollTime, 'easeInOutCubic', function () {});
+        scrollIt(food, scrollTime, 'linear', function () {});
     }
     $(this).val('burger');
 });
@@ -166,7 +165,7 @@ $(document).ready(function () {
     event.stopPropagation();
     event.preventDefault();
     var scrollTime = scrollSpeed(this);
-    scrollIt(document.getElementsByClassName('targetTop')[0], scrollTime, 'easeInOutCubic', function () {});
+    scrollIt(document.getElementsByClassName('targetTop')[0], scrollTime, 'linear', function () {});
   });
 
   document.getElementsByClassName('navbar-toggle')[0].onclick = function () {
