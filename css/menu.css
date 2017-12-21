@@ -189,7 +189,7 @@ justify-content: center;
       font-weight: bold;
       text-shadow: 1px 1px rgba(0%,0%,0%, 0.3), 2px 1px rgba(0%,0%,0%, 0.4), 1px 2px 6px rgba(0%,0%,0%, 0.5);
       top: 0;
-      
+      /* */ 
       margin-right: 10px;
       color: rgba(94.1%, 28.4%, 10.2%, 1);
       -webkit-filter: drop-shadow(1px 3px 10px rgba(255, 255, 255, 0.60));
