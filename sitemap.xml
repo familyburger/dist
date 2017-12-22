@@ -2,9 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	<url>
 		<loc>https://familyburger.com.ua/</loc>
-		<xhtml:link rel="alternate" hreflang="ua" href="https://familyburger.com.ua" />
     <lastmod>2017-12-22T20:23:11+00:00</lastmod>
     <priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://familyburger.com.ua/index.html</loc>
+		<xhtml:link rel="alternate" hreflang="ua" href="https://familyburger.com.ua" />
+    <lastmod>2017-12-22T20:23:11+00:00</lastmod>
+    <priority>0.80</priority>
 	</url>
 	<url>
 		<loc>https://familyburger.com.ua/menu.html</loc>
@@ -25,11 +30,11 @@
 		<priority>0.80</priority>
 	</url>
 	<url>
-		<loc>https://www.facebook.com/groups/FamilyBurgerr/</loc>
-		<xhtml:link rel="alternate" hreflang="ua" href="https://www.facebook.com/groups/FamilyBurgerr/" />
+		<loc>https://www.facebook.com/groups/FamilyBurgerr</loc>
+		<xhtml:link rel="alternate" hreflang="ua" href="https://www.facebook.com/groups/FamilyBurgerr" />
 	</url>
 	<url>
-		<loc>https://vk.com/familyburger/</loc>
-		<xhtml:link rel="alternate" hreflang="ru" href="https://vk.com/familyburger/" />
+		<loc>https://vk.com/familyburger</loc>
+		<xhtml:link rel="alternate" hreflang="ru" href="https://vk.com/familyburger" />
 	</url>
 </urlset>
