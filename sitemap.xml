@@ -1,37 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	<url>
-		<loc>index.html</loc>
+		<loc>https://familyburger.com.ua/</loc>
 		<xhtml:link rel="alternate" hreflang="ua" href="index.html" />
     <lastmod>2017-12-22T20:23:11+00:00</lastmod>
     <priority>1.00</priority>
 	</url>
 	<url>
-		<loc>menu.html</loc>
+		<loc>https://familyburger.com.ua/menu.html</loc>
 		<xhtml:link rel="alternate" hreflang="ua" href="menu.html" />
     <lastmod>2017-12-22T20:23:11+00:00</lastmod>
 		<priority>0.80</priority>
 	</url>
 	<url>
-		<loc>vacancies.html</loc>
+		<loc>https://familyburger.com.ua/vacancies.html</loc>
 		<xhtml:link rel="alternate" hreflang="ua" href="vacancies.html" />
     <lastmod>2017-12-22T20:23:11+00:00</lastmod>
 		<priority>0.80</priority>
 	</url>
 	<url>
-		<loc>contacts.html</loc>
+		<loc>https://familyburger.com.ua/contacts.html</loc>
 		<xhtml:link rel="alternate" hreflang="ua" href="contacts.html" />
     <lastmod>2017-12-22T20:23:11+00:00</lastmod>
 		<priority>0.80</priority>
 	</url>
 	<url>
 		<loc>https://www.facebook.com/groups/FamilyBurgerr/</loc>
-		<xhtml:link rel="alternate" hreflang="URL" href="https://www.facebook.com/groups/FamilyBurgerr/" />
-		<xhtml:link rel="alternate" hreflang="Link" href="" />
+		<xhtml:link rel="alternate" hreflang="ua" href="https://www.facebook.com/groups/FamilyBurgerr/" />
 	</url>
 	<url>
 		<loc>https://vk.com/familyburger/</loc>
-		<xhtml:link rel="alternate" hreflang="URL" href="https://vk.com/familyburger/" />
-		<xhtml:link rel="alternate" hreflang="Link" href="" />
+		<xhtml:link rel="alternate" hreflang="ru" href="https://vk.com/familyburger/" />
 	</url>
 </urlset>
