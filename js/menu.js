@@ -1,10 +1,10 @@
 $(document).ready(function () {
   var price = document.getElementsByClassName('ribbon')[0],
     description = document.getElementsByClassName('description')[0],
-    image = document.getElementsByClassName('product-img')[0],
-    ProductsModel = function ProductsModel(XMLHttpRequest) {
-      this.XMLHttpRequest = XMLHttpRequest;
-    };
+    image = document.getElementsByClassName('product-img')[0];
+  ProductsModel = function ProductsModel(XMLHttpRequest) {
+    this.XMLHttpRequest = XMLHttpRequest;
+  };
   ProductsModel.prototype.getProducts = function getProducts(index, fn) {
     var oReq = new this.XMLHttpRequest();
     oReq.onload = function onLoad(e) {
@@ -61,10 +61,12 @@ $(document).ready(function () {
     }
   })();
   window.addEventListener('load', function () {
-    const allimages = document.getElementsByTagName('img');
-    for (var i = 0; i < allimages.length; i++) {
-      if (allimages[i].getAttribute('data-src')) {
-        allimages[i].setAttribute('src', allimages[i].getAttribute('data-src'));
+    var y,
+      allimages = document.getElementsByTagName('img'),
+      allImgLen = allimages.length;
+    for (y = 0; y < allImgLen; y++) {
+      if (allimages[y].getAttribute('data-src')) {
+        allimages[y].setAttribute('src', allimages[y].getAttribute('data-src'));
       }
     }
   }, false)
