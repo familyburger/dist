@@ -584,6 +584,16 @@ a:focus {
   margin-top: -36px;
 }
 
+.arrow_box_left .notes .text img {
+  width: 50%;
+  margin: 0 auto;
+} 
+
+.arrow_box_top .notes .text img {
+  width: 50%;
+  margin: 0 auto;
+} 
+
 .arrow_box_bottom {
   display: none;
 }
