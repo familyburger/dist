@@ -18,7 +18,9 @@ z(p,function(a){h=a;u()});t(p,L(c,'"'+c.family+'",monospace'))})})};"object"===t
      stickyNotes[z].className += " loaded";
    }
  },function () {
-     console.log('Font is not available');
+  for (var z = 0; z < stickyNotes.length; z++) {
+     stickyNotes[z].className += " fallback";
+  }
 });
 
 

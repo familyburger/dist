@@ -365,8 +365,11 @@ a:focus {
   visibility: hidden;
 }
 
+.note .text.loaded {
+  visibility: visible;
+}
 
-.note .text.loaded{
+.note .text.fallback {
   visibility: visible;
 }
 
