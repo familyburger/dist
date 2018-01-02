@@ -223,11 +223,15 @@ $(function () {
             ]
         }
         var map = new google.maps.Map(mapCanvas, mapOptions);
-        var markerImage = 'svg/marker.svg';
+        var markerImage = {
+        url: 'svg/marker.svg',
+        scaledSize: new google.maps.Size(75, 75)
+        }
         var marker = new google.maps.Marker({
             position: location,
             map: map,
-            icon: markerImage
+            icon: markerImage,
+            optimized: false
         });
         var contentString = '<div class="info-window">' +
             '<h3>FamilyBurger</h3>' +
