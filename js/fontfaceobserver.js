@@ -14,8 +14,16 @@ z(p,function(a){h=a;u()});t(p,L(c,'"'+c.family+'",monospace'))})})};"object"===t
  var font = new FontFaceObserver('sticky notes');
  var stickyNotes = document.getElementsByClassName("text");
  font.load().then(function () {
-    for(var z = 0;z < stickyNotes.length;z++) {
-      stickyNotes[z].style.visibility = "visible";
-    }
+   for (var z = 0; z < stickyNotes.length; z++) {
+     stickyNotes[z].style.visibility = "visible";
+   }
  });
- 
+ (function checkBrowserSupport() {
+   var ua = window.navigator.userAgent;
+   var msie = ua.indexOf('MSIE ');
+   if (msie > 0) {
+     for (var z = 0; z < stickyNotes.length; z++) {
+       stickyNotes[z].style.visibility = "visible";
+     }
+   }
+ })();
