@@ -595,11 +595,13 @@ a:focus {
 .arrow_box_left .notes .text img {
   width: 50%;
   margin: 0 auto;
+  height: 50%;
 } 
 
 .arrow_box_top .notes .text img {
   width: 50%;
   margin: 0 auto;
+  height: 50%;
 } 
 
 .arrow_box_bottom {
