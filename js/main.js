@@ -3,13 +3,8 @@ $(document).ready(function () {
     return document.getElementById('contentWrap').offsetTop;
   };
 
-  function checkBrowserVersion() {
-     var ua = window.navigator.userAgent;
-     var msie = ua.indexOf ( 'MSIE ' );
-     if ( msie > 0 )      
-        return document.body.scrollTop;
-     else                 
-        return document.scrollingElement.scrollTop;
+  function checkBrowserSupport() {
+    return (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
   }
 
   window.onresize = offsetButton;
@@ -17,7 +12,7 @@ $(document).ready(function () {
 
   function scrollFunction() {
     var scrollOffset = offsetButton();
-    var scrollElm = checkBrowserVersion();
+    var scrollElm = checkBrowserSupport();
     if (scrollElm > scrollOffset) {
       document.getElementById('scrollTop').style.display = "block";
     } else {
