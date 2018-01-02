@@ -369,8 +369,9 @@ a:focus {
   visibility: visible;
 }
 
-.note .text.fallback {
+.blocks .container .row .note .text.fallback {
   visibility: visible;
+  letter-spacing: 0;
 }
 
 .note::after {
@@ -1105,6 +1106,15 @@ footer p {
     font-size: 7.5vw;
     margin: 0;
   }
+  .arrow_box_left .notes .text img {
+    width: 60%;
+    height: 60%;
+  } 
+  
+  .arrow_box_top .notes .text img {
+    width: 60%;
+    height: 60%;
+  } 
 }
 
 @media screen and (orientation: landscape) and (max-width: 767px) {
@@ -1266,5 +1276,15 @@ footer p {
   .blocks .container .row .note .text {
     font-size: 0.5em;
   }
+
+  .arrow_box_left .notes .text img {
+    width: 60%;
+    height: 60%;
+  } 
+  
+  .arrow_box_top .notes .text img {
+    width: 60%;
+    height: 60%;
+  } 
 }
 
