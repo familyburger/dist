@@ -918,11 +918,12 @@ footer p {
   -ms-flex-item-align: end;
   align-self: flex-end;
   margin-bottom: 22px;
+  margin-top: 50px;
 }
 
-@supports not (display: grid) {
+@supports (display: grid) {
   .container .design {
-    margin-top: 50px;
+    margin-top: 0px;
   }
 }
 
