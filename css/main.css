@@ -920,6 +920,12 @@ footer p {
   margin-bottom: 22px;
 }
 
+@supports not (display: grid) {
+  .container .design {
+    margin-top: 50px;
+  }
+}
+
 .copyright {
   margin-top: 10px;
   text-align: right;
