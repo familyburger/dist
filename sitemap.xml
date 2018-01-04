@@ -5,6 +5,9 @@
 	<url>
 		<loc>https://familyburger.com.ua/</loc>
     <lastmod>2017-12-22T20:23:11+00:00</lastmod>
+		<image:image>
+		  <image:loc>https://familyburger.com.ua/images/vacancies/employee.jpg</image:loc>
+		</image:image>
     <priority>1.00</priority>
 	</url>
 	<url>
