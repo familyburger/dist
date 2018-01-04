@@ -7,8 +7,6 @@ gulp.task('minify-css', () => {
     .pipe(gulp.dest('dist'));
 });
 
-
-
 /*var gulp = require('gulp');
 var fontmin = require('gulp-fontmin');
 
