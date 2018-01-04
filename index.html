@@ -31,8 +31,6 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <meta http-equiv="Cache-Control" content="public">
-    <meta http-equiv="Cache-Control" content="max-age=360">
     <link rel="stylesheet" href="css/index.css">
     <script>
         //carousel images preload
@@ -291,15 +289,18 @@
     <script type="application/ld+json">
         {
          "@context": "http://schema.org",
-         "@type": "Organization",
+         "@type": "Restaurant",
          "name": "Family Burger",
          "url": "https://familyburger.com.ua",
          "description": "Family Burger - ресторан швидкого харчування в місті Ромни.", 
-         "contactPoint": {
-         "@type": "ContactPoint",
          "telephone": "+38(068) 012-12-12",
-         "contactType": "customer service"
-                          }
+         "email": "info@familyburger.com"
+         "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Україна, Ромни",
+            "postalCode": "42000",
+            "streetAddress": "м.Ромни,вул.Соборна 23"
+         }
         }
     </script>
 </body>
