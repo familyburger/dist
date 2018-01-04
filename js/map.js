@@ -234,7 +234,7 @@ $(function () {
             optimized: false
         });
         var contentString = '<div class="info-window">' +
-            '<h3>FamilyBurger</h3>' +
+            '<h3>Family Burger</h3>' +
             '<div class="info-content">' +
             '<h4>Ласкаво просимо!</h4>' +
             '</div>' +
