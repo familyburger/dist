@@ -13161,7 +13161,7 @@ a:focus {
 .note::after {
     content: "";
     display: block;
-    padding-bottom: 80%
+    padding-bottom: 90%
 }
 
 .sticky1 {
@@ -13183,24 +13183,60 @@ a:focus {
 }
 
 .blocks .container .row .note .pin {
-    width: 15px;
-    height: 15px;
-    margin: 0 auto;
+    background-color: #aaa;
+    display: block;
+    height: 32px;
+    width: 2px;
+    position: absolute;
+    left: 50%;
+    top: -16px;
+    z-index: 1;
+}
+
+.pin::after {
+    background-color: #A31;
+    background-image: radial-gradient(25% 25%, circle, hsla(0, 0%, 100%, .3), hsla(0, 0%, 0%, .3));
     border-radius: 50%;
-    -webkit-box-shadow: 0 4px 3px rgba(0%, 0%, 0%, .25);
-    box-shadow: 0 4px 3px rgba(0%, 0%, 0%, .25)
+    box-shadow: inset 0 0 0 1px hsla(0, 0%, 0%, .1), inset 3px 3px 3px hsla(0, 0%, 100%, .2), inset -3px -3px 3px hsla(0, 0%, 0%, .2), 23px 20px 3px hsla(0, 0%, 0%, .15);
+    content: '';
+    height: 12px;
+    left: -5px;
+    position: absolute;
+    top: -10px;
+    width: 12px;
 }
 
-.sticky1 .pin {
-    background-image: radial-gradient(#008cff 50%, #000 100%)
+.pin::before {
+    background-color: hsla(0, 0%, 0%, 0.1);
+    box-shadow: 0 0 .25em hsla(0, 0%, 0%, .1);
+    content: '';
+    height: 24px;
+    width: 2px;
+    left: 0;
+    position: absolute;
+    top: 8px;
+    transform: rotate(57.5deg);
+    -moz-transform: rotate(57.5deg);
+    -webkit-transform: rotate(57.5deg);
+    -o-transform: rotate(57.5deg);
+    -ms-transform: rotate(57.5deg);
+    transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
 }
 
-.sticky2 .pin {
-    background-image: radial-gradient(#15ff00 50%, #000 100%)
+.sticky1 .pin::after {
+    background-image: radial-gradient(#008cff 40%, #000 100%)
 }
 
-.sticky3 .pin {
-    background-image: radial-gradient(#ff0037 50%, #000 100%)
+.sticky2 .pin::after {
+    background-image: radial-gradient(#15ff00 40%, #000 100%)
+}
+
+.sticky3 .pin::after {
+    background-image: radial-gradient(#ff0037 40%, #000 100%)
 }
 
 .blocks .container .row .note .text {
@@ -13214,7 +13250,7 @@ a:focus {
     text-shadow: none;
     justify-content: center;
     letter-spacing: .3em;
-    padding-bottom: 25px
+    padding-top: 15px;
 }
 
 .text h3 {
