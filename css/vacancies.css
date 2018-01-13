@@ -13786,6 +13786,8 @@ footer p {
         background-image: none;
         border: 1px solid transparent;
         border-radius: 4px;
+        -webkit-transition: all .3s linear 0s;
+        transition: all .3s linear 0s;
         -webkit-filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8));
         filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8))
     }
@@ -13863,6 +13865,8 @@ footer p {
         background-image: none;
         border: 1px solid transparent;
         border-radius: 4px;
+        -webkit-transition: all .3s linear 0s;
+        transition: all .3s linear 0s;
         -webkit-filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8));
         filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8))
     }
@@ -14084,7 +14088,7 @@ footer p {
 
 .container h1 {
     position: relative;
-    font-size: 1.8em;
+    font-size: 1.6em;
     margin: 0;
     padding: 0;
 }
@@ -14120,7 +14124,7 @@ hr {
 
 .indexContent .svgImg .container .row div[class*=col] p {
     font-size: 1.5em;
-    line-height: 1.5em;
+    line-height: 1.4em;
     margin: 0 3px
 }
 
@@ -14232,7 +14236,7 @@ h1 {
 
 article {
     font-size: 1.5em;
-    line-height: 1.5em;
+    line-height: 1.4em;
 }
 
 
@@ -14243,16 +14247,17 @@ article {
     .indexContent .svgImg .container .row div[class*=col] p,
     article {
         font-size: 1.4em;
-        line-height: 1.4em;
+        line-height: 1.3em;
     }
     .container h1 {
-       font-size: 1.7em;
+       font-size: 1.5em;
     }
 }
 
 @media all and (max-width:576px) {
     .indexContent .svgImg .container .row div[class*=col] p {
         font-size: 1.3em;
+        line-height: 1.2em;
         margin: 0 -10px 0 -10px;
         padding: 0 5px;
         position: absolute;
@@ -14262,20 +14267,17 @@ article {
     .indexContent .svgImg .container .row div[class*=col] p,
     article {
         font-size: 1.3em;
-        line-height: 1.3em;
+        line-height: 1.2em;
     }
     .br {
         display: initial
     }
     .container h1 {
         text-align: center;
-        font-size: 1.6em;
+        font-size: 1.4em;
     }
     .wrapper {
         display: none
-    }
-    article {
-        font-size: 1.3em
     }
     .grid-container .indexContent .container .row:nth-child(1) {
         padding-bottom: 35px
