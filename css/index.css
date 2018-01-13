@@ -14093,14 +14093,10 @@ footer p {
     }
     .row .arrow_box_inner_top article h1 {
         display: inline;
-        font-size: 1em;
+        font-size: 1.1em;
     }
     .row .arrow_box_inner_bottom article p {
         font-size: 1.4em;
-    }
-    .row .arrow_box_inner_bottom article h1 {
-        display: inline;
-        font-size: 1em;
     }
 }
 
@@ -14217,10 +14213,6 @@ footer p {
     }
     .row .arrow_box_inner_bottom article p {
         font-size: 1.3em;
-    }
-    .row .arrow_box_inner_bottom article h1 {
-        display: inline;
-        font-size: 1em;
     }
 }
 
