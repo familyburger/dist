@@ -14070,6 +14070,8 @@ footer p {
         background-image: none;
         border: 1px solid transparent;
         border-radius: 4px;
+        -webkit-transition: all .3s linear 0s;
+        transition: all .3s linear 0s;
         -webkit-filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8));
         filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8))
     }
@@ -14160,6 +14162,8 @@ footer p {
         background-image: none;
         border: 1px solid transparent;
         border-radius: 4px;
+        -webkit-transition: all .3s linear 0s;
+        transition: all .3s linear 0s;
         -webkit-filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8));
         filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8))
     }
