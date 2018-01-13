@@ -14099,11 +14099,19 @@ footer p {
 }
 
 .grid-container .container p {
-    font-size: 1.5em
+    font-size: 1.5em;
+    line-height: 1.4em;
 }
+
+.container #contactForm .button--split-effect.button--send,
+    label {
+        font-size: 1.5em;
+        line-height: 1.4em;
+    }
 
 label[for=comment] {
     font-size: 1.5em;
+    line-height: 1.4em;
     margin-top: 25px
 }
 
@@ -14426,6 +14434,75 @@ textarea:focus {
     text-align: center
 }
 
+@media all and (max-width:991px) {
+    .container #contactForm .button {
+        max-width: 50%
+    }
+}
+
+@media all and (max-width:767px) and (min-width:577px) {
+    address .btn.btn-block p {
+        font-size: 1.4em;
+        line-height: 1.7em
+    }
+    .textAlert .alert {
+        font-size: 1.4em
+    }
+    .grid-container .container p {
+        margin: 0;
+        line-height: 1.3em;
+        font-size: 1.4em
+    }
+    address .btn-vk p {
+        padding: 0 64px 0 0
+    }
+    .container #contactForm .button--split-effect.button--send,
+    label,
+    label[for=comment] {
+        font-size: 1.4em;
+        line-height: 1.3em;
+    }
+    .sm-md-line {
+        display: block
+    }
+    .container h1 {
+        text-align: center
+    }
+    address {
+        margin-bottom: -10px;
+        text-align: center
+    }
+    .wrapper {
+        display: none
+    }
+    #map {
+        width: 100vw;
+        height: calc(100vw * 9/16);
+        position: initial!important;
+        overflow: initial!important
+    }
+    .hrBottom {
+        border-top: none;
+        height: 25px;
+        border-top: 2px solid rgba(94.1%, 28.4%, 10.2%, .7)
+    }
+    main address .btn-block {
+        width: 100%
+    }
+    .container #contactForm .button--split-effect.button--send {
+        margin: 42px 0 25px 0
+    }
+    address .btn-vk {
+        margin-bottom: 24px
+    }
+    @-moz-document url-prefix() {
+        .container #contactForm .button {
+            top: -7px;
+            padding: 2.5px
+        }
+    }
+}
+
 @media all and (max-width:576px) {
     address .btn.btn-block p {
         font-size: 1.3em;
@@ -14433,6 +14510,7 @@ textarea:focus {
     }
     .grid-container .container p {
         margin: 0;
+        line-height: 1.2em;
         font-size: 1.3em
     }
     .textAlert .alert {
@@ -14444,7 +14522,8 @@ textarea:focus {
     .container #contactForm .button--split-effect.button--send,
     label,
     label[for=comment] {
-        font-size: 1.3em
+        font-size: 1.3em;
+        line-height: 1.2em;
     }
     .sm-md-line {
         display: block
@@ -14497,78 +14576,11 @@ textarea:focus {
     }
 }
 
-@media all and (max-width:767px) and (min-width:577px) {
-    address .btn.btn-block p {
-        font-size: 1.4em;
-        line-height: 1.7em
-    }
-    .textAlert .alert {
-        font-size: 1.4em
-    }
-    .container p {
-        margin: 0;
-        font-size: 1.4em
-    }
-    address .btn-vk p {
-        padding: 0 64px 0 0
-    }
-    .container #contactForm .button--split-effect.button--send,
-    label,
-    label[for=comment] {
-        font-size: 1.4em
-    }
-    .sm-md-line {
-        display: block
-    }
-    .container h1 {
-        text-align: center
-    }
-    address {
-        margin-bottom: -10px;
-        text-align: center
-    }
-    .wrapper {
-        display: none
-    }
-    #map {
-        width: 100vw;
-        height: calc(100vw * 9/16);
-        position: initial!important;
-        overflow: initial!important
-    }
-    .hrBottom {
-        border-top: none;
-        height: 25px;
-        border-top: 2px solid rgba(94.1%, 28.4%, 10.2%, .7)
-    }
-    main address .btn-block {
-        width: 100%
-    }
-    .container #contactForm .button--split-effect.button--send {
-        margin: 42px 0 25px 0
-    }
-    address .btn-vk {
-        margin-bottom: 24px
-    }
-    @-moz-document url-prefix() {
-        .container #contactForm .button {
-            top: -7px;
-            padding: 2.5px
-        }
-    }
-}
-
 @media all and (max-width:350px) {
     address .btn.btn-block p {
         font-size: 4.8vmin
     }
     .container #contactForm .button--split-effect.button--send {
         font-size: 4.8vmin
-    }
-}
-
-@media all and (max-width:991px) {
-    .container #contactForm .button {
-        max-width: 50%
     }
 }
