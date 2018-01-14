@@ -14140,7 +14140,7 @@ select::-ms-expand {
     position: absolute;
     right: 0;
     font-size: 1.5em;
-    line-height: 1.4em;
+    line-height: 1.5em;
     padding: 10px 30px 10px 10px;
     color: #fff;
     cursor: pointer;
@@ -14169,7 +14169,7 @@ option {
 
 .notify-badge {
     position: relative;
-    font-size: 1.6em;
+    font-size: 1.5em;
     line-height: 1.5;
     margin: 0
 }
@@ -14244,7 +14244,7 @@ option {
     padding: 0 10px;
     padding-right: 20px;
     font-size: 1.5em;
-    line-height: 1.4em;
+    line-height: 1.5em;
     text-shadow: 1px 1px rgba(0%, 0%, 0%, .5), 2px 1px rgba(0%, 0%, 0%, .4), 3px 1px rgba(0%, 0%, 0%, .3), 0 -1px 5px rgba(255, 255, 255, .25), 0 1px 5px rgba(255, 255, 255, .25)
 }
 
@@ -14271,7 +14271,8 @@ option {
     width: 60px;
     right: -50px;
     line-height: 25px;
-    font-size: 1.6em;
+    font-size: 1.5em;
+    line-height: 1.5;
     text-align: center;
     font-weight: 700;
     text-shadow: 1px 1px rgba(0%, 0%, 0%, .3), 2px 1px rgba(0%, 0%, 0%, .4), 1px 2px 6px rgba(0%, 0%, 0%, .5);
@@ -14311,19 +14312,19 @@ option {
 
 @media all and (max-width:767px) and (min-width:577px) {
     .modal-body>.container>.row>div>p {
-        line-height: 1.3em;
+        line-height: 1.4em;
         font-size: 1.4em;
         margin: 5px
     }
     .notify-badge {
         position: relative;
         font-size: 1.5em;
-        line-height: 1.4em;
+        line-height: 1.5em;
         margin: 0
     }
     #selectMenu {
         font-size: 1.4em;
-        line-height: 1.3em;
+        line-height: 1.4em;
     }
 }
 
@@ -14331,7 +14332,7 @@ option {
     .notify-badge {
         position: relative;
         font-size: 1.4em;
-        line-height: 1.3em;
+        line-height: 1.4em;
         margin: 0
     }
     .row img:hover {
@@ -14346,7 +14347,7 @@ option {
     }
     #selectMenu {
         font-size: 1.3em;
-        line-height: 1.2em;
+        line-height: 1.3em;
     }
 }
 
@@ -14354,6 +14355,6 @@ option {
     .notify-badge {
         position: relative;
         font-size: 1.3em;
-        line-height: 1.2em;
+        line-height: 1.3em;
     }
 }
