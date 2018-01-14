@@ -14095,12 +14095,12 @@ footer p {
 
 .container h1 {
     position: relative;
-    font-size: 1.8em
+    font-size: 1.6em
 }
 
 .grid-container .container p {
     font-size: 1.5em;
-    line-height: 1.4em;
+    line-height: 1.5em;
 }
 
 .container #contactForm .button--split-effect.button--send,
@@ -14111,8 +14111,8 @@ footer p {
 
 label[for=comment] {
     font-size: 1.5em;
-    line-height: 1.4em;
-    margin-top: 25px
+    line-height: 1.5em;
+    margin-top: 16px
 }
 
 address p:first-of-type {
@@ -14441,6 +14441,9 @@ textarea:focus {
 }
 
 @media all and (max-width:767px) and (min-width:577px) {
+    .container h1 {
+        font-size: 1.5em;
+    }
     address .btn.btn-block p {
         font-size: 1.4em;
         line-height: 1.7em
@@ -14450,7 +14453,7 @@ textarea:focus {
     }
     .grid-container .container p {
         margin: 0;
-        line-height: 1.3em;
+        line-height: 1.4em;
         font-size: 1.4em
     }
     address .btn-vk p {
@@ -14460,7 +14463,10 @@ textarea:focus {
     label,
     label[for=comment] {
         font-size: 1.4em;
-        line-height: 1.3em;
+        line-height: 1.4em;
+    }
+    .container #contactForm .button--split-effect.button--send {
+        line-height: 1.6em; 
     }
     .sm-md-line {
         display: block
@@ -14510,7 +14516,7 @@ textarea:focus {
     }
     .grid-container .container p {
         margin: 0;
-        line-height: 1.2em;
+        line-height: 1.3em;
         font-size: 1.3em
     }
     .textAlert .alert {
@@ -14523,7 +14529,10 @@ textarea:focus {
     label,
     label[for=comment] {
         font-size: 1.3em;
-        line-height: 1.2em;
+        line-height: 1.3em;
+    }
+    .container #contactForm .button--split-effect.button--send {
+        line-height: 1.58em; 
     }
     .sm-md-line {
         display: block
@@ -14545,7 +14554,7 @@ textarea:focus {
     }
     .container h1 {
         text-align: center;
-        font-size: 24px
+        font-size: 1.4em
     }
     .hrBottom {
         border-top: none;

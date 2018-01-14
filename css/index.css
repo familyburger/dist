@@ -13112,7 +13112,7 @@ a:focus {
 }
 
 .blocks .container .row div[class*=arrow] {
-    height: 400px;
+    height: 450px;
     padding-right: 0;
     padding-left: 0
 }
@@ -13279,7 +13279,7 @@ a:focus {
 }
 
 .row {
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .arrow_box_right {
@@ -14004,7 +14004,7 @@ footer p {
         padding: 35px 10%;
     }
     .row {
-    line-height: 1.3;
+    line-height: 1.4;
     }
     .note .text h1 {
         font-size: 36px;
@@ -14107,7 +14107,7 @@ footer p {
         padding: 35px 0%;
     }
     .row {
-        line-height: 1.2;
+        line-height: 1.3;
     }
     footer p {
         font-size: 1.1em

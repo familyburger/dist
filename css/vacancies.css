@@ -14124,7 +14124,7 @@ hr {
 
 .indexContent .svgImg .container .row div[class*=col] p {
     font-size: 1.5em;
-    line-height: 1.4em;
+    line-height: 1.5em;
     margin: 0 3px
 }
 
@@ -14236,7 +14236,7 @@ h1 {
 
 article {
     font-size: 1.5em;
-    line-height: 1.4em;
+    line-height: 1.5em;
 }
 
 
@@ -14247,7 +14247,7 @@ article {
     .indexContent .svgImg .container .row div[class*=col] p,
     article {
         font-size: 1.4em;
-        line-height: 1.3em;
+        line-height: 1.4em;
     }
     .container h1 {
        font-size: 1.5em;
@@ -14257,7 +14257,7 @@ article {
 @media all and (max-width:576px) {
     .indexContent .svgImg .container .row div[class*=col] p {
         font-size: 1.3em;
-        line-height: 1.2em;
+        line-height: 1.3em;
         margin: 0 -10px 0 -10px;
         padding: 0 5px;
         position: absolute;
@@ -14267,7 +14267,7 @@ article {
     .indexContent .svgImg .container .row div[class*=col] p,
     article {
         font-size: 1.3em;
-        line-height: 1.2em;
+        line-height: 1.3em;
     }
     .br {
         display: initial
