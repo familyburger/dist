@@ -13451,7 +13451,8 @@ a:focus {
 
 .arrow_box_inner_left article h1 {
     display: inline;
-    font-size: 1.1em;
+    font-size: 1.05em;
+    line-height: 1.15;
 }
 
 .arrow_box_left .notes .text img {
@@ -13872,7 +13873,8 @@ footer p {
     }
     .arrow_box_inner_bottom article h1 {
         display: inline;
-        font-size: 1.1em;
+        font-size: 1.05em;
+        line-height: 1.15;
     }
     .arrow_box_bottom {
         display: block;
@@ -14091,11 +14093,7 @@ footer p {
         font-size: 1.4em;
     }
     .row .arrow_box_inner_top article h1 {
-        display: inline;
-        font-size: 1.1em;
-    }
-    .row .arrow_box_inner_bottom article p {
-        font-size: 1.4em;
+        font-size: 1.05em;
     }
     .arrow_box_inner_bottom article {
         font-size: 1.4em;
@@ -14212,7 +14210,6 @@ footer p {
         font-size: 1.3em;
     }
     .row .arrow_box_inner_top article h1 {
-        display: inline;
         font-size: 1.1em;
     }
     .row .arrow_box_inner_bottom article p {
