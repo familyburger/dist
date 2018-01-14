@@ -13870,9 +13870,6 @@ footer p {
     .arrow_box_inner_bottom article {
         margin: 35px 15px;
     }
-    .arrow_box_inner_bottom article p {
-        font-size: 1.5em;
-    }
     .arrow_box_inner_bottom article h1 {
         display: inline;
         font-size: 1.1em;
@@ -14098,6 +14095,9 @@ footer p {
         font-size: 1.1em;
     }
     .row .arrow_box_inner_bottom article p {
+        font-size: 1.4em;
+    }
+    .arrow_box_inner_bottom article {
         font-size: 1.4em;
     }
 }
