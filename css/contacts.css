@@ -14443,7 +14443,6 @@ textarea:focus {
 @media all and (max-width:767px) and (min-width:577px) {
     .navbar-inverse .navbar-nav>li>a {
         font-size: 1.4em;
-        line-height: 1.4em;
     }
     .container h1 {
         font-size: 1.5em;
