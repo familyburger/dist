@@ -14092,11 +14092,8 @@ footer p {
     .carousel-inner~a[class] {
         display: none
     }
-    .row .arrow_box_inner_top article p {
-        font-size: 1.4em;
-    }
-    .row .arrow_box_inner_top article h1 {
-        font-size: 1.05em;
+    .arrow_box_inner_bottom article h1 {
+        line-height: 1.1;
     }
     .arrow_box_inner_bottom article {
         font-size: 1.4em;
@@ -14216,8 +14213,8 @@ footer p {
     .row .arrow_box_inner_top article p {
         font-size: 1.3em;
     }
-    .row .arrow_box_inner_top article h1 {
-        font-size: 1.1em;
+    .arrow_box_inner_bottom article h1 {
+        font-size: 1.1;
     }
     .row .arrow_box_inner_bottom article p {
         font-size: 1.3em;
