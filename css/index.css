@@ -13023,7 +13023,7 @@ a:focus {
     color: rgba(94.1%, 28.4%, 10.2%, 1);
     font-size: 1.5em;
     position: relative;
-    padding-top: 1.7em;
+    padding-top: 1.8em;
     cursor: pointer;
     -webkit-transition: all .3s linear 0s;
     transition: all .3s linear 0s
@@ -13999,6 +13999,10 @@ footer p {
 }
 
 @media all and (max-width:767px) and (min-width:577px) {
+    .navbar-inverse .navbar-nav>li>a {
+        font-size: 1.4em;
+        line-height: 1.4em;
+    }
     .notes {
         padding: 35px 10%;
     }
@@ -14101,6 +14105,10 @@ footer p {
 }
 
 @media all and (max-width:576px) {
+    .navbar-inverse .navbar-nav>li>a {
+        font-size: 1.3em;
+        line-height: 1.3em;
+    }
     .notes {
         padding: 35px 0%;
     }
