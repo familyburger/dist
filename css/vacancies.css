@@ -13706,7 +13706,7 @@ footer p {
     color: #fff;
     -ms-flex-item-align: end;
     align-self: flex-end;
-    margin: 50px 0 22px 0
+    margin: 50px 0 25px 0
 }
 
 @supports (display:grid) {

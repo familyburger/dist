@@ -13706,7 +13706,7 @@ footer p {
     color: #fff;
     -ms-flex-item-align: end;
     align-self: flex-end;
-    margin: 50px 0 22px 0
+    margin: 50px 0 25px 0
 }
 
 @supports (display:grid) {
@@ -14230,6 +14230,16 @@ hr {
     margin: 0 auto
 }
 
+.info-window h3 {
+    font-size: 22px;
+    line-height: 25px;
+}
+
+.info-window h4 {
+    font-size: 21px;
+    line-height: 32px;
+}
+
 #map:after,
 #map:before,
 .map-container:after,
@@ -14441,6 +14451,15 @@ textarea:focus {
 }
 
 @media all and (max-width:767px) and (min-width:577px) {
+    .info-window h3 {
+        font-size: 21px;
+        line-height: 23px;
+    }
+    
+    .info-window h4 {
+        font-size: 20px;
+        line-height: 27px;
+    }
     .navbar-inverse .navbar-nav>li>a {
         font-size: 1.4em;
     }
@@ -14513,6 +14532,14 @@ textarea:focus {
 }
 
 @media all and (max-width:576px) {
+    .info-window h3 {
+        font-size: 20px;
+        line-height: 22px;
+    }
+    .info-window h4 {
+        font-size: 18px;
+        line-height: 24px;
+    }
     .navbar-inverse .navbar-nav>li>a {
         font-size: 1.3em;
         line-height: 1.3em;
