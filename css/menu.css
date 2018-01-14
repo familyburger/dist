@@ -14175,8 +14175,9 @@ option {
 }
 
 .notify-badge span {
-    height: 40px;
+    height: 50px;
     color: rgba(94.1%, 28.4%, 10.2%, 1);
+    line-height: 50px;
 }
 
 .product-img {
