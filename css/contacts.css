@@ -14289,7 +14289,7 @@ hr {
     text-align: center;
 }
 
-.map-container div {
+.map-container div[class*="col"] {
     height: 100%;
 }
 
@@ -14303,6 +14303,8 @@ hr {
     right: 0;
     border: 2px solid rgba(94.1%, 28.4%, 10.2%, .7);
     border-radius: 10px;
+    -webkit-box-shadow: 0 2px 5px rgba(0%, 0%, 0%, .3);
+    box-shadow: 0 2px 5px rgba(0%, 0%, 0%, .3)
 }
 
 #map {
@@ -14311,6 +14313,13 @@ hr {
     height: 100%;
     position: initial!important;
     overflow: initial!important;
+}
+
+.btn-map {
+    display: none;
+    margin: 0 auto;
+    width: 50px;
+    height: 20px;
 }
 
 #contactForm {
