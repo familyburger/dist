@@ -14280,15 +14280,37 @@ hr {
 }
 
 .map-container {
+    background-image: url(../svg/ribbons.svg);
+    background-size: contain;
     position: relative;
-    overflow: hidden
+    overflow: hidden;
+    width: 100vw;
+    height: calc(100vw * 2/5);
+    text-align: center;
+}
+
+.map-container div {
+    height: 100%;
+}
+
+.map-container img {
+    max-width: 80%;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    margin: auto;
+    right: 0;
+    border: 2px solid rgba(94.1%, 28.4%, 10.2%, .7);
+    border-radius: 10px;
 }
 
 #map {
-    width: 100vw;
-    height: calc(100vw * 2/5);
+    display: none;
+    width: 100%;
+    height: 100%;
     position: initial!important;
-    overflow: initial!important
+    overflow: initial!important;
 }
 
 #contactForm {
@@ -14451,6 +14473,9 @@ textarea:focus {
 }
 
 @media all and (max-width:767px) and (min-width:577px) {
+    .map-container img {
+        max-width: 90%;
+    }
     .info-window h3 {
         font-size: 21px;
         line-height: 23px;
@@ -14503,11 +14528,9 @@ textarea:focus {
     .wrapper {
         display: none
     }
-    #map {
+    .map-container {
         width: 100vw;
         height: calc(100vw * 9/16);
-        position: initial!important;
-        overflow: initial!important
     }
     .hrBottom {
         border-top: none;
@@ -14532,6 +14555,9 @@ textarea:focus {
 }
 
 @media all and (max-width:576px) {
+    .map-container img {
+        max-width: 100%;
+    }
     .info-window h3 {
         font-size: 20px;
         line-height: 22px;
@@ -14580,11 +14606,9 @@ textarea:focus {
     address {
         text-align: center
     }
-    #map {
+    .map-container {
         width: 100vw;
-        height: calc(100vw * 3/4);
-        position: initial!important;
-        overflow: initial!important
+        height: calc(100vw * 3/4); 
     }
     .container h1 {
         text-align: center;
