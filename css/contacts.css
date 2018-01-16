@@ -117,6 +117,7 @@ img {
 }
 
 svg:not(:root) {
+    transform: rotate(180deg);
     overflow: hidden
 }
 
@@ -13412,10 +13413,8 @@ a:focus {
 
 .wrapper {
     max-width: 30px;
-    position: absolute;
-    top: -3px;
-    left: 50%;
-    right: 50%
+    margin: 0 auto;
+    padding-top: 5px;
 }
 
 svg {
@@ -14095,7 +14094,8 @@ footer p {
 
 .container h1 {
     position: relative;
-    font-size: 1.6em
+    font-size: 1.6em;
+    margin-top: 0px;
 }
 
 .grid-container .container p {
@@ -14315,11 +14315,34 @@ hr {
     overflow: initial!important;
 }
 
-.btn-map {
-    display: none;
-    margin: 0 auto;
-    width: 50px;
-    height: 20px;
+.grid-container .container .map-pointer {
+    text-align: center;
+    margin: 5px;
+}
+
+#btn-map {
+    text-align: center;
+    background-image: url(../svg/map.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8));
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8))
+}
+
+#btn-map.showMap{
+    background-image: url(../svg/closeMap.svg);
+}
+
+#btn-map img {
+    width: 7em;
+    height: 7em;
+    -webkit-filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8));
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8))
+}
+
+#btn-map:hover, #btn-map:active {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 #contactForm {
@@ -14482,6 +14505,11 @@ textarea:focus {
 }
 
 @media all and (max-width:767px) and (min-width:577px) {
+
+#btn-map img {
+    width: 6em;
+    height: 6em;
+}
     .map-container img {
         max-width: 90%;
     }
@@ -14534,9 +14562,6 @@ textarea:focus {
         margin-bottom: -10px;
         text-align: center
     }
-    .wrapper {
-        display: none
-    }
     .map-container {
         width: 100vw;
         height: calc(100vw * 9/16);
@@ -14564,6 +14589,10 @@ textarea:focus {
 }
 
 @media all and (max-width:576px) {
+    #btn-map img {
+        width: 5em;
+        height: 5em;
+    }
     .map-container img {
         max-width: 100%;
     }
@@ -14605,9 +14634,6 @@ textarea:focus {
     }
     .sm-md-line {
         display: block
-    }
-    .wrapper {
-        display: none
     }
     .container h1 {
         text-align: center
