@@ -14242,8 +14242,8 @@ hr {
 
 #map:after,
 #map:before,
-.map-container:after,
-.map-container:before {
+.svg-container:after,
+.svg-container:before {
     content: '';
     position: absolute;
     -webkit-box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, .3);
@@ -14251,14 +14251,14 @@ hr {
     z-index: 1
 }
 
-.map-container:before {
+.svg-container:before {
     top: -5px;
     left: 0;
     right: 0;
     height: 5px
 }
 
-.map-container:after {
+.svg-container:after {
     right: -5px;
     top: 0;
     bottom: 0;
@@ -14279,28 +14279,27 @@ hr {
     width: 5px
 }
 
-.map-container {
+.svg-container {
     background-image: url(../svg/ribbons.svg);
     background-size: contain;
     position: relative;
-    overflow: hidden;
-    width: 100vw;
-    height: calc(100vw * 2/5);
+    overflow-x: hidden;
+    overflow-y: visible;
+    top: -105px;
+    width: 100%;
     text-align: center;
 }
 
-.map-container div[class*="col"] {
+.svg-container+.container {
+    margin-top: -105px;
+}
+.svg-container div[class*="col"] {
     height: 100%;
+    margin-top: 175px;
 }
 
-.map-container img {
+.svg-container img {
     max-width: 80%;
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    margin: auto;
-    right: 0;
     border: 2px solid rgba(94.1%, 28.4%, 10.2%, .7);
     border-radius: 10px;
     -webkit-box-shadow: 0 2px 5px rgba(0%, 0%, 0%, .3);
@@ -14308,16 +14307,15 @@ hr {
 }
 
 #map {
-    display: none;
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 105px);
     position: initial!important;
     overflow: initial!important;
 }
 
 .grid-container .container .map-pointer {
     text-align: center;
-    margin: 5px;
+    margin: 25px 0px 5px 0px;
 }
 
 #btn-map {
@@ -14327,10 +14325,6 @@ hr {
     background-repeat: no-repeat;
     -webkit-filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8));
     filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8))
-}
-
-#btn-map.showMap{
-    background-image: url(../svg/closeMap.svg);
 }
 
 #btn-map img {
@@ -14498,6 +14492,45 @@ textarea:focus {
     text-align: center
 }
 
+.modal-fullscreen {
+    background: rgba(0%, 0%, 0%, .5);
+    padding: 0!important
+}
+
+.modal-fullscreen .modal-content {
+    background-color: transparent;
+    background-position: right top;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-repeat: no-repeat
+}
+
+.modal-backdrop.modal-backdrop-fullscreen.in {
+    opacity: .97
+}
+
+.modal-fullscreen .modal-dialog {
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%
+}
+
+.modal-body>.container:first-child {
+    border: 5px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+    overflow: hidden
+}
+
+.modal-body>.container>.row div {
+    padding: 0
+}
+
+.modal-header {
+    border-bottom: none
+}
+
 @media all and (max-width:991px) {
     .container #contactForm .button {
         max-width: 50%
@@ -14505,12 +14538,14 @@ textarea:focus {
 }
 
 @media all and (max-width:767px) and (min-width:577px) {
-
+    .svg-container div[class*="col"] {
+        margin-top: 165px;
+    }
 #btn-map img {
     width: 6em;
     height: 6em;
 }
-    .map-container img {
+    .svg-container img {
         max-width: 90%;
     }
     .info-window h3 {
@@ -14562,10 +14597,6 @@ textarea:focus {
         margin-bottom: -10px;
         text-align: center
     }
-    .map-container {
-        width: 100vw;
-        height: calc(100vw * 9/16);
-    }
     .hrBottom {
         border-top: none;
         height: 25px;
@@ -14589,11 +14620,14 @@ textarea:focus {
 }
 
 @media all and (max-width:576px) {
+    .svg-container div[class*="col"] {
+        margin-top: 155px;
+    }
     #btn-map img {
         width: 5em;
         height: 5em;
     }
-    .map-container img {
+    .svg-container img {
         max-width: 100%;
     }
     .info-window h3 {
@@ -14640,10 +14674,6 @@ textarea:focus {
     }
     address {
         text-align: center
-    }
-    .map-container {
-        width: 100vw;
-        height: calc(100vw * 3/4); 
     }
     .container h1 {
         text-align: center;
