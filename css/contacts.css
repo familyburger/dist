@@ -14273,6 +14273,22 @@ hr {
     filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8))
 }
 
+.balloons {
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    z-index: 1;
+}
+
+#mapPic .balloons:nth-child(1) {
+   margin: 20% 0% 0% -10%;
+}
+
+#mapPic .balloons:nth-child(3) {
+  top: 10%;
+  right: -9%;
+}
+
 #map {
     width: 100%;
     height: calc(100vh - 105px);
