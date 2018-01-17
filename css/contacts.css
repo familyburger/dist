@@ -14256,13 +14256,12 @@ hr {
 
 .svg-container {
     background-image: url(../svg/ribbons.svg);
-    background-size: contain;
+    background-size: calc(100vw * 2/5 + 105px) 100%;
     position: absolute;
     background-repeat: repeat-x;
     top: -105px;
     width: 100vw;
     height: calc(100vw * 2/5 + 105px); 
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../svg/ribbons.svg', sizingMethod='scale')";
 }
 
 .restaurant {
@@ -14507,6 +14506,7 @@ textarea:focus {
 
 @media all and (max-width:767px) and (min-width:577px) {
     .svg-container {
+    background-size: calc(100vw * 9/16 + 105px) 100%;
     height: calc(100vw * 9/16 + 105px);
     }
 #btn-map img {
@@ -14586,6 +14586,7 @@ textarea:focus {
 
 @media all and (max-width:576px) {
     .svg-container {
+        background-size: calc(100vw * 3/4 + 105px) 100%;
         height: calc(100vw * 3/4 + 105px);
     }
     #btn-map img {
