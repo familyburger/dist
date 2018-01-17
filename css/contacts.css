@@ -14262,6 +14262,9 @@ hr {
     top: -105px;
     width: 100vw;
     height: calc(100vw * 2/5 + 105px);
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src='../svg/ribbons.svg',
+    sizingMethod='scale');  
 }
 
 .restaurant {
