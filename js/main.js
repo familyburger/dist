@@ -87,7 +87,7 @@ $(document).ready(function () {
             var u = document.getElementById("salat");
             t(u, o(u), "linear", function () {})
         } else if ("Різне" === n) {
-            var r = document.getElementById("chicken");
+            var r = document.getElementById("sundries");
             t(r, o(r), "linear", function () {})
         }
         $(this).val("burger")
