@@ -28,35 +28,38 @@ $(document).ready(function () {
         var x,
             y,
             items,
-            firstItemNum,
+            itemIdx,
             flag = true,
             that = this,
+            imgPreload = [],
             itemsByName = [],
             itemsByPrice = [],
-            itemDescription = [],
+            itemsByDescription = [],
             itemsLen = viewModel.length,
             selectValue = this.select.options[this.select.selectedIndex].value;
         this.element.innerHTML = '';
         for (x = 0; x < itemsLen; x++) {
             if (viewModel[x].type === selectValue) {
                 if (flag) {
-                    firstItemNum = x;
+                    itemIdx = x;
                     flag = false;
                 }
                 this.element.innerHTML += '<div class="item-img"><a href="#modal-fullscreen" data-toggle="modal"><h1 class="notify-badge">' +
-                    viewModel[x].name + '</h1><img src="images/menu/img-' +
+                    viewModel[x].name + '</h1><img src="images/menuLowQuality/img-' +
                     (x + 1) + '.png"alt="' + viewModel[x].name + '"></a></div>';
+                imgPreload.push(new Image());
                 itemsByName.push(viewModel[x].name);
                 itemsByPrice.push(viewModel[x].price);
-                itemDescription.push(viewModel[x].description);
+                itemsByDescription.push(viewModel[x].description);
             }
         }
         items = Array.prototype.slice.call(document.querySelectorAll('.container .item-img'));
         itemsLen = items.length;
         for (y = 0; y < itemsLen; y++) {
+            imgPreload[y].src = './images/menuHighQuality/img-' + (itemIdx + y + 1) + '.png';
             items[y].addEventListener('click', function () {
                 that.onClickShowDescription(items.indexOf(this) +
-                    firstItemNum, itemsByPrice[items.indexOf(this)], itemsByName[items.indexOf(this)], itemDescription[items.indexOf(this)]);
+                    itemIdx, itemsByPrice[items.indexOf(this)], itemsByName[items.indexOf(this)], itemsByDescription[items.indexOf(this)]);
             });
         };
         this.select.addEventListener('change', function () {
@@ -72,7 +75,7 @@ $(document).ready(function () {
         var description = document.getElementsByClassName("description")[0],
             image = document.getElementsByClassName("product-img")[0];
         description.innerHTML = "<b>" + elementName + "</b><br>" + elementDescription,
-            image.style.backgroundImage = 'url("images/product/img-' + (elementIndex + 1) + '.png")';
+            image.style.backgroundImage = 'url("images/menuHighQuality/img-' + (elementIndex + 1) + '.png")';
     }
 
     ProductsView.prototype.slideDown = function slideDown(price) {
