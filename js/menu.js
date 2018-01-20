@@ -47,7 +47,7 @@ $(document).ready(function () {
                     viewModel[x].name + '</h1><img src="images/menu/img-' +
                     (x + 1) + '.png"alt="' + viewModel[x].name + '"></a></div>';
                 itemsByName.push(viewModel[x].name);
-                itemsByPrice.push(viewModel[x].price); 
+                itemsByPrice.push(viewModel[x].price);
                 itemDescription.push(viewModel[x].description);
             }
         }
@@ -55,8 +55,8 @@ $(document).ready(function () {
         itemsLen = items.length;
         for (y = 0; y < itemsLen; y++) {
             items[y].addEventListener('click', function () {
-                that.onClickShowDescription(items.indexOf(this) + 
-                firstItemNum,itemsByPrice[items.indexOf(this)],itemsByName[items.indexOf(this)], itemDescription[items.indexOf(this)]);
+                that.onClickShowDescription(items.indexOf(this) +
+                    firstItemNum, itemsByPrice[items.indexOf(this)], itemsByName[items.indexOf(this)], itemDescription[items.indexOf(this)]);
             });
         };
         this.select.addEventListener('change', function () {
@@ -88,7 +88,7 @@ $(document).ready(function () {
                     interval = null; // garbage collection
                 }
             }, 25);
-            ribbon.innerHTML = String(price);
+        ribbon.innerHTML = price;
     };
 
     var ProductsController = function ProductsController(productsModel, productsView) {
@@ -110,7 +110,7 @@ $(document).ready(function () {
         this.productsView.render(newProductData);
     };
 
-    ProductsController.prototype.onClickShowDescription = function onClickShowDescription(itemIndex,itemPrice,itemName,itemModal) {
+    ProductsController.prototype.onClickShowDescription = function onClickShowDescription(itemIndex, itemPrice, itemName, itemModal) {
         this.productsView.showItemDescription(itemIndex, itemName, itemModal);
         this.productsView.slideDown(itemPrice);
     };
