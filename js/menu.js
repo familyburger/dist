@@ -1,47 +1,124 @@
 $(document).ready(function () {
-    var t = document.getElementsByClassName("ribbon")[0],
-        e = document.getElementsByClassName("description")[0],
-        n = document.getElementsByClassName("product-img")[0];
-    ProductsModel = function (t) {
-        this.XMLHttpRequest = t
-    }, ProductsModel.prototype.getProducts = function (t, e) {
-        var n = new this.XMLHttpRequest;
-        n.onload = function (n) {
-            var o = JSON.parse(n.currentTarget.responseText)[t];
-            e(o)
-        }, n.open("GET", "https://familyburger.com.ua/products.json", !0), n.send()
+    'use strict';
+    var option = document.getElementById('selectMenu'),
+        targetElement = document.getElementsByClassName('flex-row')[0];
+
+    var ProductsModel = function ProductsModel(XMLHttpRequest) {
+        this.XMLHttpRequest = XMLHttpRequest;
     };
-    var o = function (t, e) {
-        this.element = t, this.index = e.indexOf(t)
+
+    ProductsModel.prototype.getProducts = function getProducts(fn) {
+        var oReq = new this.XMLHttpRequest();
+        oReq.onload = function onLoad(e) {
+            var ajaxResponse = JSON.parse(e.currentTarget.responseText),
+                product = ajaxResponse;
+            fn(product);
+        };
+        oReq.open('GET', 'https://familyburger.com.ua/products.json', true);
+        oReq.send();
     };
-    o.prototype.render = function (o) {
-        var r = this.index + 1;
-        t.innerHTML = String(o.price), e.innerHTML = "<b>" + o.name + "</b><br>" + o.description, n.style.backgroundImage = 'url("images/product/img-' + r + '.png")'
-    }, o.prototype.slideDown = function () {
-        var e = 25,
-            n = setInterval(function () {
-                50 > e ? (e += .5, t.style.height = e + "%") : (t.style.height = e + "%", clearInterval(n), n = null)
-            }, 25)
+
+    var ProductsView = function ProductsView(element, select) {
+        this.element = element;
+        this.select = select;
+        this.onChangeGetProduct = null;
     };
-    var r = function (t, e) {
-        this.productsView = t, this.productsModel = e, this.productsModel.getProducts(this.productsView.index, this.onClickShowProduct.bind(this))
-    };
-    r.prototype.onClickShowProduct = function (t) {
-            this.productsView.slideDown(), this.productsView.render(t)
-        },
-        function () {
-            var t, e = Array.prototype.slice.call(document.querySelectorAll(".container .item-img")),
-                n = new ProductsModel(XMLHttpRequest),
-                i = e.length;
-            for (t = 0; t < i; t++) e[t].onclick = function () {
-                var t = new o(this, e);
-                new r(t, n)
+
+    ProductsView.prototype.render = function render(viewModel) {
+        var x,
+            y,
+            items,
+            firstItemNum,
+            flag = true,
+            that = this,
+            itemsByName = [],
+            itemsByPrice = [],
+            itemDescription = [],
+            itemsLen = viewModel.length,
+            selectValue = this.select.options[this.select.selectedIndex].value;
+        this.element.innerHTML = '';
+        for (x = 0; x < itemsLen; x++) {
+            if (viewModel[x].type === selectValue) {
+                if (flag) {
+                    firstItemNum = x;
+                    flag = false;
+                }
+                this.element.innerHTML += '<div class="item-img"><a href="#modal-fullscreen" data-toggle="modal"><h1 class="notify-badge">' +
+                    viewModel[x].name + '</h1><img src="images/menu/img-' +
+                    (x + 1) + '.png"alt="' + viewModel[x].name + '"></a></div>';
+                itemsByName.push(viewModel[x].name);
+                itemsByPrice.push(viewModel[x].price); 
+                itemDescription.push(viewModel[x].description);
             }
-        }(), window.addEventListener("load", function () {
-            var t, e = document.getElementsByTagName("img"),
-                n = e.length;
-            for (t = 0; t < n; t++) e[t].getAttribute("data-src") && e[t].setAttribute("src", e[t].getAttribute("data-src"))
-        }, !1), $(".notify-badge").arctext({
+        }
+        items = Array.prototype.slice.call(document.querySelectorAll('.container .item-img'));
+        itemsLen = items.length;
+        for (y = 0; y < itemsLen; y++) {
+            items[y].addEventListener('click', function () {
+                that.onClickShowDescription(items.indexOf(this) + 
+                firstItemNum,itemsByPrice[items.indexOf(this)],itemsByName[items.indexOf(this)], itemDescription[items.indexOf(this)]);
+            });
+        };
+        this.select.addEventListener('change', function () {
+            that.onChangeGetProducts(viewModel);
+        });
+
+        $('.notify-badge').arctext({
             radius: 300
-        })
+        });
+    };
+
+    ProductsView.prototype.showItemDescription = function showItem(elementIndex, elementName, elementDescription) {
+        var description = document.getElementsByClassName("description")[0],
+            image = document.getElementsByClassName("product-img")[0];
+        description.innerHTML = "<b>" + elementName + "</b><br>" + elementDescription,
+            image.style.backgroundImage = 'url("images/product/img-' + (elementIndex + 1) + '.png")';
+    }
+
+    ProductsView.prototype.slideDown = function slideDown(price) {
+        var ribbon = document.getElementsByClassName('ribbon')[0],
+            hgt = 25,
+            interval = setInterval(function () {
+                if (50 > hgt) {
+                    hgt += 0.5;
+                    ribbon.style.height = hgt + "%";
+                } else {
+                    ribbon.style.height = hgt + "%";
+                    clearInterval(interval);
+                    interval = null; // garbage collection
+                }
+            }, 25);
+            ribbon.innerHTML = String(price);
+    };
+
+    var ProductsController = function ProductsController(productsModel, productsView) {
+        this.productsModel = productsModel;
+        this.productsView = productsView;
+    };
+
+    ProductsController.prototype.initialize = function initialize() {
+        this.productsModel.getProducts(this.onLoadShowProducts.bind(this));
+        this.productsView.onChangeGetProducts = this.onChangeGetProducts.bind(this);
+        this.productsView.onClickShowDescription = this.onClickShowDescription.bind(this);
+    };
+
+    ProductsController.prototype.onLoadShowProducts = function onLoadShowProducts(productModelData) {
+        this.productsView.render(productModelData);
+    };
+
+    ProductsController.prototype.onChangeGetProducts = function onChangeGetProducts(newProductData) {
+        this.productsView.render(newProductData);
+    };
+
+    ProductsController.prototype.onClickShowDescription = function onClickShowDescription(itemIndex,itemPrice,itemName,itemModal) {
+        this.productsView.showItemDescription(itemIndex, itemName, itemModal);
+        this.productsView.slideDown(itemPrice);
+    };
+
+    (function initialize() {
+        var model = new ProductsModel(XMLHttpRequest),
+            view = new ProductsView(targetElement, option),
+            controller = new ProductsController(model, view);
+        controller.initialize();
+    })();
 });
