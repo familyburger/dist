@@ -1,4 +1,3 @@
-$(document).ready(function () {
     'use strict';
     var option = document.getElementById('selectMenu'),
         targetElement = document.getElementsByClassName('flex-row')[0];
@@ -124,4 +123,3 @@ $(document).ready(function () {
             controller = new ProductsController(model, view);
         controller.initialize();
     })();
-});
