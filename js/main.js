@@ -1,5 +1,4 @@
-$(document).ready(function () {
-    function offsetButton() {
+function offsetButton() {
       return document.getElementById('contentWrap').offsetTop;
     };
   
@@ -19,9 +18,9 @@ $(document).ready(function () {
         document.getElementById('scrollTop').style.display = "none";
       }
       if (scrollElm >= 105) {
-        $('.navbar').addClass('scrolled-nav');
+        document.getElementsByClassName('navbar')[0].classList.add('scrolled-nav');
       } else {
-        $('.navbar').removeClass('scrolled-nav');
+        document.getElementsByClassName('navbar')[0].classList.remove('scrolled-nav');
       }
     }
   
@@ -147,4 +146,3 @@ $(document).ready(function () {
         scrolledNav.classList.remove("activeBar");
       }
     };
-  });

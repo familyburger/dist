@@ -13080,6 +13080,7 @@ a:focus {
     background-image: url(../images/sign.png);
     -webkit-filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8));
     filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8));
+    background-size: 100% 100%;
     background-size: cover;
     width: 7.5em;
     height: 44px;
