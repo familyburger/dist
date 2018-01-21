@@ -14412,6 +14412,7 @@ textarea:focus {
 
 .container #contactForm .button--split-effect.button--send,
 .container #contactForm .button--split-effect.button--send::before {
+    display: block;
     opacity: 1;
     -webkit-transition-property: -webkit-box-shadow;
     transition-property: -webkit-box-shadow;
