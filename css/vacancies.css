@@ -13677,6 +13677,7 @@ footer {
 }
 
 .footer {
+    display: block;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -13696,18 +13697,20 @@ footer p {
 }
 
 .social {
+    float: right;
     flex: 1 0 auto;
     text-align: right;
     margin: 0
 }
 
 .container .design {
+    float: left;
     flex: 0 1 auto;
     font-size: 1.3em;
     color: #fff;
     -ms-flex-item-align: end;
     align-self: flex-end;
-    margin: 50px 0 25px 0
+    margin: 50px 0 22px 0
 }
 
 @supports (display:grid) {
