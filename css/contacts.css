@@ -13083,12 +13083,16 @@ a:focus {
 }
 
 .sign {
-    background-image: url(../images/sign.png);
+    background: url('../images/sign.png');
     -webkit-filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8));
     filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8));
     background-size: 100% 100%;
     background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size:cover;
     width: 210px;
+    width: 7.5em;
     height: 44px;
     position: relative;
     top: -12px
