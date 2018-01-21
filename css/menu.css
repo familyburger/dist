@@ -13098,6 +13098,9 @@ a:focus {
 }
 
 .navbar-brand {
+    display: block;
+    width: 250px;
+    height: 44px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
