@@ -13,7 +13,7 @@ $(document).ready(function () {
     function scrollFunction() {
       var scrollOffset = offsetButton();
       var scrollElm = checkBrowserSupport();
-      if (scrollElm > scrollOffset && scrollElm > 210) {
+      if (scrollElm > scrollOffset && scrollElm > window.innerHeight) {
         document.getElementById('scrollTop').style.display = "block";
       } else {
         document.getElementById('scrollTop').style.display = "none";
