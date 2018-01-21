@@ -13082,6 +13082,7 @@ a:focus {
 }
 
 .sign {
+    display: block;
     background: url('../images/sign.png');
     -webkit-filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8));
     filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8));
