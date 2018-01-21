@@ -35,8 +35,10 @@
             itemsByPrice = [],
             itemsByDescription = [],
             itemsLen = viewModel.length,
+            loader = document.getElementsByClassName('loader')[0],
             selectValue = this.select.options[this.select.selectedIndex].value;
-        this.element.innerHTML = '';
+            this.element.innerHTML = '';
+            loader.classList.remove('contentLoaded');
         for (x = 0; x < itemsLen; x++) {
             if (viewModel[x].type === selectValue) {
                 if (flag) {
@@ -64,7 +66,9 @@
         this.select.addEventListener('change', function () {
             that.onChangeGetProducts(viewModel);
         });
-
+        imgPreload[y - 1].addEventListener("load", function() {
+            loader.classList.add('contentLoaded');
+        });
         $('.notify-badge').arctext({
             radius: 300
         });
@@ -73,7 +77,7 @@
     ProductsView.prototype.showItemDescription = function showItem(elementIndex, elementName, elementDescription) {
         var description = document.getElementsByClassName("description")[0],
             image = document.getElementsByClassName("product-img")[0];
-        description.innerHTML = "<b>" + elementName + "</b><br>" + elementDescription,
+            description.innerHTML = "<b>" + elementName + "</b><br>" + elementDescription,
             image.style.backgroundImage = 'url("images/menuHighQuality/img-' + (elementIndex + 1) + '.png")';
     }
 
