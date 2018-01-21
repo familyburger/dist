@@ -14113,11 +14113,13 @@ footer p {
 
 .container #contactForm .button--split-effect.button--send,
     label {
+        width: 100%;
         font-size: 1.5em;
         line-height: 1.4em;
     }
 
 label[for=comment] {
+    width: 100%;
     font-size: 1.5em;
     line-height: 1.5em;
     margin-top: 16px
@@ -14331,6 +14333,7 @@ hr {
 }
 
 #contactForm {
+    display: block;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -14374,6 +14377,7 @@ textarea:focus {
 }
 
 .container #contactForm .button {
+    width: 100%;
     flex: 1 0 auto;
     background-color: rgba(94.1%, 28.4%, 10.2%, 1);
     color: #fff;
@@ -14458,6 +14462,7 @@ textarea:focus {
 }
 
 .messegeSend {
+    display: block;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
