@@ -1,1 +1,126 @@
-"use strict";var option=document.getElementById("selectMenu"),targetElement=document.getElementsByClassName("flex-row")[0],ProductsModel=function(t){this.XMLHttpRequest=t};ProductsModel.prototype.getProducts=function(t){var e=new this.XMLHttpRequest;e.onload=function(e){var o=JSON.parse(e.currentTarget.responseText);t(o)},e.open("GET","https://familyburger.com.ua/products.json",!0),e.send()};var ProductsView=function(t,e){this.element=t,this.select=e,this.onChangeGetProduct=null};ProductsView.prototype.render=function(t){var e,o,n,i,s=!0,r=this,c=[],d=[],l=[],u=[],a=t.length,h=document.getElementsByClassName("loader")[0],p=this.select.options[this.select.selectedIndex].value;for(this.element.innerHTML="",h.classList.remove("contentLoaded"),e=0;e<a;e++)t[e].type===p&&(s&&(i=e,s=!1),this.element.innerHTML+='<div class="item-img"><a href="#modal-fullscreen" data-toggle="modal"><h1 class="notify-badge">'+t[e].name+'</h1><img src="images/menuLowQuality/img-'+(e+1)+'.png"alt="'+t[e].name+'"></a></div>',c.push(new Image),d.push(t[e].name),l.push(t[e].price),u.push(t[e].description));for(a=(n=Array.prototype.slice.call(document.querySelectorAll(".container .item-img"))).length,o=0;o<a;o++)c[o].src="./images/menuHighQuality/img-"+(i+o+1)+".png",n[o].addEventListener("click",function(){r.onClickShowDescription(n.indexOf(this)+i,l[n.indexOf(this)],d[n.indexOf(this)],u[n.indexOf(this)])});this.select.addEventListener("change",function(){r.onChangeGetProducts(t)}),c[o-1].addEventListener("load",function(){h.classList.add("contentLoaded")}),$(".notify-badge").arctext({radius:300})},ProductsView.prototype.showItemDescription=function(t,e,o){var n=document.getElementsByClassName("description")[0],i=document.getElementsByClassName("product-img")[0];n.innerHTML="<b>"+e+"</b><br>"+o,i.style.backgroundImage='url("images/menuHighQuality/img-'+(t+1)+'.png")'},ProductsView.prototype.slideDown=function(t){var e=document.getElementsByClassName("ribbon")[0],o=25,n=setInterval(function(){50>o?(o+=.5,e.style.height=o+"%"):(e.style.height=o+"%",clearInterval(n),n=null)},25);e.innerHTML=t};var ProductsController=function(t,e){this.productsModel=t,this.productsView=e};ProductsController.prototype.initialize=function(){this.productsModel.getProducts(this.onLoadShowProducts.bind(this)),this.productsView.onChangeGetProducts=this.onChangeGetProducts.bind(this),this.productsView.onClickShowDescription=this.onClickShowDescription.bind(this)},ProductsController.prototype.onLoadShowProducts=function(t){this.productsView.render(t)},ProductsController.prototype.onChangeGetProducts=function(t){this.productsView.render(t)},ProductsController.prototype.onClickShowDescription=function(t,e,o,n){this.productsView.showItemDescription(t,o,n),this.productsView.slideDown(e)},function(){var t=new ProductsModel(XMLHttpRequest),e=new ProductsView(targetElement,option);new ProductsController(t,e).initialize()}();
+'use strict';
+var ProductsModel = function ProductsModel(XMLHttpRequest) {
+    this.XMLHttpRequest = XMLHttpRequest;
+    this.ajaxResponse = '';
+};
+
+ProductsModel.prototype.getProducts = function getProducts(fn) {
+    var oReq = new this.XMLHttpRequest();
+    oReq.onload = function onLoad(e) {
+        this.ajaxResponse = JSON.parse(e.currentTarget.responseText),
+            fn(this.ajaxResponse);
+    };
+    oReq.open('GET', 'https://familyburger.com.ua/products.json', true);
+    oReq.send();
+};
+
+var ProductsView = function ProductsView() {
+    this.viewElement = document.getElementsByClassName('flex-row')[0];
+    this.select = document.getElementById('selectMenu');
+    this.description = document.getElementsByClassName("description")[0];
+    this.image = document.getElementsByClassName("product-img")[0];
+    this.loader = document.getElementsByClassName('loader')[0];
+    this.description = document.getElementsByClassName("description")[0];
+    this.image = document.getElementsByClassName("product-img")[0];
+};
+
+ProductsView.prototype.render = function render(viewModel) {
+    var x,
+        itemIdx,
+        items,
+        flag = true,
+        imgPreload = [];
+    this.viewModel = viewModel;
+    this.viewElement.innerHTML = '';
+    this.loader.classList.remove('contentLoaded');
+    for (x = 0; x < viewModel.length; x++) {
+        if (viewModel[x].type === this.select.options[this.select.selectedIndex].value) {
+            if (flag) {
+                itemIdx = x;
+                flag = false;
+            }
+            this.viewElement.innerHTML += '<div class="item-img"><a href="#modal-fullscreen" data-toggle="modal"><h1 class="notify-badge">' +
+                viewModel[x].name + '</h1><img src="images/menuLowQuality/img-' +
+                (x + 1) + '.png"alt="' + viewModel[x].name + '"></a></div>';
+            imgPreload.push(new Image());
+        }
+    }
+
+    this.onClickShowDescription(itemIdx, imgPreload);
+    $('.notify-badge').arctext({
+        radius: 300
+    });
+};
+
+ProductsView.prototype.showItemDescription = function showItemDescription(idxNum, firstNum) {
+    this.description.innerHTML = "<b>" + this.viewModel[firstNum + idxNum].name + "</b><br>" + this.viewModel[firstNum + idxNum].description,
+        this.image.style.backgroundImage = 'url("images/menuHighQuality/img-' + (firstNum + idxNum + 1) + '.png")';
+    this.slideDown(this.viewModel[firstNum + idxNum].price);
+}
+
+ProductsView.prototype.slideDown = function slideDown(price) {
+    var ribbon = document.getElementsByClassName('ribbon')[0],
+        hgt = 25,
+        interval = setInterval(function () {
+            if (50 > hgt) {
+                hgt += 0.5;
+                ribbon.style.height = hgt + "%";
+            } else {
+                ribbon.style.height = hgt + "%";
+                clearInterval(interval);
+                interval = null; // garbage collection
+            }
+        }, 25);
+    ribbon.innerHTML = price;
+};
+
+var ProductsController = function ProductsController(productsModel, productsView) {
+    this.productsModel = productsModel;
+    this.productsView = productsView;
+};
+
+ProductsController.prototype.initialize = function initialize() {
+    this.productsModel.getProducts(this.onLoadShowProducts.bind(this));
+    this.productsView.onClickShowDescription = this.onClickShowDescription.bind(this);
+    this.attachEvent(this.productsView.select, 'change', this.selectEventHandler.bind(this));
+};
+
+ProductsController.prototype.onLoadShowProducts = function onLoadShowProducts(productModelData) {
+    this.productsView.render(productModelData);
+};
+
+ProductsController.prototype.attachEvent = function attachEvent(element, type, handler) {
+    if (element.addEventListener) element.addEventListener(type, handler, false);
+    else element.attachEvent("on" + type, handler);
+}
+
+ProductsController.prototype.selectEventHandler = function selectEventHandler() {
+    this.productsView.render(this.productsView.viewModel);
+}
+
+ProductsController.prototype.itemsEventHandler = function itemsEventHandler(itemIndex, firstItem) {
+    this.productsView.showItemDescription(itemIndex, firstItem);
+}
+
+ProductsController.prototype.onClickShowDescription = function onClickShowDescription(idx, images) {
+    this.index = idx;
+    var y,
+        controller = this,
+        items = Array.prototype.slice.call(document.getElementsByClassName('item-img'));
+    for (y = 0; y < items.length; y++) {
+        this.attachEvent(items[y], 'click', function () {
+            controller.itemsEventHandler(items.indexOf(this), controller.index);
+        });
+        images[y].src = './images/menuHighQuality/img-' + (idx + y + 1) + '.png';
+    }
+    this.attachEvent(images[y - 1], 'load' ,function() {
+        controller.productsView.loader.classList.add('contentLoaded');
+    });
+};
+
+(function initialize() {
+    var model = new ProductsModel(XMLHttpRequest),
+        view = new ProductsView(),
+        controller = new ProductsController(model, view);
+    controller.initialize();
+})();
