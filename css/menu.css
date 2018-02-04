@@ -14148,10 +14148,6 @@ option:disabled {
     margin: 0 0 75px 0
 }
 
-select::-ms-expand {
-    display: none
-}
-
 #selectMenu {
     position: absolute;
     right: 0;
@@ -14181,9 +14177,14 @@ select::-ms-expand {
     color:#fff;
 }
 
+select::-ms-expand {
+    display: none
+}
+
 .js-drinks-table {
     display: none;
     width: 100%;
+    margin-top: 85px;
     border-collapse: initial;
 }
 
@@ -14438,6 +14439,10 @@ select::-ms-expand {
         line-height: 1.4em;
     }
 
+    .js-drinks-table {
+        margin-top: 75px;
+    }
+
     .js-drinks-table.is-visible th {
         font-size: 1.5em;
         line-height: 1.7;
@@ -14479,6 +14484,11 @@ select::-ms-expand {
         font-size: 1.3em;
         line-height: 1.3em;
     }
+
+    .js-drinks-table {
+        margin-top: 65px;
+    }
+
     .js-drinks-table.is-visible th {
         font-size: 1.4em;
         line-height: 1.6;
