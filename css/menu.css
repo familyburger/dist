@@ -14173,7 +14173,7 @@ option:disabled {
 }
 
 #selectMenu::-ms-value {
-    background: none;
+    background: transparent;
     color:#fff;
 }
 
