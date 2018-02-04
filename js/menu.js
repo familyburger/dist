@@ -20,14 +20,11 @@ var ProductsView = function ProductsView() {
     this.description = document.getElementsByClassName("description")[0];
     this.image = document.getElementsByClassName("product-img")[0];
     this.loader = document.getElementsByClassName('loader')[0];
-    this.description = document.getElementsByClassName("description")[0];
-    this.image = document.getElementsByClassName("product-img")[0];
 };
 
 ProductsView.prototype.render = function render(viewModel) {
     var x,
         itemIdx,
-        items,
         flag = true,
         imgPreload = [];
     this.viewModel = viewModel;
@@ -45,7 +42,6 @@ ProductsView.prototype.render = function render(viewModel) {
             imgPreload.push(new Image());
         }
     }
-
     this.onClickShowDescription(itemIdx, imgPreload);
     $('.notify-badge').arctext({
         radius: 300
@@ -89,13 +85,13 @@ ProductsController.prototype.onLoadShowProducts = function onLoadShowProducts(pr
     this.productsView.render(productModelData);
 };
 
+ProductsController.prototype.selectEventHandler = function selectEventHandler() {
+    this.productsView.render(this.productsView.viewModel);
+}
+
 ProductsController.prototype.attachEvent = function attachEvent(element, type, handler) {
     if (element.addEventListener) element.addEventListener(type, handler, false);
     else element.attachEvent("on" + type, handler);
-}
-
-ProductsController.prototype.selectEventHandler = function selectEventHandler() {
-    this.productsView.render(this.productsView.viewModel);
 }
 
 ProductsController.prototype.itemsEventHandler = function itemsEventHandler(itemIndex, firstItem) {
@@ -105,6 +101,7 @@ ProductsController.prototype.itemsEventHandler = function itemsEventHandler(item
 ProductsController.prototype.onClickShowDescription = function onClickShowDescription(idx, images) {
     this.index = idx;
     var y,
+        items = [],
         controller = this,
         items = Array.prototype.slice.call(document.getElementsByClassName('item-img'));
     for (y = 0; y < items.length; y++) {

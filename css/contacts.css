@@ -14289,6 +14289,7 @@ hr {
 
 .balloons {
     width: 20%;
+    opacity: 0.8;
     height: 20%;
     position: absolute;
     z-index: 1;

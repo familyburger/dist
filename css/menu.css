@@ -14321,7 +14321,8 @@ option {
     margin-right: 10px;
     color: rgba(94.1%, 28.4%, 10.2%, 1);
     -webkit-filter: drop-shadow(1px 3px 10px rgba(255, 255, 255, .6));
-    filter: drop-shadow(1px 3px 10px rgba(255, 255, 255, .6))
+    filter: drop-shadow(1px 3px 10px rgba(255, 255, 255, .6));
+    will-change: height;
 }
 
 .ribbon:after,
