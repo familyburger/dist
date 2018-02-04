@@ -14185,9 +14185,11 @@ select::-ms-expand {
 .js-drinks-table.--is-visible {
     display: block;
     color: #fff;
+    text-align: center;
 }
 
 .js-drinks-table.--is-visible th {
+    display: block;
     flex: 1 0 100%;
     font-size: 1.7em;
     line-height: 1.7;
@@ -14197,13 +14199,14 @@ select::-ms-expand {
 
 .js-drinks-table.--is-visible tbody {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    display: inline;
 }
 
 .js-drinks-table.--is-visible tr {
+    display: inline-block;
     display: flex;
     flex-wrap: wrap;
+    min-width: 50%;
     margin: 5px 0px;
     background-color: rgba(94.1%, 28.4%, 10.2%, .9);
     -webkit-box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
@@ -14213,11 +14216,12 @@ select::-ms-expand {
 }
 
 .js-drinks-table.--is-visible tr td {
+    display: inline-block;
     flex: 1 0 50%;
     font-size: 1.5em;
     line-height: 1.4;
     text-align: center;
-    padding: 5px;
+    padding: 5px 15px;
 }
 
 #selectMenu option {
