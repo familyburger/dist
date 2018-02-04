@@ -20,18 +20,21 @@ var ProductsView = function ProductsView() {
     this.description = document.getElementsByClassName("description")[0];
     this.image = document.getElementsByClassName("product-img")[0];
     this.loader = document.getElementsByClassName('loader')[0];
+    this.table = document.getElementsByClassName('drinks')[0];
 };
 
 ProductsView.prototype.render = function render(viewModel) {
     var x,
         itemIdx,
         flag = true,
+        option = this.select.options[this.select.selectedIndex].value,
         imgPreload = [];
     this.viewModel = viewModel;
     this.viewElement.innerHTML = '';
+    if(option !== 'Drinks') {
     this.loader.classList.remove('contentLoaded');
     for (x = 0; x < viewModel.length; x++) {
-        if (viewModel[x].type === this.select.options[this.select.selectedIndex].value) {
+        if (viewModel[x].type === option) {
             if (flag) {
                 itemIdx = x;
                 flag = false;
@@ -46,6 +49,7 @@ ProductsView.prototype.render = function render(viewModel) {
     $('.notify-badge').arctext({
         radius: 300
     });
+    }
 };
 
 ProductsView.prototype.showItemDescription = function showItemDescription(idxNum, firstNum) {
