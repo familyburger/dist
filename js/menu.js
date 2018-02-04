@@ -37,7 +37,7 @@ ProductsView.prototype.render = function render(viewModel) {
     this.table.innerHTML = '';
     if(option !== 'Drinks') {
     this.loader.classList.remove('contentLoaded');
-    this.table.classList.remove('--is-visible');
+    this.table.classList.remove('is-visible');
     for (x = 0; x < viewModel.length; x++) {
         if (viewModel[x].type === option) {
             if (flag) {
@@ -56,7 +56,7 @@ ProductsView.prototype.render = function render(viewModel) {
     });
     }
     else {
-        this.table.classList.add('--is-visible');
+        this.table.classList.add('is-visible');
         var html = '<tbody>';
         for (y = 0; y < viewModel.length; y++) {
         if (viewModel[y].type === option) {

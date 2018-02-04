@@ -14182,13 +14182,13 @@ select::-ms-expand {
     border-collapse: initial;
 }
 
-.js-drinks-table.--is-visible {
+.js-drinks-table.is-visible {
     display: block;
     color: #fff;
     text-align: center;
 }
 
-.js-drinks-table.--is-visible th {
+.js-drinks-table.is-visible th {
     display: block;
     flex: 1 0 100%;
     font-size: 1.6em;
@@ -14197,12 +14197,12 @@ select::-ms-expand {
     border-bottom: 3px dashed rgba(96.4%, 82.5%, 47.7%, .85);
 }
 
-.js-drinks-table.--is-visible tbody {
+.js-drinks-table.is-visible tbody {
     width: 100%;
     display: inline;
 }
 
-.js-drinks-table.--is-visible tr {
+.js-drinks-table.is-visible tr {
     display: inline-block;
     display: flex;
     flex-wrap: wrap;
@@ -14215,7 +14215,7 @@ select::-ms-expand {
     border: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
 }
 
-.js-drinks-table.--is-visible tr td {
+.js-drinks-table.is-visible tr td {
     display: inline-block;
     flex: 1 0 50%;
     font-size: 1.5em;
@@ -14433,12 +14433,12 @@ select::-ms-expand {
         line-height: 1.4em;
     }
 
-    .js-drinks-table.--is-visible th {
+    .js-drinks-table.is-visible th {
         font-size: 1.5em;
         line-height: 1.7;
     }
 
-    .js-drinks-table.--is-visible tr td {
+    .js-drinks-table.is-visible tr td {
         flex: 1 0 100%;
         font-size: 1.4em;
         line-height: 1.4;
@@ -14474,12 +14474,12 @@ select::-ms-expand {
         font-size: 1.3em;
         line-height: 1.3em;
     }
-    .js-drinks-table.--is-visible th {
+    .js-drinks-table.is-visible th {
         font-size: 1.4em;
         line-height: 1.6;
     }
 
-    .js-drinks-table.--is-visible tr td {
+    .js-drinks-table.is-visible tr td {
         flex: 1 0 100%;
         font-size: 1.3em;
         line-height: 1.3;
