@@ -13302,7 +13302,7 @@ a:focus {
     -webkit-box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
     box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
     -moz-box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
-    border: 4px solid rgba(96.4%, 82.5%, 47.7%, .9);
+    border: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
     z-index: 2
 }
 
@@ -13339,7 +13339,7 @@ a:focus {
     -webkit-box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
     box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
     -moz-box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
-    border: 4px solid rgba(96.4%, 82.5%, 47.7%, .9)
+    border: 3px solid rgba(96.4%, 82.5%, 47.7%, .9)
 }
 
 .arrow_box_inner_right::after,
@@ -13386,7 +13386,7 @@ a:focus {
     -webkit-box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
     box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
     -moz-box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
-    border: 4px solid rgba(96.4%, 82.5%, 47.7%, .9);
+    border: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
 }
 
 .arrow_box_left::after,
@@ -13422,7 +13422,7 @@ a:focus {
     -webkit-box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
     box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
     -moz-box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
-    border: 4px solid rgba(96.4%, 82.5%, 47.7%, .9);
+    border: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
 }
 
 .arrow_box_inner_left::after,
@@ -13854,7 +13854,7 @@ footer p {
         -webkit-box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
         box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
         -moz-box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
-        border: 4px solid rgba(96.4%, 82.5%, 47.7%, .9)
+        border: 3px solid rgba(96.4%, 82.5%, 47.7%, .9)
     }
     .arrow_box_inner_bottom::after,
     .arrow_box_inner_bottom::before {
@@ -13900,7 +13900,7 @@ footer p {
         -webkit-box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
         box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
         -moz-box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
-        border: 4px solid rgba(96.4%, 82.5%, 47.7%, .9)
+        border: 3px solid rgba(96.4%, 82.5%, 47.7%, .9)
     }
     .arrow_box_bottom::after,
     .arrow_box_bottom::before {
@@ -13932,7 +13932,7 @@ footer p {
         -webkit-box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
         box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
         -moz-box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
-        border: 4px solid rgba(96.4%, 82.5%, 47.7%, .9)
+        border: 3px solid rgba(96.4%, 82.5%, 47.7%, .9)
     }
     .arrow_box_top:after,
     .arrow_box_top:before {
@@ -13964,7 +13964,7 @@ footer p {
         -webkit-box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
         box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
         -moz-box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
-        border: 4px solid rgba(96.4%, 82.5%, 47.7%, .9)
+        border: 3px solid rgba(96.4%, 82.5%, 47.7%, .9)
     }
     .arrow_box_inner_top:after,
     .arrow_box_inner_top:before {

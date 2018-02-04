@@ -14601,7 +14601,7 @@ textarea:focus {
     .hrBottom {
         border-top: none;
         height: 25px;
-        border-top: 2px solid rgba(94.1%, 28.4%, 10.2%, .7)
+        border-top: 3px solid rgba(94.1%, 28.4%, 10.2%, .7)
     }
     main address .btn-block {
         width: 100%
@@ -14681,7 +14681,7 @@ textarea:focus {
     .hrBottom {
         border-top: none;
         height: 25px;
-        border-top: 2px solid rgba(94.1%, 28.4%, 10.2%, .7)
+        border-top: 3px solid rgba(94.1%, 28.4%, 10.2%, .7)
     }
     #comment-error,
     #email-error {

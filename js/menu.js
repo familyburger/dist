@@ -20,19 +20,24 @@ var ProductsView = function ProductsView() {
     this.description = document.getElementsByClassName("description")[0];
     this.image = document.getElementsByClassName("product-img")[0];
     this.loader = document.getElementsByClassName('loader')[0];
-    this.table = document.getElementsByClassName('drinks')[0];
+    this.table = document.getElementsByClassName('js-drinks-table')[0];
 };
 
 ProductsView.prototype.render = function render(viewModel) {
     var x,
+        y,
+        z,
         itemIdx,
         flag = true,
         option = this.select.options[this.select.selectedIndex].value,
+        drinks = [],
         imgPreload = [];
     this.viewModel = viewModel;
     this.viewElement.innerHTML = '';
+    this.table.innerHTML = '';
     if(option !== 'Drinks') {
     this.loader.classList.remove('contentLoaded');
+    this.table.classList.remove('--is-visible');
     for (x = 0; x < viewModel.length; x++) {
         if (viewModel[x].type === option) {
             if (flag) {
@@ -49,6 +54,21 @@ ProductsView.prototype.render = function render(viewModel) {
     $('.notify-badge').arctext({
         radius: 300
     });
+    }
+    else {
+        this.table.classList.add('--is-visible');
+        var html = '<tbody>';
+        for (y = 0; y < viewModel.length; y++) {
+        if (viewModel[y].type === option) {
+        drinks = viewModel[y].description.split(';');
+        html += '<tr><th>' + viewModel[y].name + '</th>';
+                for (z = 0; z < drinks.length; z++) {
+                    if (z < drinks.length - 1) html += '<td>' +  drinks[z] + '</td>';
+                    else html += '<td>' +  drinks[z] + '</td></tr>';
+                }
+            }
+        }
+        this.table.innerHTML = html + '</tbody>';
     }
 };
 
@@ -104,17 +124,17 @@ ProductsController.prototype.itemsEventHandler = function itemsEventHandler(item
 
 ProductsController.prototype.onClickShowDescription = function onClickShowDescription(idx, images) {
     this.index = idx;
-    var y,
+    var x,
         items = [],
         controller = this,
         items = Array.prototype.slice.call(document.getElementsByClassName('item-img'));
-    for (y = 0; y < items.length; y++) {
-        this.attachEvent(items[y], 'click', function () {
+    for (x = 0; x < items.length; x++) {
+        this.attachEvent(items[x], 'click', function () {
             controller.itemsEventHandler(items.indexOf(this), controller.index);
         });
-        images[y].src = './images/menuHighQuality/img-' + (idx + y + 1) + '.png';
+        images[x].src = './images/menuHighQuality/img-' + (idx + x + 1) + '.png';
     }
-    this.attachEvent(images[y - 1], 'load' ,function() {
+    this.attachEvent(images[x - 1], 'load' ,function() {
         controller.productsView.loader.classList.add('contentLoaded');
     });
 };
