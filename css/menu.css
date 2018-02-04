@@ -12849,7 +12849,7 @@ body {
     font-size: 140%;
     letter-spacing: 1.2px;
     line-height: 200%;
-    text-shadow: 0 1px 0 rgba(0%, 0%, 0%, .3), 1px 0 0 rgba(0%, 0%, 0%, .3), 1px 1px 1px rgba(0%, 0%, 0%, .3), 2px 1px 1px rgba(0%, 0%, 0%, .3)
+    text-shadow: 0 1px 0 rgba(0%, 0%, 0%, .5), 1px 0 0 rgba(0%, 0%, 0%, .5), 1px 1px 1px rgba(0%, 0%, 0%, .5), 2px 1px 1px rgba(0%, 0%, 0%, .5)
 }
 
 .grid-container {
