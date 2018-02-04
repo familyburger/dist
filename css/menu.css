@@ -14177,6 +14177,11 @@ option:disabled {
     color:#fff;
 }
 
+select:focus::-ms-value {
+    color:#fff;
+    background: transparent;
+}
+
 select::-ms-expand {
     display: none
 }
