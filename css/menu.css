@@ -14173,8 +14173,13 @@ select::-ms-expand {
     -webkit-appearance: none
 }
 
-option {
+#selectMenu option {
     background: rgba(94.1%, 28.4%, 10.2%, .9)
+}
+
+#selectMenu:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #fff;
 }
 
 .loader {
