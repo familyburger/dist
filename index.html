@@ -325,7 +325,8 @@
        $(window).on("scroll", function() {
         var scrollHeight = $(document).height();
         var scrollPosition = $(window).height() + $(window).scrollTop();
-        if ((scrollHeight - scrollPosition) / scrollHeight <= 105) {
+        console.log((scrollHeight - scrollPosition) / scrollHeight)
+        if ((scrollHeight - scrollPosition) / scrollHeight <= 0) {
          document.getElementsByClassName('fixed-footer')[0].classList.add('bottom');
          document.documentElement.style.overflow = "auto";
         }
