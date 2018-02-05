@@ -7282,7 +7282,7 @@ button.close {
 }
 
 .modal-open .modal {
-    overflow-x: hidden;
+    overflow: hidden;
     overflow-y: auto
 }
 

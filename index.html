@@ -327,11 +327,9 @@
         var scrollPosition = $(window).height() + $(window).scrollTop();
         if ((scrollHeight - scrollPosition) / scrollHeight <= 0) {
          document.getElementsByClassName('fixed-footer')[0].classList.add('bottom');
-         document.getElementsByClassName('flex-container')[0].classList.add('bottom');
         }
         else {
         document.getElementsByClassName('fixed-footer')[0].classList.remove('bottom');
-         document.getElementsByClassName('flex-container')[0].classList.remove('bottom');
         }
     });
     </script>
