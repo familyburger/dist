@@ -21,6 +21,7 @@ var ProductsView = function ProductsView() {
     this.image = document.getElementsByClassName("product-img")[0];
     this.loader = document.getElementsByClassName('loader')[0];
     this.table = document.getElementsByClassName('js-drinks-table')[0];
+    this.ribbon = document.getElementsByClassName('ribbon')[0];
 };
 
 ProductsView.prototype.render = function render(viewModel) {
@@ -75,24 +76,8 @@ ProductsView.prototype.render = function render(viewModel) {
 ProductsView.prototype.showItemDescription = function showItemDescription(idxNum, firstNum) {
     this.description.innerHTML = "<b>" + this.viewModel[firstNum + idxNum].name + "</b><br>" + this.viewModel[firstNum + idxNum].description,
         this.image.style.backgroundImage = 'url("images/menuHighQuality/img-' + (firstNum + idxNum + 1) + '.png")';
-    this.slideDown(this.viewModel[firstNum + idxNum].price);
+    this.ribbon.innerHTML = this.viewModel[firstNum + idxNum].price;
 }
-
-ProductsView.prototype.slideDown = function slideDown(price) {
-    var ribbon = document.getElementsByClassName('ribbon')[0],
-        hgt = 25,
-        interval = setInterval(function () {
-            if (50 > hgt) {
-                hgt += 0.5;
-                ribbon.style.height = hgt + "%";
-            } else {
-                ribbon.style.height = hgt + "%";
-                clearInterval(interval);
-                interval = null; // garbage collection
-            }
-        }, 25);
-    ribbon.innerHTML = price;
-};
 
 var ProductsController = function ProductsController(productsModel, productsView) {
     this.productsModel = productsModel;

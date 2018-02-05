@@ -14385,8 +14385,9 @@ select::-ms-expand {
 .ribbon {
     background: rgba(255, 255, 255, .2);
     position: absolute;
-    width: 60px;
+    width: 65px;
     right: -50px;
+    height: 35%;
     line-height: 25px;
     font-size: 1.5em;
     line-height: 1.5;
