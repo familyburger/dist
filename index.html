@@ -285,7 +285,7 @@
             <div class="push"></div>
         </main>
     </div>
-    <footer data-role="header" data-position="fixed" data-fullscreen="true">
+    <footer id="footer">
         <div class="container">
             <div class="footer">
                 <p class="design">Design by VY</p>
@@ -475,9 +475,12 @@
 }();
      </script>
      <script>
-       noBounce.init({
-        animate: true
-      });
+         window.onload = function() {
+  noBounce.init({
+    animate: true,
+    element: document.getElementById("footer")
+  });
+}
          </script>
     <script type="application/ld+json">
         {
