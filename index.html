@@ -31,6 +31,8 @@
         <link rel="manifest" href="/manifest.json">
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="viewport" content="initial-scale = 1.0, user-scalable = no">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="theme-color" content="#ffffff">
         <link rel="stylesheet" href="css/index.css">
         <script>
@@ -321,6 +323,11 @@
     <script src="js/fontfaceobserver.js" async></script>
     <script src="js/carousel.js"></script>
     <script src="js/main.js" defer="defer"></script>
+    <script type="text/javascript">
+        document.addEventListener('touchmove', function(event) {
+             event.preventDefault();
+        }, false);
+    </script>
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
