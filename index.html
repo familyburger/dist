@@ -327,12 +327,10 @@
         var scrollPosition = $(window).height() + $(window).scrollTop();
         if ((scrollHeight - scrollPosition) / scrollHeight <= 0) {
          document.getElementsByClassName('fixed-footer')[0].classList.add('bottom');
-         document.documentElement.style.overflow = "hidden";
-         document.body.style.overflow = "auto";
+         document.documentElement.style.overflow = "auto";
         }
         else {
         document.documentElement.style.overflow = "visible";
-        document.body.style.overflow = "visible";
         document.getElementsByClassName('fixed-footer')[0].classList.remove('bottom');
         }
     });
