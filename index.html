@@ -328,10 +328,10 @@
         console.log((scrollHeight - scrollPosition) / scrollHeight)
         if ((scrollHeight - scrollPosition) / scrollHeight <= 0) {
          document.getElementsByClassName('fixed-footer')[0].classList.add('bottom');
-         document.documentElement.style.overflow = "auto";
+   
         }
         else {
-        document.documentElement.style.overflow = "visible";
+      
         document.getElementsByClassName('fixed-footer')[0].classList.remove('bottom');
         }
     });
