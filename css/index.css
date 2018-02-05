@@ -12819,7 +12819,7 @@ fieldset[disabled] .btn-yahoo:hover {
     height: 0
 }
 
-html {
+html,body {
     height: 100%;
 }
 
