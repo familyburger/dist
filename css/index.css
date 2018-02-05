@@ -12875,10 +12875,6 @@ body {
     flex-direction: column
 }
 
-.flex-container.bottom {
-    padding-bottom: 105px;
-}
-
 .navbar {
     margin: 0;
     background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
