@@ -14238,10 +14238,13 @@ hr {
 }
 
 .modal-body>.container>.row div .info-window {
-    background : rgba(94.1%, 28.4%, 10.2%, 1);
     padding: 5px;
-    border-radius: 3px;
     margin-top: 3px;
+    background-color: rgba(94.1%, 28.4%, 10.2%, .9);
+    -webkit-box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
+    box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
+    -moz-box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .2);
+    border: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
 }
 
 .info-window h3,
