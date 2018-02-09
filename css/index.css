@@ -12821,12 +12821,14 @@ fieldset[disabled] .btn-yahoo:hover {
 
 html {
     height: 100%;
+    overflow: auto;
 }
 
 body {
     margin: 0;
     padding: 0;
     width: 100%;
+    height: 100%;
     min-height: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -12837,6 +12839,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    overflow: auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -12868,6 +12871,8 @@ body {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
     padding-top: 105px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -12878,7 +12883,7 @@ body {
 .navbar {
     margin: 0;
     background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
-    background-color:  #FAD591;
+    background-color:  hsl(39, 91%, 77%);
     min-height: 105px;
     -webkit-box-shadow: 0 1px 5px 1px rgba(0%, 0%, 0%, .25);
     box-shadow: 0 1px 5px 1px rgba(0%, 0%, 0%, .25)
@@ -13753,7 +13758,7 @@ footer {
     position: sticky;
     top: 0;
     background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
-    background-color:  #FAD591;
+    background-color:  hsl(39, 91%, 77%);
     -webkit-box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, .3);
     box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, .3)
 }

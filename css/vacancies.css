@@ -13679,7 +13679,7 @@ footer {
     position: relative;
     overflow: hidden;
     background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
-    background-color:  #FAD591;
+    background-color:  #fad591;
     -webkit-box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, .3);
     box-shadow: 0 -1px 5px 1px rgba(0, 0, 0, .3)
 }
@@ -14128,7 +14128,7 @@ hr {
     border: 3px solid rgba(94.1%, 28.4%, 10.2%, .8);
     margin: 5px;
     border-radius: 50%;
-    background-color: #FAD591;
+    background-color: hsl(39, 91%, 77%);
     -webkit-box-shadow: 0 0 3px 3px rgba(0, 0, 0, .2);
     box-shadow: 0 0 3px 3px rgba(0, 0, 0, .2);
     -moz-box-shadow: 0 0 3px 3px rgba(0, 0, 0, .2)
