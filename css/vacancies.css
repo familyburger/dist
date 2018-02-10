@@ -13097,7 +13097,8 @@ a:focus {
     padding-top: 1.8em;
     cursor: pointer;
     transform: translate3d(0,0,0);
- 
+    -webkit-transition: all .3s linear 0s;
+    transition: all .3s linear 0s
 }
 
 .navbar-inverse .navbar-brand {
@@ -13106,12 +13107,14 @@ a:focus {
     padding-top: 1.2em;
     position: relative;
     transform: translate3d(0,0,0);
-  
+    -webkit-transition: all .3s linear 0s;
+    transition: all .3s linear 0s
 }
 
 .navbar-toggle {
     transform: translate3d(0,0,0);
-  
+    -webkit-transition: all .3s linear 0s;
+    transition: all .3s linear 0s
 }
 
 .navbar-inverse .navbar-nav>li>a:hover:before {
