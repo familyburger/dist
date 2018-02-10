@@ -16,12 +16,12 @@ document.addEventListener('DOMContentLoaded', function () {
     
     window.addEventListener('resize', offsetButton, false);
     window.addEventListener('scroll', scrollFunction, false);
-    window.addEventListener('touchmove', function(event) {
+    document.body.ontouchmove = function() {
       scrollOffset = offsetButton();
       scrollElm = checkBrowserSupport();
       if (scrollElm >= 105) header.classList.add('scrolled-nav');
       else header.classList.remove('scrolled-nav');
-    },false);
+    }
   
     function scrollFunction() {
       scrollOffset = offsetButton();
