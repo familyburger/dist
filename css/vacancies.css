@@ -12898,6 +12898,10 @@ footer {
     box-shadow: 0 1px 5px 1px rgba(0%, 0%, 0%, .25)
 }
 
+.header-copy {
+    display: none;
+}
+
 .navbar.navbar-inverse {
     border-top: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
     border-bottom: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
@@ -12933,6 +12937,12 @@ a:focus {
     min-height: 75px;
     position: fixed;
     animation: slide-down 0.6s;
+}
+
+.navbar.navbar-inverse.navbar-fixed-top.scrolled-top {
+    min-height: 105px;
+    position: absolute;
+    animation: slide-up 1.2s;
 }
 
 .scrolled-nav .navbar-toggle {
@@ -13078,8 +13088,7 @@ a:focus {
     padding-top: 1.8em;
     cursor: pointer;
     transform: translate3d(0,0,0);
-    -webkit-transition: all .6s linear 0s;
-    transition: all .6s linear 0s
+ 
 }
 
 .navbar-inverse .navbar-brand {
@@ -13088,14 +13097,12 @@ a:focus {
     padding-top: 1.2em;
     position: relative;
     transform: translate3d(0,0,0);
-    -webkit-transition: all .6s linear 0s;
-    transition: all .6s linear 0s
+  
 }
 
 .navbar-toggle {
     transform: translate3d(0,0,0);
-    -webkit-transition: all .6s linear 0s;
-    transition: all .6s linear 0s
+  
 }
 
 .navbar-inverse .navbar-nav>li>a:hover:before {
