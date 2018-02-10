@@ -149,12 +149,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   
     document.getElementsByClassName('navbar-toggle')[0].onclick = function () {
-      var scrolledNav = document.getElementsByClassName('navbar')[0];
-      if (this.getAttribute("aria-expanded") === 'false' || this.getAttribute("aria-expanded") === null && !scrolledNav.classList.contains("activeBar")) {
-        scrolledNav.classList.add("activeBar");
-        scrolledNav.style.height = 'auto';
+      if (this.getAttribute("aria-expanded") === 'false' || this.getAttribute("aria-expanded") === null && !   header.classList.contains("activeBar")) {
+           header.classList.add("activeBar");
+           header.style.height = 'auto';
       } else {
-        scrolledNav.classList.remove("activeBar");
+           header.classList.remove("activeBar");
       }
     };
   }, false);
