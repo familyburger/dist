@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function scrollFunction() {
       scrollOffset = offsetButton();
       scrollElm = checkBrowserSupport();
-      if (scrollElm >= 75) {
+      if (scrollElm >= 32.5) {
         $('.navbar').stop(true,true).removeClass('scrolled-top').addClass('scrolled-nav');
       }
       else {
