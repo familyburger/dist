@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function touchFunction(event) {
       scrollOffset = offsetButton();
       scrollElm = checkBrowserSupport();
+      console.log('touch')
       if (scrollElm >= 105) header.classList.add('scrolled-nav');
       else header.classList.remove('scrolled-nav');
     }
