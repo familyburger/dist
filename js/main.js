@@ -21,15 +21,27 @@ document.addEventListener('DOMContentLoaded', function () {
     function touchFunction(event) {
       scrollOffset = offsetButton();
       scrollElm = checkBrowserSupport();
-      if (scrollElm >= 75) header.classList.add('scrolled-nav');
-      else header.classList.remove('scrolled-nav');
+      if (scrollElm >= 75) {
+        header.classList.add('scrolled-nav');
+        header.classList.remove('scrolled-top');
+      }
+      else {
+        header.classList.remove('scrolled-nav');
+        header.classList.add('scrolled-top');
+      }
     }
 
     function scrollFunction() {
       scrollOffset = offsetButton();
       scrollElm = checkBrowserSupport();
-      if (scrollElm >= 75) header.classList.add('scrolled-nav');
-      else header.classList.remove('scrolled-nav');
+      if (scrollElm >= 75) {
+        header.classList.add('scrolled-nav');
+        header.classList.remove('scrolled-top');
+      }
+      else {
+        header.classList.remove('scrolled-nav');
+        header.classList.add('scrolled-top');
+      }
       if (scrollElm > scrollOffset && scrollElm > window.innerHeight) {
         document.getElementById('scrollTop').style.display = "block";
       } else document.getElementById('scrollTop').style.display = "none";

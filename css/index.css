@@ -12908,6 +12908,15 @@ footer {
     } 
 }
 
+@keyframes slide-up {
+    0% {
+        transform: translateY(0);
+    } 
+    100% {
+        transform: translateY(0);
+    } 
+}
+
 a:focus {
     outline: 0
 }
@@ -12929,6 +12938,12 @@ a:focus {
     min-height: 75px;
     position: fixed;
     animation: slide-down 0.6s;
+}
+
+.navbar.navbar-inverse.navbar-fixed-top.scrolled-top {
+    min-height: 105px;
+    position: absolute;
+    animation: slide-up 0.6s;
 }
 
 .scrolled-nav .navbar-toggle {
