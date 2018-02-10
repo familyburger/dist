@@ -28,38 +28,42 @@ var toggle = document.getElementsByClassName('navbar-toggle')[0],
 
     function touchFunction(event) {
       if (navbar.state()) {
-      if (navbar.scrollElm() >= 105) { 
-        console.log('>')
-        header.classList.add('scrolled-nav');
-      }
+      if (navbar.scrollElm() >= 105) header.classList.add('scrolled-nav');
       else {
-        console.log('else')
         header.classList.remove('scrolled-nav');
-       }
+        header.classList.remove('no-animation');
+        }
       }
     }
 
     function scrollFunction() {
       if (navbar.state()) {
-
       if (navbar.scrollElm() >= 105) header.classList.add('scrolled-nav');
-      else header.classList = ' navbar navbar-inverse navbar-fixed-top';
-      
+      else {
+        header.classList.remove('scrolled-nav');
+        header.classList.remove('no-animation');
+        }
       }
       if (navbar.scrollElm() > navbar.scrollOffset() && navbar.scrollElm() > window.innerHeight) {
         document.getElementById('scrollTop').style.display = "block";
       } else document.getElementById('scrollTop').style.display = "none"; 
-
     }
   
     document.getElementsByClassName('navbar-toggle')[0].onclick = function () {
       if (navbar.state()) {
-           if (navbar.scrollElm() >= 105) header.classList = ' navbar navbar-inverse navbar-fixed-top scrolled-nav active-bar';
-           else header.classList = ' navbar navbar-inverse navbar-fixed-top active-bar';
+          header.classList.remove('no-animation');
+          header.classList.add('active-bar');
       }
       else {
-           if (navbar.scrollElm() >= 105) header.classList = ' navbar navbar-inverse navbar-fixed-top scrolled-nav no-animation';
-           else header.classList = ' navbar navbar-inverse navbar-fixed-top no-animation';
+          header.classList.remove('active-bar');
+          if(navbar.scrollElm() >= 105) {
+            header.classList.add('no-animation');
+            header.classList.add('scrolled-nav');
+          }
+          else { 
+            header.classList.remove('scrolled-nav');
+            header.classList.remove('no-animation');
+          }
       }
     };
 
