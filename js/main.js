@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     window.addEventListener('resize', offsetButton, false);
     window.addEventListener('scroll', scrollFunction, false);
-    window.addEventListener("touchmove", touchFunction ,false);
+    window.addEventListener("touchmove", touchFunction ,true);
    
     function touchFunction(event) {
       scrollOffset = offsetButton();
