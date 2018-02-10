@@ -12891,7 +12891,47 @@ footer {
     min-height: 105px;
     -webkit-box-shadow: 0 1px 5px 1px rgba(0%, 0%, 0%, .25);
     transform: translate3d(0,0,0);
-    box-shadow: 0 1px 5px 1px rgba(0%, 0%, 0%, .25)
+    box-shadow: 0 1px 5px 1px rgba(0%, 0%, 0%, .25);
+    z-index: 99;
+}
+
+.navbar-copy {
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+.navbar-copy .navbar {
+    min-height: 75px;
+}
+
+.navbar-copy .navbar {
+    display: block;
+}
+
+.navbar-copy .scrolled-nav .navbar-toggle {
+    top: 13px
+}
+
+.navbar-copy .scrolled-nav .navbar-header .navbar-brand {
+    padding-top: .75em
+}
+
+.navbar-copy .scrolled-nav .container .navbar-nav>li>a {
+    padding-top: 1.15em
+}
+
+.navbar-copy .scrolled-nav .navbar-header .navbar-brand::after {
+    top: 8px
+}
+
+.navbar-copy .scrolled-nav .navbar-header .navbar-brand::before {
+    bottom: -4px
+}
+
+.navbar-copy .scrolled-nav .navbar-collapse .navbar-nav>li>a::after {
+    top: 17px
 }
 
 .navbar.navbar-inverse {
@@ -14067,6 +14107,9 @@ footer p {
     .blocks .container .row div[class*=col] {
         padding: 0 15px
     }
+    .navbar-copy .scrolled-nav .container .navbar-nav>li>a {
+        padding-top: 1.8em
+    }
     .scrolled-nav .container .navbar-nav>li>a {
         padding-top: 1.8em
     }
@@ -14163,6 +14206,9 @@ footer p {
         padding: 0 15px
     }
     .scrolled-nav .container .navbar-nav>li>a {
+        padding-top: 1.8em
+    }
+    .navabar-copy .scrolled-nav .container .navbar-nav>li>a {
         padding-top: 1.8em
     }
     .item {

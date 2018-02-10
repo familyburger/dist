@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function touchFunction(event) {
       scrollOffset = offsetButton();
       scrollElm = checkBrowserSupport();
+      console.log(flag)
       if(!flag) {
       if (scrollElm >= 105) header.classList.add('scrolled-nav');
       else header.classList = ' navbar navbar-inverse navbar-fixed-top';
@@ -41,14 +42,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   
     document.getElementsByClassName('navbar-toggle')[0].onclick = function () {
-      if (this.getAttribute("aria-expanded") === 'false' || this.getAttribute("aria-expanded") === null && !   header.classList.contains("activeBar")) {
+      if (this.getAttribute("aria-expanded") === 'false' || this.getAttribute("aria-expanded") === null && !header.classList.contains("activeBar")) {
            header.classList = ' navbar navbar-inverse navbar-fixed-top activeBar';
-           flag = true;
+            flag= true;
       } else {
            header.classList.remove("activeBar");
            if (scrollElm >= 105) header.classList = ' navbar navbar-inverse navbar-fixed-top scrolled-nav no-animation';
            else header.classList.remove('scrolled-nav');
-           flag = false;
+           flag= false;
       }
     };
 
