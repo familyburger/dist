@@ -34,15 +34,17 @@ var toggle = document.getElementsByClassName('navbar-toggle')[0],
       }
       else {
         console.log('else')
-        header.classList = ' navbar navbar-inverse navbar-fixed-top';
+        header.classList.remove('scrolled-nav');
        }
       }
     }
 
     function scrollFunction() {
       if (navbar.state()) {
+
       if (navbar.scrollElm() >= 105) header.classList.add('scrolled-nav');
       else header.classList = ' navbar navbar-inverse navbar-fixed-top';
+      
       }
       if (navbar.scrollElm() > navbar.scrollOffset() && navbar.scrollElm() > window.innerHeight) {
         document.getElementById('scrollTop').style.display = "block";
