@@ -1,55 +1,59 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var scrollOffset = offsetButton(),
-    scrollElm = checkBrowserSupport(),
+var toggle = document.getElementsByClassName('navbar-toggle')[0],
     header = document.getElementsByClassName('navbar')[0],
-    flag = false;
+    wrap = document.getElementById('contentWrap'),
+    navbar = {};
+    navbar.scrollOffset = offsetButton;
+    navbar.scrollElm = checkBrowserSupport;
+    navbar.state = navbarState;
 
-    if (scrollElm >= 105) header.classList.add('scrolled-nav');
+    window.addEventListener('resize', offsetButton, false);
+    window.addEventListener('scroll', scrollFunction, false);
+    window.addEventListener("touchmove", touchFunction ,true);
+
+    if (navbar.scrollElm() >= 105) header.classList.add('scrolled-nav');   // initial value
     else header.classList.remove('scrolled-nav');
-  
+
     function offsetButton() {
-      return document.getElementById('contentWrap').offsetTop;
+      return wrap.offsetTop;
     };
   
     function checkBrowserSupport() {
       return (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
     }
     
-    window.addEventListener('resize', offsetButton, false);
-    window.addEventListener('scroll', scrollFunction, false);
-    window.addEventListener("touchmove", touchFunction ,true);
-   
+    function navbarState() {
+      return toggle.getAttribute("aria-expanded") === 'false' || toggle.getAttribute("aria-expanded") === null;
+    }
+
     function touchFunction(event) {
-      scrollOffset = offsetButton();
-      scrollElm = checkBrowserSupport();
-      console.log(flag)
-      if(!flag) {
-      if (scrollElm >= 105) header.classList.add('scrolled-nav');
+      console.log(navbar.state())
+      if (navbar.state()) {
+        console.log('sss')
+      if (navbar.scrollElm() >= 105) header.classList.add('scrolled-nav');
       else header.classList = ' navbar navbar-inverse navbar-fixed-top';
       }
     }
 
     function scrollFunction() {
-      scrollOffset = offsetButton();
-      scrollElm = checkBrowserSupport();
-      if(!flag) {
-      if (scrollElm >= 105) header.classList.add('scrolled-nav');
+      if (navbar.state()) {
+      if (navbar.scrollElm() >= 105) header.classList.add('scrolled-nav');
       else header.classList = ' navbar navbar-inverse navbar-fixed-top';
       }
-      if (scrollElm > scrollOffset && scrollElm > window.innerHeight) {
+      if (navbar.scrollElm() > navbar.scrollOffset() && navbar.scrollElm() > window.innerHeight) {
         document.getElementById('scrollTop').style.display = "block";
-      } else document.getElementById('scrollTop').style.display = "none";
+      } else document.getElementById('scrollTop').style.display = "none"; 
+
     }
   
     document.getElementsByClassName('navbar-toggle')[0].onclick = function () {
-      if (this.getAttribute("aria-expanded") === 'false' || this.getAttribute("aria-expanded") === null && !header.classList.contains("activeBar")) {
-           header.classList = ' navbar navbar-inverse navbar-fixed-top activeBar';
-            flag= true;
-      } else {
-           header.classList.remove("activeBar");
-           if (scrollElm >= 105) header.classList = ' navbar navbar-inverse navbar-fixed-top scrolled-nav no-animation';
-           else header.classList.remove('scrolled-nav');
-           flag= false;
+      if (navbar.state()) {
+           if (navbar.scrollElm() >= 105) header.classList = ' navbar navbar-inverse navbar-fixed-top scrolled-nav active-bar';
+           else header.classList = ' navbar navbar-inverse navbar-fixed-top active-bar';
+      }
+      else {
+           if (navbar.scrollElm() >= 105) header.classList = ' navbar navbar-inverse navbar-fixed-top scrolled-nav no-animation';
+           else header.classList = ' navbar navbar-inverse navbar-fixed-top no-animation';
       }
     };
 

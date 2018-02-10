@@ -12965,18 +12965,27 @@ a:focus {
     float: right
 }
 
-.navbar.navbar-inverse.navbar-fixed-top.activeBar {
-    position: fixed;
-    animation: none;
-}
-
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav {
     min-height: 75px;
     position: fixed;
     animation: slide-down 0.6s;
 }
 
+.navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.active-bar {
+    position: fixed;
+    animation: none;
+}
+
+.navbar.navbar-inverse.navbar-fixed-top.active-bar {
+    position: fixed;
+    animation: none;
+}
+
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.no-animation {
+    animation: none;
+}
+
+.navbar.navbar-inverse.navbar-fixed-top.no-animation {
     animation: none;
 }
 
