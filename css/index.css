@@ -12926,7 +12926,7 @@ a:focus {
 }
 
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav {
-    min-height: 70px;
+    min-height: 75px;
     position: fixed;
     animation: slide-down 0.6s;
 }
@@ -13040,8 +13040,8 @@ a:focus {
     padding-top: 1.8em;
     cursor: pointer;
     transform: translate3d(0,0,0);
-    -webkit-transition: all .3s linear 0s;
-    transition: all .3s linear 0s
+    -webkit-transition: all .6s linear 0s;
+    transition: all .6s linear 0s
 }
 
 .navbar-inverse .navbar-brand {
@@ -13050,14 +13050,14 @@ a:focus {
     padding-top: 1.2em;
     position: relative;
     transform: translate3d(0,0,0);
-    -webkit-transition: all .3s linear 0s;
-    transition: all .3s linear 0s
+    -webkit-transition: all .6s linear 0s;
+    transition: all .6s linear 0s
 }
 
 .navbar-toggle {
     transform: translate3d(0,0,0);
-    -webkit-transition: all .3s linear 0s;
-    transition: all .3s linear 0s
+    -webkit-transition: all .6s linear 0s;
+    transition: all .6s linear 0s
 }
 
 .navbar-inverse .navbar-nav>li>a:hover {
@@ -13072,6 +13072,7 @@ a:focus {
     top: 27px;
     right: 0;
     background-color: rgba(94.1%, 28.4%, 10.2%, 1);
+    transform: translate3d(0,0,0);
     -webkit-transition: all .3s linear 0s;
     transition: all .3s linear 0s
 }
@@ -13088,6 +13089,7 @@ a:focus {
     bottom: 6px;
     left: 0;
     background-color: #ef481a;
+    transform: translate3d(0,0,0);
     -webkit-transition: all .3s linear 0s;
     transition: all .3s linear 0s
 }
@@ -13715,6 +13717,7 @@ address .btn-facebook:hover {
     display: block;
     height: 0;
     width: 100%;
+    transform: translate3d(0,0,0);
     padding-bottom: 40.25%
 }
 
@@ -13809,6 +13812,7 @@ footer p {
    bottom: 3.75px;
    left: 0;
    margin: 0;
+   transform: translate3d(0,0,0);
    -webkit-transition: all .3s linear 0s;
    transition: all .3s linear 0s
 }
@@ -13818,6 +13822,7 @@ footer p {
    bottom: 3.75px;
    right: 0;
    margin: 0;
+   transform: translate3d(0,0,0);
    -webkit-transition: all .3s linear 0s;
    transition: all .3s linear 0s
 }

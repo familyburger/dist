@@ -12835,9 +12835,7 @@ body {
     min-height: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: hsla(43, 86%, 72%, 0.9);
-    background-image: url(../svg/i-like-food.svg);
-    background-size: 75px 75px;
+    background-color: rgba(94.1%, 28.4%, 10.2%, .9);
     font-family: 'Alegreya Sans';
     display: -webkit-box;
     display: -ms-flexbox;
@@ -12859,6 +12857,9 @@ body {
     -webkit-box-flex: 1;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
+    background-color: hsla(45, 76%, 72%, 1);
+    background-image: url(../svg/i-like-food.svg);
+     background-size: 75px 75px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -12872,6 +12873,9 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    background-color: hsla(45, 76%, 72%, 1);
+    background-image: url(../svg/i-like-food.svg);
+     background-size: 75px 75px;
     width: 100%;
     padding-top: 105px;
     -webkit-box-orient: vertical;
@@ -12880,13 +12884,34 @@ body {
     flex-direction: column
 }
 
+footer {
+    border-top: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
+    border-bottom: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
+}
+
 .navbar {
     margin: 0;
+    position: absolute;
     background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
-    background-color:  hsl(39, 91%, 77%);
+    background-color:  hsla(45, 76%, 72%, 1);
     min-height: 105px;
     -webkit-box-shadow: 0 1px 5px 1px rgba(0%, 0%, 0%, .25);
+    transform: translate3d(0,0,0);
     box-shadow: 0 1px 5px 1px rgba(0%, 0%, 0%, .25)
+}
+
+.navbar.navbar-inverse {
+    border-top: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
+    border-bottom: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+    } 
+    100% {
+        transform: translateY(0);
+    } 
 }
 
 a:focus {
@@ -12906,12 +12931,10 @@ a:focus {
     float: right
 }
 
-.flex-container .scrolled-nav {
-    min-height: 70px
-}
-
-.grid-container .scrolled-nav {
-    min-height: 70px
+.navbar.navbar-inverse.navbar-fixed-top.scrolled-nav {
+    min-height: 75px;
+    position: fixed;
+    animation: slide-down 0.6s;
 }
 
 .scrolled-nav .navbar-toggle {
@@ -12946,22 +12969,11 @@ a:focus {
 
 .navbar-inverse {
     border: none;
-    -webkit-transition: all .3s linear 0s;
-    transition: all .3s linear 0s
 }
 
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
     border: none
-}
-
-.navbar-inverse .navbar-brand {
-    color: #fff;
-    font-size: 2em;
-    padding-top: 1.2em;
-    position: relative;
-    -webkit-transition: all .3s linear 0s;
-    transition: all .3s linear 0s
 }
 
 .navbar-inverse .navbar-brand:hover {
@@ -12976,6 +12988,7 @@ a:focus {
     top: 18px;
     right: 0;
     background-color: rgba(94.1%, 28.4%, 10.2%, 1);
+    transform: translate3d(0,0,0);
     -webkit-transition: all .3s linear 0s;
     transition: all .3s linear 0s
 }
@@ -12992,6 +13005,7 @@ a:focus {
     bottom: -20px;
     left: 0;
     background-color: rgba(94.1%, 28.4%, 10.2%, 1);
+    transform: translate3d(0,0,0);
     -webkit-transition: all .3s linear 0s;
     transition: all .3s linear 0s
 }
@@ -13031,8 +13045,25 @@ a:focus {
     position: relative;
     padding-top: 1.8em;
     cursor: pointer;
-    -webkit-transition: all .3s linear 0s;
-    transition: all .3s linear 0s
+    transform: translate3d(0,0,0);
+    -webkit-transition: all .6s linear 0s;
+    transition: all .6s linear 0s
+}
+
+.navbar-inverse .navbar-brand {
+    color: rgba(94.1%, 28.4%, 10.2%, 1);
+    font-size: 2em;
+    padding-top: 1.2em;
+    position: relative;
+    transform: translate3d(0,0,0);
+    -webkit-transition: all .6s linear 0s;
+    transition: all .6s linear 0s
+}
+
+.navbar-toggle {
+    transform: translate3d(0,0,0);
+    -webkit-transition: all .6s linear 0s;
+    transition: all .6s linear 0s
 }
 
 .navbar-inverse .navbar-nav>li>a:hover {
@@ -13047,6 +13078,7 @@ a:focus {
     top: 27px;
     right: 0;
     background-color: rgba(94.1%, 28.4%, 10.2%, 1);
+    transform: translate3d(0,0,0);
     -webkit-transition: all .3s linear 0s;
     transition: all .3s linear 0s
 }
@@ -13063,6 +13095,7 @@ a:focus {
     bottom: 6px;
     left: 0;
     background-color: #ef481a;
+    transform: translate3d(0,0,0);
     -webkit-transition: all .3s linear 0s;
     transition: all .3s linear 0s
 }
@@ -13797,8 +13830,6 @@ footer p {
         background-image: none;
         border: 1px solid transparent;
         border-radius: 4px;
-        -webkit-transition: all .3s linear 0s;
-        transition: all .3s linear 0s;
         -webkit-filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8));
         filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8))
     }
@@ -13876,8 +13907,6 @@ footer p {
         background-image: none;
         border: 1px solid transparent;
         border-radius: 4px;
-        -webkit-transition: all .3s linear 0s;
-        transition: all .3s linear 0s;
         -webkit-filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8));
         filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8))
     }
