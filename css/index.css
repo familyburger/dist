@@ -12970,15 +12970,6 @@ a:focus {
     border: none
 }
 
-.navbar-inverse .navbar-brand {
-    color: rgba(94.1%, 28.4%, 10.2%, 1);
-    font-size: 2em;
-    padding-top: 1.2em;
-    position: relative;
-    -webkit-transition: all .3s linear 0s;
-    transition: all .3s linear 0s
-}
-
 .navbar-inverse .navbar-brand:hover {
     color: rgba(94.1%, 28.4%, 10.2%, 1)
 }
@@ -12991,6 +12982,7 @@ a:focus {
     top: 18px;
     right: 0;
     background-color: rgba(94.1%, 28.4%, 10.2%, 1);
+    will-change: transform;
     -webkit-transition: all .3s linear 0s;
     transition: all .3s linear 0s
 }
@@ -13007,6 +12999,7 @@ a:focus {
     bottom: -20px;
     left: 0;
     background-color: rgba(94.1%, 28.4%, 10.2%, 1);
+    will-change: transform;
     -webkit-transition: all .3s linear 0s;
     transition: all .3s linear 0s
 }
@@ -13046,8 +13039,25 @@ a:focus {
     position: relative;
     padding-top: 1.8em;
     cursor: pointer;
-    -webkit-transition: all .3s linear 0s;
-    transition: all .3s linear 0s
+    will-change: transform;
+    -webkit-transition: all .4s linear 0s;
+    transition: all .4s linear 0s
+}
+
+.navbar-inverse .navbar-brand {
+    color: rgba(94.1%, 28.4%, 10.2%, 1);
+    font-size: 2em;
+    padding-top: 1.2em;
+    position: relative;
+    will-change: transform;
+    -webkit-transition: all .4s linear 0s;
+    transition: all .4s linear 0s
+}
+
+.navbar-toggle {
+    will-change: transform;
+    -webkit-transition: all .4s linear 0s;
+    transition: all .4s linear 0s
 }
 
 .navbar-inverse .navbar-nav>li>a:hover {
@@ -14092,8 +14102,6 @@ footer p {
         background-image: none;
         border: 1px solid transparent;
         border-radius: 4px;
-        -webkit-transition: all .3s linear 0s;
-        transition: all .3s linear 0s;
         -webkit-filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8));
         filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8))
     }
@@ -14184,8 +14192,6 @@ footer p {
         background-image: none;
         border: 1px solid transparent;
         border-radius: 4px;
-        -webkit-transition: all .3s linear 0s;
-        transition: all .3s linear 0s;
         -webkit-filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8));
         filter: drop-shadow(0 0 1px rgba(0, 0, 0, .8))
     }
