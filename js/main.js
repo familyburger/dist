@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     scrollElm = checkBrowserSupport(),
     header = document.getElementsByClassName('navbar')[0];
 
-    if (scrollElm > 105) header.classList.add('scrolled-nav');
+    if (scrollElm >= 105) header.classList.add('scrolled-nav');
     else header.classList.remove('scrolled-nav');
   
     function offsetButton() {
@@ -19,14 +19,14 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('touchmove', function(event) {
       scrollOffset = offsetButton();
       scrollElm = checkBrowserSupport();
-      if (scrollElm > 105) header.classList.add('scrolled-nav');
+      if (scrollElm >= 105) header.classList.add('scrolled-nav');
       else header.classList.remove('scrolled-nav');
     },false);
   
     function scrollFunction() {
       scrollOffset = offsetButton();
       scrollElm = checkBrowserSupport();
-      if (scrollElm > 105) header.classList.add('scrolled-nav');
+      if (scrollElm >= 105) header.classList.add('scrolled-nav');
       else header.classList.remove('scrolled-nav');
       if (scrollElm > scrollOffset && scrollElm > window.innerHeight) {
         document.getElementById('scrollTop').style.display = "block";
