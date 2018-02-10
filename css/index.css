@@ -12982,7 +12982,7 @@ a:focus {
     top: 18px;
     right: 0;
     background-color: rgba(94.1%, 28.4%, 10.2%, 1);
-    will-change: transform;
+    transform: translate3d(0,0,0);
     -webkit-transition: all .3s linear 0s;
     transition: all .3s linear 0s
 }
@@ -12999,7 +12999,7 @@ a:focus {
     bottom: -20px;
     left: 0;
     background-color: rgba(94.1%, 28.4%, 10.2%, 1);
-    will-change: transform;
+    transform: translate3d(0,0,0);
     -webkit-transition: all .3s linear 0s;
     transition: all .3s linear 0s
 }
@@ -13039,9 +13039,9 @@ a:focus {
     position: relative;
     padding-top: 1.8em;
     cursor: pointer;
-    will-change: transform;
-    -webkit-transition: all .4s linear 0s;
-    transition: all .4s linear 0s
+    transform: translate3d(0,0,0);
+    -webkit-transition: all .3s linear 0s;
+    transition: all .3s linear 0s
 }
 
 .navbar-inverse .navbar-brand {
@@ -13049,15 +13049,15 @@ a:focus {
     font-size: 2em;
     padding-top: 1.2em;
     position: relative;
-    will-change: transform;
-    -webkit-transition: all .4s linear 0s;
-    transition: all .4s linear 0s
+    transform: translate3d(0,0,0);
+    -webkit-transition: all .3s linear 0s;
+    transition: all .3s linear 0s
 }
 
 .navbar-toggle {
-    will-change: transform;
-    -webkit-transition: all .4s linear 0s;
-    transition: all .4s linear 0s
+    transform: translate3d(0,0,0);
+    -webkit-transition: all .3s linear 0s;
+    transition: all .3s linear 0s
 }
 
 .navbar-inverse .navbar-nav>li>a:hover {
