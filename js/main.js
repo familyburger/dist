@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     var scrollOffset = offsetButton(),
     scrollElm = checkBrowserSupport(),
-    header = document.getElementsByClassName('navbar')[0];
+    header = document.getElementsByClassName('navbar')[0],
+    flag = false;
 
     if (scrollElm >= 105) header.classList.add('scrolled-nav');
     else header.classList.remove('scrolled-nav');
@@ -21,20 +22,32 @@ document.addEventListener('DOMContentLoaded', function () {
     function touchFunction(event) {
       scrollOffset = offsetButton();
       scrollElm = checkBrowserSupport();
-      if (scrollElm >= 105) header.classList.add('scrolled-nav');
+      if (scrollElm >= 105 && !flag) header.classList.add('scrolled-nav');
       else header.classList.remove('scrolled-nav');
     }
 
     function scrollFunction() {
       scrollOffset = offsetButton();
       scrollElm = checkBrowserSupport();
-      if (scrollElm >= 105) header.classList.add('scrolled-nav');
+      if (scrollElm >= 105 && !flag) header.classList.add('scrolled-nav');
       else header.classList.remove('scrolled-nav');
       if (scrollElm > scrollOffset && scrollElm > window.innerHeight) {
         document.getElementById('scrollTop').style.display = "block";
       } else document.getElementById('scrollTop').style.display = "none";
     }
   
+    document.getElementsByClassName('navbar-toggle')[0].onclick = function () {
+      if (this.getAttribute("aria-expanded") === 'false' || this.getAttribute("aria-expanded") === null && !   header.classList.contains("activeBar")) {
+           header.classList = ' navbar navbar-inverse navbar-fixed-top activeBar';
+           flag = true;
+      } else {
+           header.classList.remove("activeBar");
+           if (scrollElm >= 105) {header.classList.add('scrolled-nav')}
+           else header.classList.remove('scrolled-nav');
+           flag = false;
+      }
+    };
+
     function scrollIt(destination) {
       var duration = arguments.length <= 1 || arguments[1] === undefined ? 200 : arguments[1];
       var easing = arguments.length <= 2 || arguments[2] === undefined ? 'linear' : arguments[2];
@@ -147,13 +160,4 @@ document.addEventListener('DOMContentLoaded', function () {
       var scrollTime = scrollGetSpeed(this);
       scrollIt(document.getElementsByClassName('targetTop')[0], scrollTime, 'linear', function () {});
     });
-  
-    document.getElementsByClassName('navbar-toggle')[0].onclick = function () {
-      if (this.getAttribute("aria-expanded") === 'false' || this.getAttribute("aria-expanded") === null && !   header.classList.contains("activeBar")) {
-           header.classList.add("activeBar");
-           header.style.height = 'auto';
-      } else {
-           header.classList.remove("activeBar");
-      }
-    };
   }, false);

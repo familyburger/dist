@@ -12929,6 +12929,12 @@ a:focus {
     float: right
 }
 
+
+.navbar.navbar-inverse.navbar-fixed-top.activeBar {
+    position: fixed;
+    animation: none;
+}
+
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav {
     min-height: 75px;
     position: fixed;
