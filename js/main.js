@@ -22,15 +22,19 @@ document.addEventListener('DOMContentLoaded', function () {
     function touchFunction(event) {
       scrollOffset = offsetButton();
       scrollElm = checkBrowserSupport();
-      if (scrollElm >= 105 && !flag) header.classList.add('scrolled-nav');
-      else header.classList.remove('scrolled-nav');
+      if(!flag) {
+      if (scrollElm >= 105) header.classList.add('scrolled-nav');
+      else header.classList = ' navbar navbar-inverse navbar-fixed-top';
+      }
     }
 
     function scrollFunction() {
       scrollOffset = offsetButton();
       scrollElm = checkBrowserSupport();
-      if (scrollElm >= 105 && !flag) header.classList.add('scrolled-nav');
-      else header.classList.remove('scrolled-nav');
+      if(!flag) {
+      if (scrollElm >= 105) header.classList.add('scrolled-nav');
+      else header.classList = ' navbar navbar-inverse navbar-fixed-top';
+      }
       if (scrollElm > scrollOffset && scrollElm > window.innerHeight) {
         document.getElementById('scrollTop').style.display = "block";
       } else document.getElementById('scrollTop').style.display = "none";
@@ -42,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
            flag = true;
       } else {
            header.classList.remove("activeBar");
-           if (scrollElm >= 105) {header.classList.add('scrolled-nav')}
+           if (scrollElm >= 105) header.classList = ' navbar navbar-inverse navbar-fixed-top scrolled-nav no-animation';
            else header.classList.remove('scrolled-nav');
            flag = false;
       }

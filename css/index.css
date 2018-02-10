@@ -12936,6 +12936,10 @@ a:focus {
     animation: slide-down 0.6s;
 }
 
+.navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.no-animation {
+    animation: none;
+}
+
 .scrolled-nav .navbar-toggle {
     top: 13px
 }
