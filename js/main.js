@@ -27,12 +27,8 @@ var toggle = document.getElementsByClassName('navbar-toggle')[0],
     }
 
     function touchFunction(event) {
-      console.log(navbar.state())
-      if (navbar.state()) {
-        console.log('sss')
       if (navbar.scrollElm() >= 105) header.classList.add('scrolled-nav');
       else header.classList = ' navbar navbar-inverse navbar-fixed-top';
-      }
     }
 
     function scrollFunction() {
