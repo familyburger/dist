@@ -14187,7 +14187,8 @@ h1 {
 }
 
 .pictureFrame {
-    position: relative
+    position: relative;
+    z-index: 2;
 }
 
 .hook {
