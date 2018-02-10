@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var header = document.getElementsByClassName('navbar')[0];
-  
-    if (checkBrowserSupport() > 105) header.classList.add('scrolled-nav');
+    var scrollOffset = offsetButton(),
+    scrollElm = checkBrowserSupport(),
+    header = document.getElementsByClassName('navbar')[0];
+
+    if (scrollElm > 105) header.classList.add('scrolled-nav');
     else header.classList.remove('scrolled-nav');
   
     function offsetButton() {
@@ -11,13 +13,19 @@ document.addEventListener('DOMContentLoaded', function () {
     function checkBrowserSupport() {
       return (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
     }
-  
-    window.onresize = offsetButton;
-    window.onscroll = scrollFunction;
+    
+    window.addEventListener('resize', offsetButton, false);
+    window.addEventListener('scroll', scrollFunction, false);
+    window.addEventListener('touchmove', function(event) {
+      scrollOffset = offsetButton();
+      scrollElm = checkBrowserSupport();
+      if (scrollElm > 105) header.classList.add('scrolled-nav');
+      else header.classList.remove('scrolled-nav');
+    },false);
   
     function scrollFunction() {
-      var scrollOffset = offsetButton();
-      var scrollElm = checkBrowserSupport();
+      scrollOffset = offsetButton();
+      scrollElm = checkBrowserSupport();
       if (scrollElm > 105) header.classList.add('scrolled-nav');
       else header.classList.remove('scrolled-nav');
       if (scrollElm > scrollOffset && scrollElm > window.innerHeight) {
