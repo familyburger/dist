@@ -16,14 +16,19 @@ document.addEventListener('DOMContentLoaded', function () {
     
     window.addEventListener('resize', offsetButton, false);
     window.addEventListener('scroll', scrollFunction, false);
-    document.body.ontouchmove = function() {
-      console.log('true')
+    window.addEventListener("touchmove", function() {
+      console.log('move')
       scrollOffset = offsetButton();
       scrollElm = checkBrowserSupport();
       if (scrollElm >= 105) header.classList.add('scrolled-nav');
       else header.classList.remove('scrolled-nav');
-    }
-  
+    }, false);
+    window.addEventListener("touchstart", function() {
+      console.log('start')
+    }, false);
+    window.addEventListener("touchend", function() {
+      console.log('end')
+    }, false);
     function scrollFunction() {
       scrollOffset = offsetButton();
       scrollElm = checkBrowserSupport();
