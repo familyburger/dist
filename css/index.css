@@ -12886,37 +12886,26 @@ footer {
 .navbar {
     margin: 0;
     position: absolute;
+    min-height: 105px;
     background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
     background-color:  hsla(45, 76%, 72%, 1);
-    min-height: 105px;
     -webkit-box-shadow: 0 1px 5px 1px rgba(0%, 0%, 0%, .25);
     transform: translate3d(0,0,0);
     box-shadow: 0 1px 5px 1px rgba(0%, 0%, 0%, .25);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     z-index: 99;
 }
 
-.navbar-copy {
+.navbar-background-top {
     display: block;
     width: 100%;
     position: absolute;
     min-height: 105px;
-    top: 0;
-    z-index: 98;
-}
-
-.navbar-copy .navbar {
-    visibility: visible;
-    margin: 0;
-    position: absolute;
     background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
     background-color:  hsla(45, 76%, 72%, 1);
-    min-height: 105px;
-    -webkit-box-shadow: 0 1px 5px 1px rgba(0%, 0%, 0%, .25);
-    transform: translate3d(0,0,0);
-    box-shadow: 0 1px 5px 1px rgba(0%, 0%, 0%, .25);
-}
-
-.navbar.navbar-inverse {
+    top: 0;
+    z-index: 98;
     border-top: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
     border-bottom: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
 }
@@ -12947,17 +12936,27 @@ a:focus {
     float: right;
 }
 
+.navbar.navbar-inverse {
+border-top: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
+border-bottom: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
+}
+
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav {
-    opacity: 1;
     min-height: 75px;
+    border-top: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
+    border-bottom: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
+    background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
+    background-color:  hsla(45, 76%, 72%, 1);
     position: fixed;
     transform: translate3d(0,0,0);
     animation: slide-down 0.6s;
 }
 
+
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.active-bar {
     position: fixed;
     animation: none;
+    z-index: 100;
 }
 
 .navbar.navbar-inverse.navbar-fixed-top.active-bar {
@@ -13148,6 +13147,8 @@ a:focus {
 }
 
 .carousel-indicators .active {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     background-color: red
 }
 
@@ -13847,12 +13848,12 @@ footer p {
 
 .social {
     float: right;
-    margin-top: 35.5px;
+    margin-top: 17.75px
 }
 
 .container .design {
    position: absolute;
-   bottom: 3.75px;
+   bottom: 15px;
    left: 0;
    margin: 0;
    transform: translate3d(0,0,0);
@@ -13862,7 +13863,7 @@ footer p {
 
 .copyright {
    position: absolute;
-   bottom: 3.75px;
+   bottom: 15px;
    right: 0;
    margin: 0;
    transform: translate3d(0,0,0);
