@@ -13738,12 +13738,12 @@ footer p {
 
 .social {
     float: right;
-    margin-top: 35.5px;
+    margin-top: 17.75px
 }
 
 .container .design {
    position: absolute;
-   bottom: 3.75px;
+   bottom: 15px;
    left: 0;
    margin: 0;
    transform: translate3d(0,0,0);
@@ -13753,7 +13753,7 @@ footer p {
 
 .copyright {
    position: absolute;
-   bottom: 3.75px;
+   bottom: 15px;
    right: 0;
    margin: 0;
    transform: translate3d(0,0,0);
