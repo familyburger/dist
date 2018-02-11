@@ -12905,6 +12905,7 @@ footer {
 }
 
 .navbar-copy .navbar {
+    visibility: visible;
     margin: 0;
     position: absolute;
     background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
@@ -12943,12 +12944,14 @@ a:focus {
 }
 
 .navbar-nav {
-    float: right
+    float: right;
 }
 
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav {
+    opacity: 1;
     min-height: 75px;
     position: fixed;
+    transform: translate3d(0,0,0);
     animation: slide-down 0.6s;
 }
 
