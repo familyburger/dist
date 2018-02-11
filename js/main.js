@@ -11,7 +11,7 @@ var toggle = document.getElementsByClassName('navbar-toggle')[0],
     window.addEventListener('scroll', scrollFunction, false);
     window.addEventListener("touchmove", touchFunction ,true);
 
-    if (navbar.scrollElm() >= 105) header.classList.add('scrolled-nav');   // initial value
+    if (navbar.scrollElm() >= 75) header.classList.add('scrolled-nav');   // initial value
     else header.classList.remove('scrolled-nav');
 
     function offsetButton() {
@@ -28,7 +28,7 @@ var toggle = document.getElementsByClassName('navbar-toggle')[0],
 
     function touchFunction(event) {
       if (navbar.state()) {
-      if (navbar.scrollElm() >= 105) header.classList.add('scrolled-nav');
+      if (navbar.scrollElm() >= 75) header.classList.add('scrolled-nav');
       else {
         header.classList.remove('scrolled-nav');
         header.classList.remove('no-animation');
@@ -38,7 +38,7 @@ var toggle = document.getElementsByClassName('navbar-toggle')[0],
 
     function scrollFunction() {
       if (navbar.state()) {
-      if (navbar.scrollElm() >= 105) header.classList.add('scrolled-nav');
+      if (navbar.scrollElm() >= 75) header.classList.add('scrolled-nav');
       else {
         header.classList.remove('scrolled-nav');
         header.classList.remove('no-animation');
@@ -56,7 +56,7 @@ var toggle = document.getElementsByClassName('navbar-toggle')[0],
       }
       else {
           header.classList.remove('active-bar');
-          if(navbar.scrollElm() >= 105) {
+          if(navbar.scrollElm() >= 75) {
             header.classList.add('no-animation');
             header.classList.add('scrolled-nav');
           }
