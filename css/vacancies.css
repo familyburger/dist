@@ -14174,7 +14174,7 @@ hr {
     border: 3px solid rgba(94.1%, 28.4%, 10.2%, .8);
     margin: 5px;
     border-radius: 50%;
-    background-color: hsl(39, 91%, 77%);
+    background-color: hsla(45, 76%, 72%, 1);
     -webkit-box-shadow: 0 0 3px 3px rgba(0, 0, 0, .2);
     box-shadow: 0 0 3px 3px rgba(0, 0, 0, .2);
     -moz-box-shadow: 0 0 3px 3px rgba(0, 0, 0, .2)
