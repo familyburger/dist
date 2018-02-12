@@ -4,7 +4,7 @@ var toggle = document.getElementsByClassName('navbar-toggle')[0],
     wrap = document.getElementById('contentWrap'),
     body = document.getElementById('body');
     navbar = {
-      offset: 205,
+      offset: 105,
       clone: header.cloneNode(true)
     };
     navbar.scrollOffset = offsetButton;
