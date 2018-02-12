@@ -12885,6 +12885,9 @@ footer {
 
 .navbar {
     margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     position: absolute;
     min-height: 105px;
     background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
@@ -12897,27 +12900,21 @@ footer {
     z-index: 99;
 }
 
-.navbar-background-top {
-    display: block;
-    width: 100%;
-    position: absolute;
-    min-height: 105px;
-    background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
-    background-color:  hsla(45, 76%, 72%, 1);
-    top: 0;
-    z-index: 98;
-    border-top: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
-    border-bottom: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
+.navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.clone {
+   position: fixed;
+   top: -75px;
+   z-index: 999;
+   -webkit-transition: all .3s linear 0s;
+   transition: all .3s linear 0s;
 }
 
-@keyframes slide-down {
-    0% {
-        transform: translateY(-100%);
-    } 
-    100%{
-        transform: translateY(0);
-    } 
-}
+.navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.clone.scrolled-top {
+    position: fixed;
+    top: 0;
+    z-index: 0;
+    visibility: hidden;
+    transition: none;
+ }
 
 a:focus {
     outline: 0
@@ -12937,8 +12934,8 @@ a:focus {
 }
 
 .navbar.navbar-inverse {
-border-top: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
-border-bottom: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
+    border-top: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
+    border-bottom: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
 }
 
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav {
@@ -12948,10 +12945,28 @@ border-bottom: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
     background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
     background-color:  hsla(45, 76%, 72%, 1);
     position: fixed;
+    animation: slide-down .3s;
     transform: translate3d(0,0,0);
-    animation: slide-down 0.6s;
+    top: 0;
 }
 
+@keyframes slide-down {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
 
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.active-bar {
     position: fixed;
@@ -13081,8 +13096,7 @@ border-bottom: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
     padding-top: 1.8em;
     cursor: pointer;
     transform: translate3d(0,0,0);
-    -webkit-transition: all .6s linear 0s;
-    transition: all .6s linear 0s
+
 }
 
 .navbar-inverse .navbar-brand {
@@ -13091,14 +13105,12 @@ border-bottom: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
     padding-top: 1.2em;
     position: relative;
     transform: translate3d(0,0,0);
-    -webkit-transition: all .6s linear 0s;
-    transition: all .6s linear 0s
+    
 }
 
 .navbar-toggle {
     transform: translate3d(0,0,0);
-    -webkit-transition: all .6s linear 0s;
-    transition: all .6s linear 0s
+   
 }
 
 .navbar-inverse .navbar-nav>li>a:hover {

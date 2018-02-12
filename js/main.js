@@ -2,16 +2,23 @@ document.addEventListener('DOMContentLoaded', function () {
 var toggle = document.getElementsByClassName('navbar-toggle')[0],
     header = document.getElementsByClassName('navbar')[0],
     wrap = document.getElementById('contentWrap'),
-    navbar = {};
+    body = document.getElementById('body');
+    navbar = {
+      offset: 105,
+      clone: header.cloneNode(true)
+    };
     navbar.scrollOffset = offsetButton;
     navbar.scrollElm = checkBrowserSupport;
     navbar.state = navbarState;
+    navbar.clone.classList.add("scrolled-nav");
+    navbar.clone.classList.add("clone");
+    document.getElementsByTagName('header')[0].insertBefore(navbar.clone, navbar.lastChild);  
 
     window.addEventListener('resize', offsetButton, false);
     window.addEventListener('scroll', scrollFunction, false);
     window.addEventListener("touchmove", touchFunction ,true);
 
-    if (navbar.scrollElm() >= 75) header.classList.add('scrolled-nav');   // initial value
+    if (navbar.scrollElm() >= navbar.offset) header.classList.add('scrolled-nav');   // initial value
     else header.classList.remove('scrolled-nav');
 
     function offsetButton() {
@@ -28,8 +35,12 @@ var toggle = document.getElementsByClassName('navbar-toggle')[0],
 
     function touchFunction(event) {
       if (navbar.state()) {
-      if (navbar.scrollElm() >= 75) header.classList.add('scrolled-nav');
+      if (navbar.scrollElm() >= navbar.offset) {
+        navbar.clone.classList.add("scrolled-top");
+        header.classList.add('scrolled-nav');
+      }
       else {
+        navbar.clone.classList.remove("scrolled-top");
         header.classList.remove('scrolled-nav');
         header.classList.remove('no-animation');
         }
@@ -38,8 +49,12 @@ var toggle = document.getElementsByClassName('navbar-toggle')[0],
 
     function scrollFunction() {
       if (navbar.state()) {
-      if (navbar.scrollElm() >= 75) header.classList.add('scrolled-nav');
+      if (navbar.scrollElm() >= navbar.offset) {
+        header.classList.add('scrolled-nav');
+        navbar.clone.classList.add("scrolled-top");
+      }
       else {
+        navbar.clone.classList.remove("scrolled-top");
         header.classList.remove('scrolled-nav');
         header.classList.remove('no-animation');
         }
@@ -56,7 +71,7 @@ var toggle = document.getElementsByClassName('navbar-toggle')[0],
       }
       else {
           header.classList.remove('active-bar');
-          if(navbar.scrollElm() >= 75) {
+          if(navbar.scrollElm() >= navbar.offset) {
             header.classList.add('no-animation');
             header.classList.add('scrolled-nav');
           }
@@ -66,6 +81,7 @@ var toggle = document.getElementsByClassName('navbar-toggle')[0],
           }
       }
     };
+
 
     function scrollIt(destination) {
       var duration = arguments.length <= 1 || arguments[1] === undefined ? 200 : arguments[1];
