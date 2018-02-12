@@ -12878,11 +12878,6 @@ body {
     flex-direction: column
 }
 
-footer {
-    border-top: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
-    border-bottom: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
-}
-
 .navbar {
     margin: 0;
     top: 0;
@@ -12890,24 +12885,33 @@ footer {
     right: 0;
     position: absolute;
     min-height: 105px;
+    background: transparent;
+    border: transparent;
+    transform: translate3d(0,0,0);
+    z-index: 100;
+}
+
+.header-background {
+    width: 100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    min-height: 105px;
+    border-top: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
+    border-bottom: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
     background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
     background-color:  hsla(45, 76%, 72%, 1);
-    -webkit-box-shadow: 0 1px 5px 1px rgba(0%, 0%, 0%, .25);
-    transform: translate3d(0,0,0);
-    box-shadow: 0 1px 5px 1px rgba(0%, 0%, 0%, .25);
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
     z-index: 99;
 }
 
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.clone {
     visibility: visible;
     z-index: 98;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
     transform:translateY(-80px);
-    -ms-transform:translateY(-80px); /* prefix for IE 9 */
-    -webkit-transform:translateY(-80px); /* prefix for Safari and Chrome */
+    -ms-transform:translateY(-80px); 
+    -webkit-transform:translateY(-80px); 
     -webkit-transition:transform .6s linear .0s;
     -moz-transition:transform .6s linear .0s;
     -o-transition:transform .6s linear .0s;
@@ -12920,8 +12924,6 @@ footer {
       transform:translateY(0);
     -ms-transform:translateY(0); 
     -webkit-transform:translateY(0); 
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
     -webkit-transition:transform .6s linear .0s;
     -moz-transition:transform .6s linear .0s;
     -o-transition:transform .6s linear .0s;
@@ -12957,23 +12959,11 @@ a:focus {
     background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
     background-color:  hsla(45, 76%, 72%, 1);
     position: fixed;
+    transform: translate3d(0,0,0);
     animation: slide-down .6s;
     -moz-animation: slide-down .6s;
     -o-animation: slide-down .6s;
     -webkit-animation: slide-down .6s;
-    transform: translate3d(0,0,0);
-}
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-     99% {
-        opacity: 0;
-    }
-     100% {
-        opacity: 1;
-    }
 }
 
 @keyframes slide-down {
@@ -13140,7 +13130,8 @@ a:focus {
     padding-top: 1.8em;
     cursor: pointer;
     transform: translate3d(0,0,0);
-
+    -webkit-transition: all .3s linear 0s;
+    transition: all .3s linear 0s
 }
 
 .navbar-inverse .navbar-brand {
@@ -13149,12 +13140,14 @@ a:focus {
     padding-top: 1.2em;
     position: relative;
     transform: translate3d(0,0,0);
-    
+    -webkit-transition: all .3s linear 0s;
+    transition: all .3s linear 0s
 }
 
 .navbar-toggle {
     transform: translate3d(0,0,0);
-   
+    -webkit-transition: all .3s linear 0s;
+    transition: all .3s linear 0s
 }
 
 .navbar-inverse .navbar-nav>li>a:hover {
