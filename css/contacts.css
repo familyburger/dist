@@ -7866,7 +7866,7 @@ button.close {
     margin: 1px;
     text-indent: -999px;
     cursor: pointer;
-    background-color: #000\9;
+    background-color: #000;
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid #fff;
     border-radius: 10px
@@ -12902,6 +12902,25 @@ footer {
     -webkit-backface-visibility: hidden;
     z-index: 99;
 }
+
+.navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.clone {
+    position: fixed;
+    top: -80px;
+    z-index: 100;
+    visibility: visible;
+    transform: translate3d(0,0,0);
+    -webkit-transition: all .3s linear 0s;
+    transition: all .3s linear 0s;
+ 
+ }
+ 
+ .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.clone.scrolled-top {
+     top: 0;
+     z-index: 0;
+     visibility: hidden;
+     transform: translate3d(0,0,0);
+     transition: none;
+  }
 
 .navbar-background-top {
     display: block;
