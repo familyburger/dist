@@ -12899,7 +12899,6 @@ footer {
 }
 
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.clone {
-    opacity: 1;
     z-index: 98;
     transform:translateY(-80px);
     -ms-transform:translateY(-80px); 
@@ -12911,7 +12910,8 @@ footer {
 }
 
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.clone.scrolled-top {
-    opacity: 0;
+    z-index: -99;
+    visibility: hidden;
     transition: translateY(0);
       transform:translateY(0);
     -ms-transform:translateY(0); 

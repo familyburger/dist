@@ -40,13 +40,14 @@ var toggle = document.getElementsByClassName('navbar-toggle')[0],
     function touchFunction(event) {
       if (navbar.state()) {
       if (navbar.scrollElm() >= navbar.offset) {
-        navbar.clone.classList.add("scrolled-top");
         header.classList.add('scrolled-nav');
+        navbar.clone.classList.add("scrolled-top");
+        
       }
       else {
-        navbar.clone.classList.remove("scrolled-top");
         header.classList.remove('scrolled-nav');
         header.classList.remove('no-animation');
+        navbar.clone.classList.remove("scrolled-top");
         }
       }
     }
@@ -58,9 +59,9 @@ var toggle = document.getElementsByClassName('navbar-toggle')[0],
         navbar.clone.classList.add("scrolled-top");
       }
       else {
-        navbar.clone.classList.remove("scrolled-top");
         header.classList.remove('scrolled-nav');
         header.classList.remove('no-animation');
+        navbar.clone.classList.remove("scrolled-top");
         }
       }
       if (navbar.scrollElm() > navbar.scrollOffset() && navbar.scrollElm() > window.innerHeight) {
