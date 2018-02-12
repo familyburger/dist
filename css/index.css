@@ -12903,7 +12903,7 @@ footer {
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.clone {
     visibility: visible;
     top: -80px;
-    z-index: 100;
+    z-index: 9999;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     transform: translate3d(0,0,0);
@@ -12917,6 +12917,7 @@ footer {
     visibility: hidden;
     top: 0;
     z-index: 0;
+    transform: translate3d(0,0,0);
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     transition: none;
