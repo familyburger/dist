@@ -7861,7 +7861,7 @@ button.close {
     margin: 1px;
     text-indent: -999px;
     cursor: pointer;
-    background-color: #000;
+    background-color: #000\9;
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid #fff;
     border-radius: 10px
@@ -12901,21 +12901,24 @@ footer {
 }
 
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.clone {
-   position: fixed;
-   top: -80px;
-   z-index: 100;
-   visibility: visible;
-   transform: translate3d(0,0,0);
-   -webkit-transition: all .3s linear 0s;
-   transition: all .3s linear 0s;
-
+    visibility: visible;
+    top: -80px;
+    z-index: 100;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translate3d(0,0,0);
+    -webkit-transition: all .6s linear 0s;
+    -moz-transition: all .6s linear 0s;
+    -o-transition: all .6s linear 0s;
+    transition: all .6s linear 0s;
 }
 
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.clone.scrolled-top {
+    visibility: hidden;
     top: 0;
     z-index: 0;
-    visibility: hidden;
-    transform: translate3d(0,0,0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     transition: none;
  }
 
@@ -12948,7 +12951,10 @@ a:focus {
     background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .2) 10px, rgba(0, 0, 0, .2) 20px), url(../svg/i-like-food.svg);
     background-color:  hsla(45, 76%, 72%, 1);
     position: fixed;
-    animation: slide-down .3s;
+    animation: slide-down .6s;
+    -moz-animation: slide-down .6s;
+    -o-animation: slide-down .6s;
+    -webkit-animation: slide-down .6s;
     transform: translate3d(0,0,0);
     top: 0;
 }
@@ -12962,12 +12968,30 @@ a:focus {
     }
 }
 
-@keyframes slide-up {
+@-webkit-keyframes slide-down {
     from {
-        transform: translateY(0);
+        transform: translateY(-100%);
     }
     to {
+        transform: translateY(0);
+    }
+}
+
+@-moz-keyframes slide-down {
+    from {
         transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@-o-keyframes slide-down {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
     }
 }
 
