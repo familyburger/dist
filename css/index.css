@@ -12902,10 +12902,11 @@ footer {
 
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.clone {
    position: fixed;
-   top: -75px;
+   top: -80px;
    z-index: 999;
    -webkit-transition: all .3s linear 0s;
    transition: all .3s linear 0s;
+
 }
 
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.clone.scrolled-top {
