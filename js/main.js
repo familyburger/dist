@@ -18,9 +18,13 @@ var toggle = document.getElementsByClassName('navbar-toggle')[0],
     window.addEventListener('scroll', scrollFunction, false);
     window.addEventListener("touchmove", touchFunction ,true);
 
-    if (navbar.scrollElm() >= navbar.offset) header.classList.add('scrolled-nav');   // initial value
-    else header.classList.remove('scrolled-nav');
-
+    if (navbar.scrollElm() >= navbar.offset) {
+      header.classList.add('scrolled-nav');  
+     } // initial value
+    else 
+    {
+      header.classList.remove('scrolled-nav');
+    }
     function offsetButton() {
       return wrap.offsetTop;
     };

@@ -12902,24 +12902,30 @@ footer {
 
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.clone {
     visibility: visible;
-    top: -80px;
-    z-index: 9999;
+    z-index: 98;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    transform: translate3d(0,0,0);
-    -webkit-transition: all .6s linear 0s;
-    -moz-transition: all .6s linear 0s;
-    -o-transition: all .6s linear 0s;
-    transition: all .6s linear 0s;
+    transform:translateY(-80px);
+    -ms-transform:translateY(-80px); /* prefix for IE 9 */
+    -webkit-transform:translateY(-80px); /* prefix for Safari and Chrome */
+    -webkit-transition:transform .6s linear .0s;
+    -moz-transition:transform .6s linear .0s;
+    -o-transition:transform .6s linear .0s;
+    transition:transform .6s linear .0s;
 }
 
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.clone.scrolled-top {
     visibility: hidden;
-    top: 0;
-    transform: translate3d(0,0,0);
+    transition: translateY(0);
+      transform:translateY(0);
+    -ms-transform:translateY(0); 
+    -webkit-transform:translateY(0); 
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    transition: none;
+    -webkit-transition:transform .6s linear .0s;
+    -moz-transition:transform .6s linear .0s;
+    -o-transition:transform .6s linear .0s;
+    transition:transform .6s linear .0s;
  }
 
 a:focus {
@@ -12956,7 +12962,18 @@ a:focus {
     -o-animation: slide-down .6s;
     -webkit-animation: slide-down .6s;
     transform: translate3d(0,0,0);
-    top: 0;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+     99% {
+        opacity: 0;
+    }
+     100% {
+        opacity: 1;
+    }
 }
 
 @keyframes slide-down {
