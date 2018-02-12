@@ -12904,6 +12904,9 @@ footer {
    position: fixed;
    top: -80px;
    z-index: 999;
+   backface-visibility: hidden;
+   transform: translate3d(0,0,0);
+   -webkit-backface-visibility: hidden;
    -webkit-transition: all .3s linear 0s;
    transition: all .3s linear 0s;
 
@@ -12912,6 +12915,9 @@ footer {
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.clone.scrolled-top {
     top: 0;
     z-index: 0;
+    transform: translate3d(0,0,0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     visibility: hidden;
     transition: none;
  }
