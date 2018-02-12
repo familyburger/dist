@@ -12894,7 +12894,7 @@ body {
 }
 
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.clone {
-    visibility: visible;
+    opacity: 1;
     z-index: 98;
     transform:translateY(-80px);
     -ms-transform:translateY(-80px); 
@@ -12906,7 +12906,7 @@ body {
 }
 
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.clone.scrolled-top {
-    visibility: hidden;
+    opacity: 0;
     transition: translateY(0);
       transform:translateY(0);
     -ms-transform:translateY(0); 
@@ -12998,6 +12998,7 @@ a:focus {
 .navbar.navbar-inverse.navbar-fixed-top.active-bar {
     position: fixed;
     animation: none;
+    z-index: 100;
 }
 
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.no-animation {
