@@ -12878,6 +12878,11 @@ body {
     flex-direction: column
 }
 
+footer {
+    border-top: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
+    border-bottom: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
+}
+
 .navbar {
     margin: 0;
     top: 0;
