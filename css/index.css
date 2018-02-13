@@ -13586,13 +13586,23 @@ a:focus {
 
 .arrow_box_left .notes .text img {
     width: 50%;
-    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
     height: 50%
 }
 
 .arrow_box_top .notes .text img {
     width: 50%;
-    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
     height: 50%
 }
 
