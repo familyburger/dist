@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
 var toggle = document.getElementsByClassName('navbar-toggle')[0],
     header = document.getElementsByClassName('navbar')[0],
     wrap = document.getElementById('contentWrap'),
-    body = document.getElementById('body');
     navbar = {
       offset: 105,
       clone: header.cloneNode(true)
@@ -189,13 +188,14 @@ var toggle = document.getElementsByClassName('navbar-toggle')[0],
   
     //measure scroll speed
     function scrollGetSpeed(elem) {
-      var pixels = document.body.clientHeight + elem.offsetTop,
+      var pageHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight,
+        elementOffset = elem.offsetTop || elem.getBoundingClientRect().top,
+        pixels = pageHeight + elementOffset,
         pixelsPerMs = 4;
       return pixels / pixelsPerMs;
     }
   
     document.getElementById('scrollTop').addEventListener('click', function (event) {
-      event.stopPropagation();
       event.preventDefault();
       var scrollTime = scrollGetSpeed(this);
       scrollIt(document.getElementsByClassName('targetTop')[0], scrollTime, 'linear', function () {});
