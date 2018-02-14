@@ -50,13 +50,14 @@ document.addEventListener('DOMContentLoaded', function () {
         } else document.getElementsByClassName('scrollTop')[0].classList.remove('visible');
       }
 
-      navbar.toggle.addEventListener('click', function () {
+      navbar.toggle.addEventListener('click', function (event) {
+        event.preventDefault();
         if (navbar.state()) {
           $(navbar.menu).removeClass('no-animation').addClass('active-bar');
         } else {
           $(navbar.menu).removeClass('active-bar');
           if (navbar.scrollElm() >= navbar.offsetY) $(navbar.menu).addClass('scrolled-nav no-animation');
-          else $(navbar.menu).removeClass('scrolled-nav no-animation');
+          else $(navbar.menu).removeClass('scrolled-nav');
         }
       });
 
