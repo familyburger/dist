@@ -1,51 +1,56 @@
 document.addEventListener('DOMContentLoaded', function () {
-var toggle = document.getElementsByClassName('navbar-toggle')[0],
-    header = document.getElementsByClassName('navbar')[0],
-    wrap = document.getElementById('contentWrap'),
-    navbar = {
-      offset: 105,
-      clone: header.cloneNode(true)
+var navbar = {
+      offsetY: 105,
+      init: function() {
+        this.header =  document.getElementsByTagName('header')[0];
+        this.menu = document.getElementsByClassName('navbar')[0];
+        this.toggle = document.getElementsByClassName('navbar-toggle')[0];
+        this.wrap = document.getElementById('contentWrap');
+        this.clone = this.menu.cloneNode(true);
+      },
+      scrollOffset: function() {
+        return this.wrap.offsetTop;
+      }
     };
-    navbar.scrollOffset = offsetButton;
+    navbar.init();
     navbar.scrollElm = checkBrowserSupport;
     navbar.state = navbarState;
-    navbar.clone.classList.add("scrolled-nav");
-    navbar.clone.classList.add("clone");
-    document.getElementsByTagName('header')[0].insertBefore(navbar.clone, navbar.lastChild);  
+    
+    navbar.clone.classList.add("clone"); 
+    navbar.header.insertBefore(navbar.clone, navbar.lastChild);
 
-    window.addEventListener('resize', offsetButton, false);
+    window.addEventListener('resize', navbar.scrollOffset.bind(navbar), false);
     window.addEventListener('scroll', scrollFunction, false);
     window.addEventListener("touchmove", touchFunction ,true);
 
-    if (navbar.scrollElm() >= navbar.offset) {
-      header.classList.add('scrolled-nav');  
+    if (navbar.scrollElm() >= navbar.offsetY) {
+      navbar.menu.classList.add('scrolled-nav');  
+      navbar.clone.classList.add('scrolled-nav'); 
      } // initial value
     else 
     {
-      header.classList.remove('scrolled-nav');
+      navbar.menu.classList.remove('scrolled-nav');
     }
-    function offsetButton() {
-      return wrap.offsetTop;
-    };
-  
+
     function checkBrowserSupport() {
       return (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
     }
     
     function navbarState() {
-      return toggle.getAttribute("aria-expanded") === 'false' || toggle.getAttribute("aria-expanded") === null;
+      return this.toggle.getAttribute("aria-expanded") === 'false' || this.toggle.getAttribute("aria-expanded") === null;
     }
 
     function touchFunction(event) {
       if (navbar.state()) {
-      if (navbar.scrollElm() >= navbar.offset) {
-        header.classList.add('scrolled-nav');
+      if (navbar.scrollElm() >= navbar.offsetY) {
+        navbar.menu.classList.add('scrolled-nav');
+        navbar.clone.classList.add("scrolled-nav");
         navbar.clone.classList.add("scrolled-top");
         
       }
       else {
-        header.classList.remove('scrolled-nav');
-        header.classList.remove('no-animation');
+        navbar.menu.classList.remove('scrolled-nav');
+        navbar.menu.classList.remove('no-animation');
         navbar.clone.classList.remove("scrolled-top");
         }
       }
@@ -53,39 +58,39 @@ var toggle = document.getElementsByClassName('navbar-toggle')[0],
 
     function scrollFunction() {
       if (navbar.state()) {
-      if (navbar.scrollElm() >= navbar.offset) {
-        header.classList.add('scrolled-nav');
+      if (navbar.scrollElm() >= navbar.offsetY) {
+        navbar.menu.classList.add('scrolled-nav');
+        navbar.clone.classList.add("scrolled-nav");
         navbar.clone.classList.add("scrolled-top");
       }
       else {
-        header.classList.remove('scrolled-nav');
-        header.classList.remove('no-animation');
+        navbar.menu.classList.remove('scrolled-nav');
+        navbar.menu.classList.remove('no-animation');
         navbar.clone.classList.remove("scrolled-top");
         }
       }
       if (navbar.scrollElm() > navbar.scrollOffset() && navbar.scrollElm() > window.innerHeight) {
-        document.getElementById('scrollTop').style.display = "block";
-      } else document.getElementById('scrollTop').style.display = "none"; 
+        document.getElementsByClassName('scrollTop')[0].classList.add('visible');
+      } else document.getElementsByClassName('scrollTop')[0].classList.remove('visible');
     }
   
-    document.getElementsByClassName('navbar-toggle')[0].onclick = function () {
+   navbar.toggle.addEventListener('click', function() {
       if (navbar.state()) {
-          header.classList.remove('no-animation');
-          header.classList.add('active-bar');
+        navbar.menu.classList.remove('no-animation');
+        navbar.menu.classList.add('active-bar');
       }
       else {
-          header.classList.remove('active-bar');
-          if(navbar.scrollElm() >= navbar.offset) {
-            header.classList.add('no-animation');
-            header.classList.add('scrolled-nav');
+        navbar.menu.classList.remove('active-bar');
+          if(navbar.scrollElm() >= navbar.offsetY) {
+            navbar.menu.classList.add('no-animation');
+            navbar.menu.classList.add('scrolled-nav');
           }
           else { 
-            header.classList.remove('scrolled-nav');
-            header.classList.remove('no-animation');
+            navbar.menu.classList.remove('scrolled-nav');
+            navbar.menu.classList.remove('no-animation');
           }
       }
-    };
-
+    });
 
     function scrollIt(destination) {
       var duration = arguments.length <= 1 || arguments[1] === undefined ? 200 : arguments[1];
@@ -195,7 +200,7 @@ var toggle = document.getElementsByClassName('navbar-toggle')[0],
       return pixels / pixelsPerMs;
     }
   
-    document.getElementById('scrollTop').addEventListener('click', function (event) {
+    document.getElementsByClassName('scrollTop')[0].addEventListener('click', function (event) {
       event.preventDefault();
       var scrollTime = scrollGetSpeed(this);
       scrollIt(document.getElementsByClassName('targetTop')[0], scrollTime, 'linear', function () {});

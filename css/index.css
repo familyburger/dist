@@ -12899,8 +12899,15 @@ footer {
     z-index: 99;
 }
 
+.navbar.navbar-inverse.navbar-fixed-top.clone {
+    visibility: hidden;
+    transition: none;
+}
+
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.clone {
+    visibility: visible;
     z-index: 98;
+    opacity: 1;
     transform:translateY(-80px);
     -ms-transform:translateY(-80px); 
     -webkit-transform:translateY(-80px); 
@@ -12911,17 +12918,15 @@ footer {
 }
 
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.clone.scrolled-top {
-    z-index: -99;
+    opacity: 0;
     visibility: hidden;
+    z-index: -99px;
     transition: translateY(0);
       transform:translateY(0);
     -ms-transform:translateY(0); 
     -webkit-transform:translateY(0); 
-    -webkit-transition:transform .6s linear .0s;
-    -moz-transition:transform .6s linear .0s;
-    -o-transition:transform .6s linear .0s;
-    transition:transform .6s linear .0s;
- }
+    transition: none;
+}
 
 a:focus {
     outline: 0
@@ -13733,8 +13738,8 @@ address .btn-facebook:hover {
     width: 0
 }
 
-#scrollTop {
-    display: none;
+.scrollTop {
+    visibility: hidden;
     position: fixed;
     bottom: 125px;
     z-index: 999;
@@ -13750,7 +13755,15 @@ address .btn-facebook:hover {
     box-shadow: 0 1px 5px 1px rgba(0%, 0%, 0%, .3)
 }
 
-#scrollTop:hover {
+.scrollTop.visible {
+    visibility: visible;
+}
+
+.scrollTop:hover {
+    background-color: rgba(0%, 0%, 0%, .5)
+}
+
+.scrollTop:active {
     background-color: rgba(0%, 0%, 0%, .5)
 }
 
@@ -14164,8 +14177,11 @@ footer p {
     .scrolled-nav .container .navbar-nav>li>a {
         padding-top: 1.8em
     }
-    #scrollTop:hover {
+    .scrollTop:hover {
         background-color: rgba(94.1%, 28.4%, 10.2%, .9)
+    }
+    .scrollTop:active {
+        background-color: rgba(0%, 0%, 0%, .5)
     }
     .item {
         position: relative;
@@ -14269,8 +14285,11 @@ footer p {
         width: 100%;
         padding-bottom: 75.25%
     }
-    #scrollTop:hover {
+    .scrollTop:hover {
         background-color: rgba(94.1%, 28.4%, 10.2%, .9)
+    }
+    .scrollTop:active {
+        background-color: rgba(0%, 0%, 0%, .5)
     }
     .carousel-inner>:nth-child(1)>.fill {
         background-image: url(../images/carousel/low/img-1-mob.jpg)
