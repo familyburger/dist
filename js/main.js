@@ -26,50 +26,40 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', scrollFunction, false);
   window.addEventListener("touchmove", touchFunction, true);
 
-  if (navbar.scrollElm() >= navbar.offsetY) { // initial value
-    $(navbar.menu).add(navbar.clone).addClass('scrolled-nav');
-  } else {
-    navbar.menu.classList.remove('scrolled-nav');
-  }
+  if (navbar.scrollElm() >= navbar.offsetY) $(navbar.menu).add(navbar.clone).addClass('scrolled-nav'); // initial value
+  else $(navbar.menu).removeClass('scrolled-nav');
 
   function touchFunction(event) {
     if (navbar.state()) {
-      if (navbar.scrollElm() >= navbar.offsetY) {
-        $(navbar.menu).add(navbar.clone).addClass('scrolled-nav');
-        navbar.clone.classList.add("scrolled-top");
-
-      } else {
-        $(navbar.menu).removeClass('scrolled-nav no-animation');
-        navbar.clone.classList.remove("scrolled-top");
-      }
+    if (navbar.scrollElm() >= navbar.offsetY) {
+      $(navbar.menu).add(navbar.clone).addClass('scrolled-nav');
+      $(navbar.clone).addClass("scrolled-top");
+    }
+    else $(navbar.menu).add(navbar.clone).removeClass('scrolled-nav').removeClass('no-animation').removeClass('scrolled-top');
     }
   }
 
   function scrollFunction() {
     if (navbar.state()) {
-      if (navbar.scrollElm() >= navbar.offsetY) {
-        $(navbar.menu).add(navbar.clone).addClass('scrolled-nav');
-        navbar.clone.classList.add("scrolled-top");
-      } else {
-        $(navbar.menu).removeClass('scrolled-nav no-animation');
-        navbar.clone.classList.remove("scrolled-top");
-      }
+    if (navbar.scrollElm() >= navbar.offsetY) {
+      $(navbar.menu).add(navbar.clone).addClass('scrolled-nav');
+      $(navbar.clone).addClass("scrolled-top");
+    }
+    else $(navbar.menu).add(navbar.clone).removeClass('scrolled-nav').removeClass('no-animation').removeClass('scrolled-top');
     }
     if (navbar.scrollElm() > navbar.scrollOffset() && navbar.scrollElm() > window.innerHeight) {
       document.getElementsByClassName('scrollTop')[0].classList.add('visible');
     } else document.getElementsByClassName('scrollTop')[0].classList.remove('visible');
   }
 
-  navbar.toggle.addEventListener('click', function () {
+ navbar.toggle.addEventListener('click', function() {
     if (navbar.state()) {
       $(navbar.menu).removeClass('no-animation').addClass('active-bar');
-    } else {
-      navbar.menu.classList.remove('active-bar');
-      if (navbar.scrollElm() >= navbar.offsetY) {
-        $(navbar.menu).addClass('scrolled-nav no-animation');
-      } else {
-        $(navbar.menu).removeClass('scrolled-nav no-animation');
-      }
+    }
+    else {
+      $(navbar.menu).removeClass('active-bar');
+        if(navbar.scrollElm() >= navbar.offsetY) $(navbar.menu).addClass('scrolled-nav no-animation');
+        else $(navbar.menu).removeClass('scrolled-nav no-animation');
     }
   });
 
