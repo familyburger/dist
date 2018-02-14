@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
       $(navbar.menu).add(navbar.clone).addClass('scrolled-nav');
       $(navbar.clone).addClass("scrolled-top");
     }
-    else $(navbar.menu).add(navbar.clone).removeClass('scrolled-nav').removeClass('no-animation').removeClass('scrolled-top');
+    else $(navbar.menu).removeClass('scrolled-nav').removeClass('no-animation').add(navbar.clone).removeClass('scrolled-top');
     }
   }
 
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
       $(navbar.menu).add(navbar.clone).addClass('scrolled-nav');
       $(navbar.clone).addClass("scrolled-top");
     }
-    else $(navbar.menu).add(navbar.clone).removeClass('scrolled-nav').removeClass('no-animation').removeClass('scrolled-top');
+    else $(navbar.menu).removeClass('scrolled-nav').removeClass('no-animation').add(navbar.clone).removeClass('scrolled-top');
     }
     if (navbar.scrollElm() > navbar.scrollOffset() && navbar.scrollElm() > window.innerHeight) {
       document.getElementsByClassName('scrollTop')[0].classList.add('visible');
