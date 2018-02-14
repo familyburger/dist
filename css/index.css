@@ -13004,21 +13004,33 @@ a:focus {
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.active-bar {
     position: fixed;
     animation: none;
+    -moz-animation: none;
+    -o-animation: none;
+    -webkit-animation: none;
     z-index: 100;
 }
 
 .navbar.navbar-inverse.navbar-fixed-top.active-bar {
     position: fixed;
     animation: none;
+    -moz-animation: none;
+    -o-animation: none;
+    -webkit-animation: none;
     z-index: 100;
 }
 
 .navbar.navbar-inverse.navbar-fixed-top.scrolled-nav.no-animation {
     animation: none;
+    -moz-animation: none;
+    -o-animation: none;
+    -webkit-animation: none;
 }
 
 .navbar.navbar-inverse.navbar-fixed-top.no-animation {
     animation: none;
+    -moz-animation: none;
+    -o-animation: none;
+    -webkit-animation: none;
 }
 
 .scrolled-nav .navbar-toggle {
