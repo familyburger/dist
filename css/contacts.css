@@ -13327,7 +13327,7 @@ address .btn-facebook:hover {
     visibility: hidden;
     position: fixed;
     bottom: 125px;
-    z-index: 999;
+    z-index: 99;
     right: 0;
     border: none;
     outline: 0;
