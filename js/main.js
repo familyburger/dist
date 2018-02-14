@@ -1,67 +1,64 @@
 document.addEventListener('DOMContentLoaded', function () {
-  var navbar = {
-    offsetY: 105,
-    init: function () {
-      this.header = document.getElementsByTagName('header')[0];
-      this.menu = document.getElementsByClassName('navbar')[0];
-      this.toggle = document.getElementsByClassName('navbar-toggle')[0];
-      this.wrap = document.getElementById('contentWrap');
-      this.clone = this.menu.cloneNode(true);
-    },
-    state: function () {
-      return this.toggle.getAttribute("aria-expanded") === 'false' || this.toggle.getAttribute("aria-expanded") === null;
-    },
-    scrollElm: function () {
-      return (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-    },
-    scrollOffset: function () {
-      return this.wrap.offsetTop;
-    }
-  };
-  navbar.init();
-  navbar.clone.classList.add("clone");
-  navbar.header.insertBefore(navbar.clone, navbar.lastChild);
+      var navbar = {
+        offsetY: 105,
+        init: function () {
+          this.header = document.getElementsByTagName('header')[0];
+          this.menu = document.getElementsByClassName('navbar')[0];
+          this.toggle = document.getElementsByClassName('navbar-toggle')[0];
+          this.wrap = document.getElementById('contentWrap');
+          this.clone = this.menu.cloneNode(true);
+        },
+        state: function () {
+          return this.toggle.getAttribute("aria-expanded") === 'false' || this.toggle.getAttribute("aria-expanded") === null;
+        },
+        scrollElm: function () {
+          return (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+        },
+        scrollOffset: function () {
+          return this.wrap.offsetTop;
+        }
+      };
+      navbar.init();
+      navbar.clone.classList.add("clone");
+      navbar.header.insertBefore(navbar.clone, navbar.lastChild);
 
-  window.addEventListener('resize', navbar.scrollOffset.bind(navbar), false);
-  window.addEventListener('scroll', scrollFunction, false);
-  window.addEventListener("touchmove", touchFunction, true);
+      window.addEventListener('resize', navbar.scrollOffset.bind(navbar), false);
+      window.addEventListener('scroll', scrollFunction, false);
+      window.addEventListener("touchmove", touchFunction, true);
 
-  if (navbar.scrollElm() >= navbar.offsetY) $(navbar.menu).add(navbar.clone).addClass('scrolled-nav'); // initial value
-  else $(navbar.menu).removeClass('scrolled-nav');
+      if (navbar.scrollElm() >= navbar.offsetY) $(navbar.menu).add(navbar.clone).addClass('scrolled-nav'); // initial value
+      else $(navbar.menu).removeClass('scrolled-nav');
 
-  function touchFunction(event) {
-    if (navbar.state()) {
-    if (navbar.scrollElm() >= navbar.offsetY) {
-      $(navbar.menu).add(navbar.clone).addClass('scrolled-nav');
-      $(navbar.clone).addClass("scrolled-top");
-    }
-    else $(navbar.menu).removeClass('scrolled-nav').removeClass('no-animation').add(navbar.clone).removeClass('scrolled-top');
-    }
-  }
+      function touchFunction(event) {
+        if (navbar.state()) {
+          if (navbar.scrollElm() >= navbar.offsetY) $(navbar.clone).addClass('scrolled-nav scrolled-top')
+          .add(navbar.menu).addClass('scrolled-nav');
+          else $(navbar.menu).removeClass('scrolled-nav').removeClass('no-animation')
+          .add(navbar.clone).removeClass('scrolled-top');
+        }
+      }
 
-  function scrollFunction() {
-    if (navbar.state()) {
-    if (navbar.scrollElm() >= navbar.offsetY) {
-      $(navbar.menu).add(navbar.clone).addClass('scrolled-nav');
-      $(navbar.clone).addClass("scrolled-top");
-    }
-    else $(navbar.menu).removeClass('scrolled-nav').removeClass('no-animation').add(navbar.clone).removeClass('scrolled-top');
-    }
-    if (navbar.scrollElm() > navbar.scrollOffset() && navbar.scrollElm() > window.innerHeight) {
-      document.getElementsByClassName('scrollTop')[0].classList.add('visible');
-    } else document.getElementsByClassName('scrollTop')[0].classList.remove('visible');
-  }
+      function scrollFunction() {
+        if (navbar.state()) {
+          if (navbar.scrollElm() >= navbar.offsetY) $(navbar.clone).addClass('scrolled-nav scrolled-top')
+          .add(navbar.menu).addClass('scrolled-nav');
+          else $(navbar.menu).removeClass('scrolled-nav').removeClass('no-animation')
+          .add(navbar.clone).removeClass('scrolled-top');
+        }
+        if (navbar.scrollElm() > navbar.scrollOffset() && navbar.scrollElm() > window.innerHeight) {
+          document.getElementsByClassName('scrollTop')[0].classList.add('visible');
+        } else document.getElementsByClassName('scrollTop')[0].classList.remove('visible');
+      }
 
- navbar.toggle.addEventListener('click', function() {
-    if (navbar.state()) {
-      $(navbar.menu).removeClass('no-animation').addClass('active-bar');
-    }
-    else {
-      $(navbar.menu).removeClass('active-bar');
-        if(navbar.scrollElm() >= navbar.offsetY) $(navbar.menu).addClass('scrolled-nav no-animation');
-        else $(navbar.menu).removeClass('scrolled-nav no-animation');
-    }
-  });
+      navbar.toggle.addEventListener('click', function () {
+        if (navbar.state()) {
+          $(navbar.menu).removeClass('no-animation').addClass('active-bar');
+        } else {
+          $(navbar.menu).removeClass('active-bar');
+          if (navbar.scrollElm() >= navbar.offsetY) $(navbar.menu).addClass('scrolled-nav no-animation');
+          else $(navbar.menu).removeClass('scrolled-nav no-animation');
+        }
+      });
 
   function scrollIt(destination) {
     var duration = arguments.length <= 1 || arguments[1] === undefined ? 200 : arguments[1];
