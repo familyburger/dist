@@ -13868,7 +13868,9 @@ address .btn-facebook:hover {
 .high-quality {
     visibility: hidden;
     -o-object-fit: cover;
+    -moz-object-fit: cover;
     object-fit: cover;
+    -moz-object-position: center center;
     -o-object-position: center center;
     object-position: center center;
     height: 100%;
