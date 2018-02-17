@@ -14394,12 +14394,41 @@ footer p {
 
 @media all and (max-width: 485px) {
     .note .text h1 {
-        font-size: 26px;
+        font-size: 24px;
         font-size: 7.5vw;
         margin: 0
         }
     .note .text h3 {
-        font-size: 16px;
+        font-size: 18px;
         font-size: 5.5vw
+    }
+}
+
+@media all and (max-width:350px) {
+    .navbar-inverse .navbar-nav>li>a {
+        font-size: 1.2em;
+        line-height: 1.2em;
+    }
+    .row {
+        line-height: 1.2;
+    }
+    footer p {
+        font-size: 1.0em
+    }
+    .container .design {
+        font-size: 1.0em
+    }
+    .row .arrow_box_inner_bottom article {
+        font-size: 1.2em;
+    }
+    .row .arrow_box_inner_top article p {
+        font-size: 1.2em;
+    }
+    .arrow_box_inner_bottom article h1 {
+        font-size: 1em;
+        line-height: 1;
+    }
+    .row .arrow_box_inner_bottom article p {
+        font-size: 1.2em;
     }
 }

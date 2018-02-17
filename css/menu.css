@@ -13556,7 +13556,6 @@ select::-ms-expand {
     left: 0;
     right: 0;
     margin: auto;
-    padding: 0px 5px;
 }
 
 .notify-badge.add {
@@ -13784,9 +13783,35 @@ select::-ms-expand {
     }
 }
 
-@media all and (max-width:376px) {
+@media all and (max-width:350px) {
     .notify-badge {
         font-size: 1.2em;
         line-height: 1.2em;
+    }
+    .navbar-inverse .navbar-nav>li>a {
+        font-size: 1.2em;
+        line-height: 1.2em;
+    }
+    .modal-body>.container>.row>div>p {
+        font-size: 1.2em;
+        line-height: 1.2em;
+    }
+    #selectMenu {
+        font-size: 1.2em;
+        line-height: 1.2em;
+    }
+    .js-drinks-table.is-visible th {
+        font-size: 1.3em;
+        line-height: 1.5;
+    }
+    .js-drinks-table.is-visible tr td {
+        font-size: 1.2em;
+        line-height: 1.2;
+    }
+    footer p {
+        font-size: 1em
+    }
+    .container .design {
+        font-size: 1em
     }
 }

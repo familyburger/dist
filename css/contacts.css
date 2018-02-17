@@ -116,8 +116,9 @@ img {
     border-style: none
 }
 
-svg:not(:root) {
-    transform: rotate(180deg);
+.arrow-down.arrow-down--scaled {
+    position: relative;
+    top: 5px;
     overflow: hidden
 }
 
@@ -13866,7 +13867,6 @@ hr {
 
 .grid-container .container .map-pointer {
     text-align: center;
-    margin: 25px 0px 5px 0px;
 }
 
 #btn-map {
@@ -14262,9 +14262,49 @@ textarea:focus {
 
 @media all and (max-width:350px) {
     address .btn.btn-block p {
-        font-size: 4.8vmin
+        font-size: 16px;
+        font-size: 5vmin
     }
     .container #contactForm .button--split-effect.button--send {
-        font-size: 4.8vmin
+        font-size: 16px;
+        font-size: 5vmin
+    }
+    footer p {
+        font-size: 1.0em
+    }
+    .container .design {
+        font-size: 1.0em
+    }
+    .info-window h3 {
+        font-size: 19px;
+        line-height: 21px;
+    }
+    .info-window h4 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .navbar-inverse .navbar-nav>li>a {
+        font-size: 1.2em;
+        line-height: 1.2em;
+    }
+    address .btn.btn-block p {
+        font-size: 1.2em;
+        line-height: 1.7em
+    }
+    .grid-container .container p {
+        line-height: 1.2em;
+        font-size: 1.2em
+    }
+    .textAlert .alert {
+        font-size: 1.2em
+    }
+    .container #contactForm .button--split-effect.button--send,
+    label,
+    label[for=comment] {
+        font-size: 1.2em;
+        line-height: 1.2em;
+    }
+    .container h1 {
+        font-size: 1.3em
     }
 }
