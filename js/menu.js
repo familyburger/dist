@@ -47,13 +47,16 @@ ProductsView.prototype.render = function render(viewModel) {
             }
             this.viewElement.innerHTML += '<div class="item-img"><a href="#modal-fullscreen" data-toggle="modal"><h1 class="notify-badge">' +
                 viewModel[x].name + '</h1><img src="images/menuLowQuality/img-' +
-                (x + 1) + '.png"alt="' + viewModel[x].name + '"></a></div>';
+                (x + 1) + '.png"alt="' + viewModel[x].name + '"></a><h1 class="notify-badge add">' + viewModel[x].nameAdd + '</h1></div>';
             imgPreload.push(new Image());
         }
     }
     this.onClickShowDescription(itemIdx, imgPreload);
     $('.notify-badge').arctext({
-        radius: 300
+        radius: 200
+    });
+    $('.notify-badge.add').arctext({
+        radius: -200
     });
     }
     else {

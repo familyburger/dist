@@ -13396,6 +13396,7 @@ option:disabled {
     max-width: 85%;
     border-right: 10px;
     border-left: 10px;
+    margin: 50px 0px;
     border-color: rgba(0%, 0%, 0%, .15);
     border-style: groove;
     border-radius: 25px;
@@ -13546,10 +13547,20 @@ select::-ms-expand {
 }
 
 .notify-badge {
-    position: relative;
+    position: absolute;
     font-size: 1.5em;
+    text-align: center;
     line-height: 1.5;
-    margin: 0
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 0px 5px;
+}
+
+.notify-badge.add {
+    top: 25px;
 }
 
 .notify-badge span {
@@ -13705,10 +13716,8 @@ select::-ms-expand {
         margin: 5px
     }
     .notify-badge {
-        position: relative;
-        font-size: 1.5em;
-        line-height: 1.5em;
-        margin: 0
+        font-size: 1.4em;
+        line-height: 1.4em;
     }
     #selectMenu {
         font-size: 1.4em;
@@ -13741,10 +13750,8 @@ select::-ms-expand {
         line-height: 1.3em;
     }
     .notify-badge {
-        position: relative;
-        font-size: 1.4em;
-        line-height: 1.4em;
-        margin: 0
+        font-size: 1.3em;
+        line-height: 1.3em;
     }
     .row img:hover {
         -webkit-transform: scale(1.06);
@@ -13779,8 +13786,7 @@ select::-ms-expand {
 
 @media all and (max-width:376px) {
     .notify-badge {
-        position: relative;
-        font-size: 1.3em;
-        line-height: 1.3em;
+        font-size: 1.2em;
+        line-height: 1.2em;
     }
 }
