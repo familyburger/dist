@@ -13559,7 +13559,7 @@ select::-ms-expand {
 }
 
 .notify-badge.add {
-    top: 25px;
+    top: 26px;
 }
 
 .notify-badge span {
@@ -13638,13 +13638,14 @@ select::-ms-expand {
 }
 
 .modal-body>.container>.row>div>p>b {
-    font-size: 1.1em
+    font-size: 1.05em
 }
 
 .modal-body>.container>.row>div>p>b::after {
     content: "";
     display: block;
-    padding: 2px 0;
+    padding: 2px 0px;
+    margin: 8px 0px;
     line-height: 1px;
     margin-bottom: -25px;
     border-top: 3px dashed rgba(96.4%, 82.5%, 47.7%, .85)
@@ -13661,8 +13662,8 @@ select::-ms-expand {
     right: -50px;
     height: 35%;
     line-height: 25px;
-    font-size: 1.5em;
-    line-height: 1.5;
+    font-size: 22px;
+    line-height: 1.3;
     text-align: center;
     font-weight: 700;
     text-shadow: 1px 1px rgba(0%, 0%, 0%, .3), 2px 1px rgba(0%, 0%, 0%, .4), 1px 2px 6px rgba(0%, 0%, 0%, .5);
@@ -13702,6 +13703,12 @@ select::-ms-expand {
 }
 
 @media all and (max-width:767px) and (min-width:577px) {
+    .ribbon {
+        font-size: 20.5px;
+    }
+    .notify-badge.add {
+        top: 24px;
+    }
     .loader {
         width: 49px;
         height: 49px;
@@ -13740,6 +13747,17 @@ select::-ms-expand {
 }
 
 @media all and (max-width:576px) {
+    .ribbon {
+        font-size: 18.5px;
+    }
+    .modal-body>.container>.row>div>p>b::after {
+        padding: 4px 0px;
+        margin: 8px 0px;
+        margin-bottom: -25px;
+    }
+    .notify-badge.add {
+        top: 22px;
+    }
     .loader {
         width: 45px;
         height: 45px;
@@ -13784,6 +13802,17 @@ select::-ms-expand {
 }
 
 @media all and (max-width:350px) {
+    .modal-body>.container>.row>div>p>b::after {
+        padding: 4px 0px;
+        margin: 5px 0px;
+        margin-bottom: -25px;
+    }
+    .ribbon {
+        font-size: 18.5px;
+    }
+    .notify-badge.add {
+        top: 20px;
+    }
     .notify-badge {
         font-size: 1.2em;
         line-height: 1.2em;
