@@ -12867,6 +12867,10 @@ body {
     flex-direction: column
 }
 
+#contentWrap .container:nth-child(1) h1 {
+    padding-top: 34px;
+}
+
 footer {
     border-top: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
     border-bottom: 3px solid rgba(96.4%, 82.5%, 47.7%, .9);
@@ -14287,13 +14291,9 @@ textarea:focus {
         font-size: 1.2em;
         line-height: 1.2em;
     }
-    address .btn.btn-block p {
-        font-size: 1.2em;
-        line-height: 1.7em
-    }
     .grid-container .container p {
+        font-size: 1.2em;
         line-height: 1.2em;
-        font-size: 1.2em
     }
     .textAlert .alert {
         font-size: 1.2em
@@ -14302,7 +14302,7 @@ textarea:focus {
     label,
     label[for=comment] {
         font-size: 1.2em;
-        line-height: 1.2em;
+        line-height: 1.5em;
     }
     .container h1 {
         font-size: 1.3em
