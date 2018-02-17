@@ -14,15 +14,15 @@ document.addEventListener('DOMContentLoaded', function () {
         scrollElm: function () {
           return (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
         },
-        scrollOffset: function () {
-          return this.wrap.offsetTop;
+        elHeight: function () {
+          return document.body.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
         }
       };
       navbar.init();
       navbar.clone.classList.add("clone");
       navbar.header.insertBefore(navbar.clone, navbar.lastChild);
 
-      window.addEventListener('resize', navbar.scrollOffset.bind(navbar), false);
+     
       window.addEventListener('scroll', scrollFunction, false);
       window.addEventListener("touchmove", touchFunction, true);
 
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
           else $(navbar.menu).removeClass('scrolled-nav').removeClass('no-animation')
           .add(navbar.clone).removeClass('scrolled-top');
         }
-        if (navbar.scrollElm() > navbar.scrollOffset() && navbar.scrollElm() > window.innerHeight) {
+        if (navbar.scrollElm() > navbar.elHeight() / 3) {
           document.getElementsByClassName('scrollTop')[0].classList.add('visible');
         } else document.getElementsByClassName('scrollTop')[0].classList.remove('visible');
       }
