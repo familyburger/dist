@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
       navbar.clone.classList.add("clone");
       navbar.header.insertBefore(navbar.clone, navbar.lastChild);
 
-     
       window.addEventListener('scroll', scrollFunction, false);
       window.addEventListener("touchmove", touchFunction, true);
 
