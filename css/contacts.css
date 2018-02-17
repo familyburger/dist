@@ -14098,6 +14098,10 @@ textarea:focus {
 }
 
 @media all and (max-width:767px) and (min-width:577px) {
+    .grid-container .container .map-pointer {
+        position: relative;
+        top: -5px;
+    }
     .svg-container {
     background-size: calc(100vw * 9/16 + 105px) 100%;
     height: calc(100vw * 9/16 + 105px);
@@ -14178,6 +14182,13 @@ textarea:focus {
 }
 
 @media all and (max-width:576px) {
+    .wrapper {
+        padding-top: 0px;
+    }
+    .grid-container .container .map-pointer {
+        position: relative;
+        top: -5px;
+    }
     .svg-container {
         background-size: calc(100vw * 3/4 + 105px) 100%;
         height: calc(100vw * 3/4 + 105px);
