@@ -47,7 +47,7 @@ ProductsView.prototype.render = function render(viewModel) {
             }
             this.viewElement.innerHTML += '<div class="item-img"><a href="#modal-fullscreen" data-toggle="modal"><h1 class="notify-badge">' +
                 viewModel[x].name + '</h1><img src="images/menuLowQuality/img-' +
-                (x + 1) + '.png"alt="' + viewModel[x].name + '"></a><h1 class="notify-badge add">' + viewModel[x].nameAdd + '</h1></div>';
+                (x + 1) + '.png"alt="' + viewModel[x].name + '"><h1 class="notify-badge add">' + viewModel[x].nameAdd + '</h1></a></div>';
             imgPreload.push(new Image());
         }
     }
