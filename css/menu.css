@@ -13551,7 +13551,7 @@ select::-ms-expand {
     font-size: 1.5em;
     text-align: center;
     line-height: 1.5;
-    height: 50px;
+    height: auto;
     top: 0;
     left: 0;
     right: 0;
