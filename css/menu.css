@@ -13396,7 +13396,7 @@ option:disabled {
     max-width: 85%;
     border-right: 10px;
     border-left: 10px;
-    margin: 50px 0px;
+    margin-top: 50px;
     border-color: rgba(0%, 0%, 0%, .15);
     border-style: groove;
     border-radius: 25px;

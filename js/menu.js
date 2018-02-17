@@ -55,9 +55,6 @@ ProductsView.prototype.render = function render(viewModel) {
     $('.notify-badge').arctext({
         radius: 200
     });
-    $('.notify-badge.add').arctext({
-        radius: -200
-    });
     }
     else {
         this.table.classList.add('is-visible');
