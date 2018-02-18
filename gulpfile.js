@@ -1,8 +1,15 @@
-var gulp = require('gulp');
-var htmlmin = require('gulp-htmlmin');
+let gulp = require('gulp');
+var minify = require('gulp-minify');
  
-gulp.task('minify', function() {
-  return gulp.src('./*.html')
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('dist'));
+gulp.task('compress', function() {
+  gulp.src('js/*.js')
+    .pipe(minify({
+        ext:{
+            src:'-debug.js',
+            min:'.js'
+        },
+        exclude: ['tasks'],
+        ignoreFiles: ['.combo.js', '-min.js']
+    }))
+    .pipe(gulp.dest('dist'))
 });
