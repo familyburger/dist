@@ -7700,10 +7700,10 @@ button.close {
         -webkit-perspective: 1000px;
         perspective: 1000px
     }
-    .carousel-item {
-	transition: -webkit-transform 0.5s ease;
-	transition: transform 0.5s ease;
-	transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    .carousel-inner>.item {
+	transition: -webkit-transform .6s ease-in-out;
+    transition: transform .6s ease-in-out;
+	transition: transform .6s ease-in-out, -webkit-transform .6s ease-in-out;
 	-webkit-backface-visibility: visible;
 	        backface-visibility: visible;
 }
