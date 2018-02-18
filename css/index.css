@@ -7700,6 +7700,13 @@ button.close {
         -webkit-perspective: 1000px;
         perspective: 1000px
     }
+    .carousel-inner>.item {
+        transition: -webkit-transform .6s ease-in-out;
+        transition: transform .6s ease-in-out;
+        transition: transform .6s ease-in-out, -webkit-transform .6s ease-in-out;
+        -webkit-backface-visibility: visible;
+                backface-visibility: visible;
+    }
     .carousel-inner>.item.active.right,
     .carousel-inner>.item.next {
         left: 0;
@@ -13210,7 +13217,7 @@ a:focus {
 .carousel-indicators .active {
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    background-color: red
+    background-color: rgba(94.1%, 28.4%, 10.2%, .9)
 }
 
 .sign {
@@ -13841,7 +13848,6 @@ address .btn-facebook:hover {
     display: block;
     height: 0;
     width: 100%;
-    transform: translate3d(0,0,0);
     padding-bottom: 40.25%
 }
 

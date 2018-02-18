@@ -74,7 +74,8 @@ ProductsView.prototype.render = function render(viewModel) {
 };
 
 ProductsView.prototype.showItemDescription = function showItemDescription(idxNum, firstNum) {
-    this.description.innerHTML = "<b>" + this.viewModel[firstNum + idxNum].name + "</b><br>" + this.viewModel[firstNum + idxNum].description,
+    this.description.innerHTML = "<b>" + this.viewModel[firstNum + idxNum].name + ' ' + this.viewModel[firstNum + idxNum].nameAdd 
+    + "</b><br>" + this.viewModel[firstNum + idxNum].description,
         this.image.style.backgroundImage = 'url("images/menuHighQuality/img-' + (firstNum + idxNum + 1) + '.png")';
     this.ribbon.innerHTML = this.viewModel[firstNum + idxNum].price;
 }
