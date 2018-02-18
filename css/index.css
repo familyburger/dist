@@ -13856,7 +13856,8 @@ address .btn-facebook:hover {
     font-size: 54px;
     font-size: 4.2vw;
     text-shadow: 0 1px 0 rgba(0%, 0%, 0%, .7), 1px 0 0 rgba(0%, 0%, 0%, .7), 1px 1px 1px rgba(0%, 0%, 0%, .7), 2px 1px 1px rgba(0%, 0%, 0%, .7);
-    left: 5%
+    left: 5%;
+    top: 3%;
 }
 
 .carousel-caption.item-1 h3 {
@@ -13866,6 +13867,7 @@ address .btn-facebook:hover {
     text-align: end;
     text-shadow: 0 1px 0 rgba(0%, 0%, 0%, .7), 1px 0 0 rgba(0%, 0%, 0%, .7), 1px 1px 1px rgba(0%, 0%, 0%, .7), 2px 1px 1px rgba(0%, 0%, 0%, .7);
     right: 5%;
+    top: 2%;
 }
 
 .carousel-caption.item-2 h1 {
@@ -13893,6 +13895,25 @@ address .btn-facebook:hover {
     bottom: 15%;
 }
 
+.carousel-caption.item-3 h1 {
+    position: absolute;
+    font-size: 54px;
+    font-size: 4.2vw;
+    text-shadow: 0 1px 0 rgba(0%, 0%, 0%, .7), 1px 0 0 rgba(0%, 0%, 0%, .7), 1px 1px 1px rgba(0%, 0%, 0%, .7), 2px 1px 1px rgba(0%, 0%, 0%, .7);
+    left: 5%;
+    top: 3%;
+}
+
+.carousel-caption.item-3 h3 {
+    position: absolute;
+    font-size: 36px;
+    font-size: 2.8vw;
+    text-align: end;
+    text-shadow: 0 1px 0 rgba(0%, 0%, 0%, .7), 1px 0 0 rgba(0%, 0%, 0%, .7), 1px 1px 1px rgba(0%, 0%, 0%, .7), 2px 1px 1px rgba(0%, 0%, 0%, .7);
+    right: 5%;
+    top: 2%;
+}
+
 @media all and (max-width: 1280px) {
     .carousel-caption.item-1 h1 {
         font-size: 32px;
@@ -13912,6 +13933,15 @@ address .btn-facebook:hover {
     }
     
     .carousel-caption.item-2 h3 {
+        font-size: 22px;
+        font-size: 2.8vw;
+    }
+    .carousel-caption.item-3 h1 {
+        font-size: 32px;
+        font-size: 4.2vw;
+    }
+    
+    .carousel-caption.item-3 h3 {
         font-size: 22px;
         font-size: 2.8vw;
     }
@@ -14244,7 +14274,7 @@ footer p {
     .carousel-caption.item-1 h1 {
         font-size: 35px;
         font-size: 6.05vw;
-        right: 5%;
+        right: 2%;
         text-align: end;
         top: 2%;
     }
@@ -14252,7 +14282,7 @@ footer p {
         font-size: 24px;
         font-size: 4.2vw;
         top: 10%;
-        left: 5%;
+        left: 2%;
         text-align: start;
     }
     .carousel-caption.item-2 h1 {
@@ -14266,6 +14296,20 @@ footer p {
         font-size: 4.2vw;
         margin-left: 30%;
         margin-bottom: 3%;
+    }
+    .carousel-caption.item-3 h1 {
+        font-size: 35px;
+        font-size: 6.05vw;
+        right: 2%;
+        text-align: end;
+        top: 2%;
+    }
+    .carousel-caption.item-3 h3 {
+        font-size: 24px;
+        font-size: 4.2vw;
+        top: 10%;
+        left: 2%;
+        text-align: start;
     }
     .navbar-inverse .navbar-nav>li>a {
         font-size: 1.4em;
@@ -14376,7 +14420,7 @@ footer p {
     .carousel-caption.item-1 h1 {
         font-size: 25px;
         font-size: 6.6vw;
-        right: 5%;
+        right: 2%;
         text-align: end;
         top: 5%;
     }
@@ -14385,10 +14429,10 @@ footer p {
         font-size: 20px;
         font-size: 4.8vw;
         top: 20%;
-        left: 5%;
+        left: 2%;
         text-align: start;
     }
-      .carousel-caption.item-2 h1 {
+    .carousel-caption.item-2 h1 {
         font-size: 25px;
         font-size: 6.6vw;
         margin-right: 43%;
@@ -14402,6 +14446,20 @@ footer p {
         padding-right: 15%;
         padding-left: 15%;
         margin-bottom: 1%;
+    }
+    .carousel-caption.item-3 h1 {
+        font-size: 25px;
+        font-size: 6.6vw;
+        right: 2%;
+        text-align: end;
+        top: 5%;
+    }
+    .carousel-caption.item-3 h3 {
+        font-size: 20px;
+        font-size: 4.8vw;
+        left: 2%;
+        top: 20%;
+        text-align: start;
     }
     .navbar-inverse .navbar-nav>li>a {
         font-size: 1.3em;
@@ -14552,6 +14610,12 @@ footer p {
         font-size: 20px;
     }
     .carousel-caption.item-2 h3 {
+        font-size: 16px;
+    }
+    .carousel-caption.item-3 h1 {
+        font-size: 20px;
+    }
+    .carousel-caption.item-3 h3 {
         font-size: 16px;
     }
     .navbar-inverse .navbar-nav>li>a {
