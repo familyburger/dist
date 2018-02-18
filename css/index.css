@@ -14426,8 +14426,8 @@ footer p {
     }
     
     .carousel-caption.item-1 h3 {
-        font-size: 20px;
-        font-size: 4.8vw;
+        font-size: 18px;
+        font-size: 5vw;
         top: 20%;
         left: 2%;
         text-align: start;
@@ -14439,8 +14439,8 @@ footer p {
         margin-top: -2%;
     }
     .carousel-caption.item-2 h3 {
-        font-size: 20px;
-        font-size: 4.8vw;
+        font-size: 18px;
+        font-size: 5vw;
         text-align: center;
         margin-left: 35%;
         padding-right: 15%;
@@ -14455,8 +14455,8 @@ footer p {
         top: 5%;
     }
     .carousel-caption.item-3 h3 {
-        font-size: 20px;
-        font-size: 4.8vw;
+        font-size: 18px;
+        font-size: 5vw;
         left: 2%;
         top: 20%;
         text-align: start;
